@@ -692,11 +692,146 @@ const BOOKS = [
       { text: 'The regret you fear from trying is nothing compared to the regret of never having tried at all.', cite: 'Nigel Cumberland' },
     ],
     finalTakeaway: '100 Things Successful People Do is not a promise of overnight success — it is a practical toolkit of habits that compound over a lifetime. The book distills decades of coaching wisdom into actionable daily practices: manage your mind, protect your health, build genuine relationships, persist through failure, and define success on your own terms. The core message is simple but profound: a successful life is built one intentional choice at a time.'
+  },
+  {
+    id: 'vivekachudamani',
+    title: 'Vivekachudamani',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 5,
+    pages: 520,
+    year: 800,
+    rating: 4.9,
+    summary: 'The Crest-Jewel of Discrimination — a systematic guide to discerning the Real Self from the transient, leading to liberation.',
+    keyIdeas: [
+      '<b>Discrimination (viveka)</b> between the Real and the unreal is the sole path to liberation. The Atman alone is real; the body, mind, and world are appearances.',
+      'The <b>Atman</b> is the witness-consciousness — self-luminous, unchanging, and ever-free. It is <b>not the body, mind, or intellect</b>, but the silent witness of all.',
+      'The five sheaths (<b>pancha-koshas</b>): physical, vital, mental, intellectual, and bliss — all are not-Self (anatma). Transcend each to realize the Self.',
+      '<b>Adhyasa (superimposition)</b> — mistaking the body-mind for the Self is like seeing a rope as a snake. Knowledge removes the error.',
+      '<b>Four qualifications (sadhana chatushtaya)</b> are prerequisites: discrimination, dispassion, six inner treasures (calmness, self-control, etc.), and intense longing for liberation.',
+      '<b>Neti, neti</b> ("not this, not this") — negate all that is not the Atman. By stripping away every identification, the pure Self is directly realized.',
+    ],
+    mainTakeaways: [
+      'The Self (<b>Atman</b>) is identical with ultimate Reality (<b>Brahman</b>) — this is the non-dual truth of Advaita.',
+      'Bondage is caused by <b>ignorance (avidya)</b>; knowledge (<b>jnana</b>) alone removes it. No amount of ritual or action can substitute for direct self-knowledge.',
+      'The body-mind is a <b>superimposition</b> on the Self — like a mirage of water on sand. Withdraw identification from it.',
+      'A qualified student with <b>discrimination and dispassion</b> can attain liberation in this very life (jivanmukti).',
+      'The world is an <b>appearance (mithya)</b> — it has relative reality but no ultimate reality independent of Brahman.',
+    ],
+    importantConcepts: [
+      '<b>Brahman-Atman identity:</b> The individual self and the universal Self are one and the same non-dual Reality.',
+      '<b>Maya:</b> The inscrutable power that veils Brahman and projects the world-appearance.',
+      '<b>Adhyasa (superimposition):</b> The natural tendency to mistake the non-Self (body, mind) for the Self.',
+      '<b>Pancha-koshas:</b> Annamaya (food), Pranamaya (vital), Manomaya (mental), Vijnanamaya (intellectual), Anandamaya (bliss) — the five sheaths to be transcended.',
+      '<b>Avidya (ignorance):</b> Not mere absence of knowledge, but a positive beginningless entity that veils the Self.',
+    ],
+    practicalLessons: [
+      'Practice daily <b>self-enquiry</b>: repeatedly ask "Who am I?" and trace the sense of "I" back to its source.',
+      'Use <b>neti, neti</b> in meditation — mentally negate each identification: "I am not the body, not the mind, not the intellect."',
+      'Cultivate <b>dispassion (vairagya)</b> by reflecting on the impermanence of all objects and experiences.',
+      'Study the <b>mahavakyas</b> (great sayings): "Tat tvam asi" (That thou art), "Aham Brahmasmi" (I am Brahman).',
+      'Seek a <b>qualified teacher (guru)</b> — the path of knowledge requires guidance from one who has realized.',
+    ],
+    bestQuotes: [
+      { text: 'Brahman alone is real; the world is an appearance; the individual self is none other than Brahman.', cite: 'Vivekachudamani' },
+      { text: 'The Atman is self-luminous, illumining the mind, the senses, and the body. It is the witness of all modifications.', cite: 'Vivekachudamani' },
+      { text: 'The ignorant see the rope and call it a snake; the wise, through discrimination, see only the rope. So is the world to the Self-realized.', cite: 'Vivekachudamani' },
+      { text: 'The five sheaths are not the Self. The Self is the witness of the five sheaths, ever free, ever pure.', cite: 'Vivekachudamani' },
+      { text: 'By the sword of discrimination, cut the knot of ignorance. Realize the Self and be free.', cite: 'Vivekachudamani' },
+    ],
+    finalTakeaway: 'Vivekachudamani is a masterwork of Advaita Vedanta that systematically guides the seeker from ignorance to liberation. Its central teaching is that the Self (Atman) is the only Reality — everything else is an appearance. By developing discrimination, cultivating dispassion, and negating all false identifications, one can directly realize the non-dual truth and live in abiding freedom.'
+  },
+  {
+    id: 'atma-bodha',
+    title: 'Atma Bodha',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 2,
+    pages: 68,
+    year: 800,
+    rating: 4.8,
+    summary: 'Self-Knowledge — a concise yet profound exposition of the nature of the Self and the path to liberation.',
+    status: 'coming-soon',
+    keyIdeas: [],
+    mainTakeaways: [],
+    importantConcepts: [],
+    practicalLessons: [],
+    bestQuotes: [],
+    finalTakeaway: ''
+  },
+  {
+    id: 'tattva-bodha',
+    title: 'Tattva Bodha',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 2,
+    pages: 57,
+    year: 800,
+    rating: 4.7,
+    summary: 'Knowledge of Truth — a primer on the fundamental categories of Advaita Vedanta for the aspiring seeker.',
+    status: 'coming-soon',
+    keyIdeas: [],
+    mainTakeaways: [],
+    importantConcepts: [],
+    practicalLessons: [],
+    bestQuotes: [],
+    finalTakeaway: ''
+  },
+  {
+    id: 'drig-drishya-viveka',
+    title: 'Drig-Drishya Viveka',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 2,
+    pages: 42,
+    year: 800,
+    rating: 4.7,
+    summary: 'The Seer and the Seen — a short but powerful text on discriminating the perceiver from the perceived.',
+    status: 'coming-soon',
+    keyIdeas: [],
+    mainTakeaways: [],
+    importantConcepts: [],
+    practicalLessons: [],
+    bestQuotes: [],
+    finalTakeaway: ''
+  },
+  {
+    id: 'aparokshanubhuti',
+    title: 'Aparokshanubhuti',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 2,
+    pages: 78,
+    year: 800,
+    rating: 4.8,
+    summary: 'Direct Self-Realization — a practical guide to experiencing the non-dual Self directly, beyond intellectual understanding.',
+    status: 'coming-soon',
+    keyIdeas: [],
+    mainTakeaways: [],
+    importantConcepts: [],
+    practicalLessons: [],
+    bestQuotes: [],
+    finalTakeaway: ''
   }
 ];
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
+  'vivekachudamani': '2026-08-26',
+  'atma-bodha': '2026-08-26',
+  'tattva-bodha': '2026-08-26',
+  'drig-drishya-viveka': '2026-08-26',
+  'aparokshanubhuti': '2026-08-26',
   '100-things-successful-people-do': '2026-08-26',
   'atomic-habits': '2026-08-22',
   'deep-work': '2026-08-20',
@@ -858,18 +993,23 @@ function avatarColor(name) {
 }
 
 function renderBookCard(book) {
+  const isComingSoon = book.status === 'coming-soon';
   const card = document.createElement('div');
-  card.className = 'book-card' + (state.saved.has(book.id) ? ' bookmarked' : '');
+  card.className = 'book-card' + (state.saved.has(book.id) ? ' bookmarked' : '') + (isComingSoon ? ' card-coming-soon' : '');
   card.dataset.id = book.id;
   card.tabIndex = 0;
   card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', `Read summary of ${book.title} by ${book.author}`);
+  card.setAttribute('aria-label', isComingSoon ? `Summary of ${book.title} coming soon` : `Read summary of ${book.title} by ${book.author}`);
 
   const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
+  const comingSoon = isComingSoon
+    ? `<span class="coming-soon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg> Coming soon</span>`
+    : '';
 
   card.innerHTML = `
     <div class="book-cover" style="background:${book.color}">
       ${initials}
+      ${comingSoon}
       <span class="bookmark-badge" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
       </span>
@@ -958,8 +1098,20 @@ function openSummary(id) {
     ? '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="currentColor"></path>'
     : '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>';
 
-  // Build anchor nav
-  const sections = [
+  if (book.status === 'coming-soon') {
+    summaryAnchors.innerHTML = '';
+    summarySections.innerHTML = `
+      <div class="coming-soon-panel">
+        <div class="coming-soon-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>
+        </div>
+        <h2>Summary coming soon</h2>
+        <p>The full summary of <strong>${book.title}</strong> is being prepared and will appear here shortly. Check back soon.</p>
+      </div>
+    `;
+  } else {
+    // Build anchor nav
+    const sections = [
     { id: 'key-ideas', label: 'Key Ideas', icon: '✦' },
     { id: 'takeaways', label: 'Takeaways', icon: '◆' },
     { id: 'concepts', label: 'Concepts', icon: '●' },
@@ -1026,6 +1178,7 @@ function openSummary(id) {
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+  }
 
   // Show
   document.body.style.overflow = 'hidden';
