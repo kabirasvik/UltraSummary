@@ -324,6 +324,43 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   FULL TRANSLATION
+   ============================================================ */
+.translation-card { overflow: hidden; }
+.translation-attrib {
+  font-size: 13px; color: var(--text-tertiary); margin-top: -12px; margin-bottom: 22px;
+}
+.translation-attrib strong { color: var(--text-secondary); font-weight: 600; }
+
+.translation-verses {
+  list-style: none; display: flex; flex-direction: column; gap: 14px;
+  max-height: 340px; overflow: hidden; position: relative;
+  transition: max-height 400ms var(--ease);
+  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+.translation-card.expanded .translation-verses {
+  max-height: none; -webkit-mask-image: none; mask-image: none;
+}
+.translation-verses li { display: flex; gap: 14px; align-items: baseline; }
+.verse-num {
+  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+  background: var(--accent-subtle); color: var(--accent);
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+}
+.verse-text { font-size: 15px; line-height: 1.7; color: var(--text-secondary); }
+
+.translation-toggle {
+  display: flex; align-items: center; gap: 8px; margin-top: 24px;
+  padding: 10px 18px; border-radius: var(--radius-sm); background: var(--text); color: var(--white);
+  font-size: 13px; font-weight: 600; transition: var(--transition);
+}
+.translation-toggle:hover { background: #2a2824; }
+.translation-toggle .toggle-count { color: rgba(255, 255, 255, 0.6); font-weight: 500; }
+.translation-toggle svg { width: 16px; height: 16px; transition: transform 300ms var(--ease); }
+.translation-card.expanded .translation-toggle svg { transform: rotate(180deg); }
+
+/* ============================================================
    SUMMARY VIEW
    ============================================================ */
 .summary-scrim {

@@ -792,7 +792,81 @@ const BOOKS = [
       { text: 'By the awakening of Self-knowledge, all ignorance is destroyed, just as darkness is dispelled by the rising sun.', cite: 'Atma Bodha' },
       { text: 'Knowledge alone — not actions, not rites, not rituals — is the direct cause of liberation.', cite: 'Atma Bodha' },
     ],
-    finalTakeaway: 'Atma Bodha is a beautifully compact guide to self-knowledge. In sixty-eight verses, Shankaracharya walks the seeker from the gross body inward through the five sheaths, negating each as not-Self, until the luminous witness — the Atman — is directly revealed. Its message is radical and liberating: you are not what you think you are. You are the eternal, free, blissful consciousness that was never bound. Knowledge of this alone is liberation.'
+    finalTakeaway: 'Atma Bodha is a beautifully compact guide to self-knowledge. In sixty-eight verses, Shankaracharya walks the seeker from the gross body inward through the five sheaths, negating each as not-Self, until the luminous witness — the Atman — is directly revealed. Its message is radical and liberating: you are not what you think you are. You are the eternal, free, blissful consciousness that was never bound. Knowledge of this alone is liberation.',
+    translation: {
+      translator: 'Swami Chinmayananda',
+      publisher: 'Chinmaya Mission, Mumbai',
+      verses: [
+        'I am composing the ATMA-BODHA, this treatise of the Knowledge of the Self, for those who have purified themselves by austerities and are peaceful in heart and calm, who are free from cravings and are desirous of liberation.',
+        'Just as the fire is the direct cause for cooking, so without Knowledge no emancipation can be had. Compared with all other forms of discipline Knowledge of the Self is the one direct means for liberation.',
+        'Action cannot destroy ignorance, for it is not in conflict with or opposed to ignorance. Knowledge does verily destroy ignorance as light destroys deep darkness.',
+        'The Soul appears to be finite because of ignorance. When ignorance is destroyed the Self which does not admit of any multiplicity truly reveals itself by itself: like the Sun when the clouds pass away.',
+        'Constant practice of knowledge purifies the Self (Jivatman), stained by ignorance and then disappears itself – as the powder of the Kataka-nut settles down after it has cleansed the muddy water.',
+        'The world which is full of attachments, aversions, etc., is like a dream. It appears to be real, as long as it continues but appears to be unreal when one is awake (i.e., when true wisdom dawns).',
+        'The Jagat appears to be true (Satyam) so long as Brahman, the substratum, the basis of all this creation, is not realised. It is like the illusion of silver in the mother-of pearl.',
+        'Like bubbles in the water, the worlds rise, exist and dissolve in the Supreme Self, which is the material cause and the prop of everything.',
+        'All the manifested world of things and beings are projected by imagination upon the substratum which is the Eternal All-pervading Vishnu, whose nature is Existence-Intelligence; just as the different ornaments are all made out of the same gold.',
+        'The All-pervading Akasa appears to be diverse on account of its association with various conditionings (Upadhis) which are different from each other. Space becomes one on the destruction of these limiting adjuncts: So also the Omnipresent Truth appears to be diverse on account of Its association with the various Upadhis and becomes one on the destruction of these Upadhis.',
+        'Because of Its association with different conditionings (Upadhis) such ideas as caste, colour and position are super-imposed upon the Atman, as flavour, colour, etc., are super-imposed on water.',
+        'Determined for each individual by his own past actions and made up of the Five elements – that have gone through the process of "five-fold self-division and mutual combination" (Pancheekarana) – are born the gross-body, the medium through which pleasure and pain are experienced, the tent-of-experiences.',
+        'The five Pranas, the ten organs and the Manas and the Buddhi, formed from the rudimentary elements (Tanmatras) before their "five-fold division and mutual combination with one another" (Pancheekarana) and this is the subtle body, the instruments-of-experience (of the individual).',
+        'Avidya which is indescribable and beginningless is the Causal Body. Know for certain that the Atman is other than these three conditioning bodies (Upadhis).',
+        'In its identification with the five-sheaths the Immaculate Atman appears to have borrowed their qualities upon Itself; as in the case of a crystal which appears to gather unto itself colour of its vicinity (blue cloth, etc.,).',
+        'Through discriminative self-analysis and logical thinking one should separate the Pure self within from the sheaths as one separates the rice from the husk, bran, etc., that are covering it. (Katha Upanishad 2.3.17, Svetasvatara Upanishad 1.12-1.16, BG 6.5, Vivekachudamani Verse 153)',
+        'The Atman does not shine in everything although He is All-pervading. He is manifest only in the inner equipment, the intellect (Buddhi): just as the reflection in a clean mirror.',
+        'One should understand that the Atman is always like the King, distinct from the body, senses, mind and intellect, all of which constitute the matter (Prakriti); and is the witness of their functions.',
+        'The moon appears to be running when the clouds move in the sky. Likewise to the non-discriminating person the Atman appears to be active when It is observed through the functions of the sense-organs.',
+        'Depending upon the energy of vitality of Consciousness (Atma Chaitanya) the body, senses, mind and intellect engage themselves in their respective activities, just as men work depending upon the light of the Sun.',
+        'Fools, because they lack in their powers of discrimination superimpose on the Atman, the Absolute-Existence-Knowledge (Sat-Chit), all the varied functions of the body and the senses, just as they attribute blue colour and the like to the sky.',
+        'The tremblings that belong to the waters are attributed through ignorance to the reflected moon dancing on it: likewise agency of action, of enjoyment and of other limitations (which really belong to the mind) are delusively understood as the nature of the Self (Atman).',
+        'Attachment, desire, pleasure, pain, etc., are perceived to exist so long as Buddhi or mind functions. They are not perceived in deep sleep when the mind ceases to exist. Therefore they belong to the mind alone and not to the Atman.',
+        'Just as luminosity is the nature of the Sun, coolness of water and heat of fire, so too the nature of the Atman is Eternity, Purity, Reality, Consciousness and Bliss.',
+        'By the indiscriminate blending of the two – the Existence-Knowledge-aspect of the Self and the thought-wave of the intellect – there arises the notion of "I know".',
+        'Atman never does anything and the intellect of its own accord has no capacity to experience "I know". But the individuality in us delusorily thinks he is himself the seer and the knower.',
+        'Just as the person who regards a rope as a snake is overcome by fear, so also one considering oneself as the ego (Jiva) is overcome by fear. The ego-centric individuality in us regains fearlessness by realising that It is not a Jiva but is Itself the Supreme Soul.',
+        'Just as a lamp illumines a jar or a pot, so also the Atman illumines the mind and the sense organs, etc. These material-objects by themselves cannot illumine themselves because they are inert.',
+        'A lighted-lamp does not need another lamp to illumine its light. So too, Atman which is Knowledge itself needs no other knowledge to know it.',
+        'By a process of negation of the conditionings (Upadhis) through the help of the scriptural statement "It is not this, It is not this", the oneness of the individual soul and the Supreme Soul, as indicated by the great Mahavakyas, has to be realised.',
+        'The body, etc., up to the "Causal Body" – Ignorance – which are objects perceived, are as perishable as bubbles. Realise through discrimination that I am the "Pure Brahman" ever completely separate from all these.',
+        'I am other than the body and so I am free from changes such as birth, wrinkling, senility, death, etc. I have nothing to do with the sense objects such as sound and taste, for I am without the sense-organs.',
+        'I am other than the mind and hence, I am free from sorrow, attachment, malice and fear, for "HE is without breath and without mind, Pure, etc.", is the Commandment of the great scripture, the Upanishads.',
+        'I am without attributes and actions; Eternal (Nitya) without any desire and thought (Nirvikalpa), without any dirt (Niranjana), without any change (Nirvikara), without form (Nirakara), ever-liberated (Nitya Mukta) ever-pure (Nirmala).',
+        'Like the space I fill all things within and without. Changeless and the same in all, at all times I am pure, unattached, stainless and motionless.',
+        'I am verily that Supreme Brahman alone which is Eternal, Pure and Free, One, indivisible and non-dual and of the nature of Changeless-Knowledge-Infinite.',
+        'The impression "I am Brahman" thus created by constant practice destroys ignorance and the agitation caused by it, just as medicine or Rasayana destroys disease.',
+        'Sitting in a solitary place, freeing the mind from desires and controlling the senses, meditate with unswerving attention on the Atman which is One without-a-second.',
+        'The wise one should intelligently merge the entire world-of-objects in the Atman alone and constantly think of the Self ever as contaminated by anything as the sky.',
+        'He who has realised the Supreme, discards all his identification with the objects of names and forms. (Thereafter) he dwells as an embodiment of the Infinite Consciousness and Bliss. He becomes the Self.',
+        'There are no distinctions such as "Knower", the "Knowledge" and the "Object of Knowledge" in the Supreme Self. On account of Its being of the nature of endless Bliss, It does not admit of such distinctions within Itself. It alone shines by Itself.',
+        'When this the lower and the higher aspects of the Self are well churned together, the fire of knowledge is born from it, which in its mighty conflagration shall burn down all the fuel of ignorance in us.',
+        'The Lord of the early dawn (Aruna) himself has already looted away the thick darkness, when soon the sun rises. The Divine Consciousness of the Self rises when the right knowledge has already killed the darkness in the bosom.',
+        'Atman is an ever-present Reality. Yet, because of ignorance it is not realised. On the destruction of ignorance Atman is realised. It is like the missing ornament of one\'s neck.',
+        'Brahman appears to be a "Jiva" because of ignorance, just as a post appears to be a ghost. The ego-centric-individuality is destroyed when the real nature of the "Jiva" is realised as the Self.',
+        'The ignorance characterised by the notions "I" and "Mine" is destroyed by the knowledge produced by the realisation of the true nature of the Self, just as right information removes the wrong notion about the directions.',
+        'The Yogi of perfect realisation and enlightenment sees through his "eye of wisdom" (Gyana Chakshush) the entire universe in his own Self and regards everything else as his own Self and nothing else.',
+        'Nothing whatever exists other than the Atman: the tangible universe is verily Atman. As pots and jars are verily made of clay and cannot be said to be anything but clay, so too, to the enlightened soul and that is perceived is the Self.',
+        'A liberated one, endowed with Self-knowledge, gives up the traits of his previously explained equipments (Upadhis) and because of his nature of Sat-chit-ananda, he verily becomes Brahman like (the worm that grows to be) a wasp.',
+        'After crossing the ocean of delusion and killing the monsters of likes and dislikes, the Yogi who is united with peace dwells in the glory of his own realised Self – as an Atmaram.',
+        'The self-abiding Jivan Mukta, relinquishing all his attachments to the illusory external happiness and satisfied with the bliss derived from the Atman, shines inwardly like a lamp placed inside a jar.',
+        'Though he lives in the conditionings (Upadhis), he, the contemplative one, remains ever unconcerned with anything or he may move about like the wind, perfectly unattached.',
+        'On the destruction of the Upadhis, the contemplative one is totally absorbed in "Vishnu", the All-pervading Spirit, like water into water, space into space and light into light.',
+        'Realise That to be Brahman, the attainment of which leaves nothing more to be attained, the blessedness of which leaves no other blessing to be desired and the knowledge of which leaves nothing more to be known.',
+        'Realise that to be Brahman which, when seen, leaves nothing more to be seen, which having become one is not born again in this world and which, when knowing leaves nothing else to be known.',
+        'Realise that to be Brahman which is Existence-Knowledge-Bliss-Absolute, which is Non-dual, Infinite, Eternal and One and which fills all the quarters – above and below and all that exists between.',
+        'Realise that to be Brahman which is Non-dual, Indivisible, One and Blissful and which is indicated in Vedanta as the Immutable Substratum, realised after the negation of all tangible objects.',
+        'Deities like Brahma and others taste only a particle, of the unlimited Bliss of Brahman and enjoy in proportion their share of that particle.',
+        'All objects are pervaded by Brahman. All actions are possible because of Brahman: therefore Brahman permeates everything as butter permeates milk.',
+        'Realise that to be Brahman which is neither subtle nor gross: neither short nor long: without birth or change: without form, qualities, colour and name.',
+        'That by the light of which the luminous, orbs like the Sun and the Moon are illuminated, but which is not illumined by their light, realise that to be Brahman.',
+        'Pervading the entire universe outwardly and inwardly the Supreme Brahman shines of Itself like the fire that permeates a red-hot iron-ball and glows by itself.',
+        'Brahman is other than this, the universe. There exists nothing that is not Brahman. If any object other than Brahman appears to exist, it is unreal like the mirage.',
+        'All that is perceived, or heard, is Brahman and nothing else. Attaining the knowledge of the Reality, one sees the Universe as the non-dual Brahman, Existence-Knowledge-Bliss-Absolute.',
+        'Though Atman is Pure Consciousness and ever-present everywhere, yet It is perceived by the eye-of-wisdom alone: but one whose vision is obscured by ignorance he does not see It; as the blind do not see the resplendent Sun.',
+        'The "Jiva" free from impurities, being heated in the fire of knowledge kindled by hearing and so on, shines of itself like gold.',
+        'The Atman, the Sun of Knowledge that rises in the sky of the heart, destroys the darkness of the ignorance, pervades and sustains all and shines and makes everything to shine.',
+        'He who renouncing all activities, who is free of all the limitations of time, space and direction, worships his own Atman which is present everywhere, which is the destroyer of heat and cold, which is Bliss-Eternal and stainless, becomes All-knowing and All-pervading and attains thereafter Immortality.',
+      ]
+    }
   },
   {
     id: 'tattva-bodha',
@@ -1155,13 +1229,14 @@ function openSummary(id) {
   } else {
     // Build anchor nav
     const sections = [
-    { id: 'key-ideas', label: 'Key Ideas', icon: '✦' },
-    { id: 'takeaways', label: 'Takeaways', icon: '◆' },
-    { id: 'concepts', label: 'Concepts', icon: '●' },
-    { id: 'lessons', label: 'Lessons', icon: '▸' },
-    { id: 'quotes', label: 'Quotes', icon: '❝' },
-    { id: 'final', label: 'Final', icon: '★' },
-  ];
+      { id: 'key-ideas', label: 'Key Ideas', icon: '✦' },
+      { id: 'takeaways', label: 'Takeaways', icon: '◆' },
+      { id: 'concepts', label: 'Concepts', icon: '●' },
+      { id: 'lessons', label: 'Lessons', icon: '▸' },
+      { id: 'quotes', label: 'Quotes', icon: '❝' },
+    ];
+    if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: '◈' });
+    sections.push({ id: 'final', label: 'Final', icon: '★' });
 
   summaryAnchors.innerHTML = sections.map(s =>
     `<a href="#summary-${s.id}" data-section="${s.id}">${s.label}</a>`
@@ -1204,6 +1279,22 @@ function openSummary(id) {
         `).join('')}
       </div>
     </section>
+    ${book.translation ? `
+    <section id="summary-translation">
+      <div class="section-card translation-card" id="translationCard">
+        <h2><span class="section-icon">◈</span> Full Translation</h2>
+        <p class="translation-attrib">Translated by <strong>${book.translation.translator}</strong> · Published by ${book.translation.publisher}</p>
+        <ol class="translation-verses" id="translationVerses">
+          ${book.translation.verses.map((v, i) => `<li><span class="verse-num">${i + 1}</span><span class="verse-text">${v}</span></li>`).join('')}
+        </ol>
+        <button class="translation-toggle" id="translationToggle" type="button" aria-expanded="false">
+          <span class="toggle-label">Show full translation</span>
+          <span class="toggle-count">(${book.translation.verses.length} verses)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </section>
+    ` : ''}
     <section id="summary-final">
       <div class="final-block">
         <h2>★ Final Takeaway</h2>
@@ -1221,6 +1312,18 @@ function openSummary(id) {
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Translation toggle
+  const translationToggle = document.getElementById('translationToggle');
+  if (translationToggle) {
+    const card = document.getElementById('translationCard');
+    const label = translationToggle.querySelector('.toggle-label');
+    translationToggle.addEventListener('click', () => {
+      const expanded = card.classList.toggle('expanded');
+      label.textContent = expanded ? 'Hide translation' : 'Show full translation';
+      translationToggle.setAttribute('aria-expanded', String(expanded));
+    });
+  }
   }
 
   // Show
