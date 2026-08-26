@@ -850,6 +850,16 @@ const ADDED_DATES = {
 BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
 BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
 
+/* ----- Category metadata ----- */
+const CATEGORY_META = {
+  Psychology: 'Understand the mind, habits, and behavior — from cognitive bias to lasting change.',
+  Business: 'Ideas and frameworks for building, leading, and thinking about work and money.',
+  Productivity: 'Do less, better. Focus, essentialism, and the science of getting things done.',
+  Philosophy: 'Timeless questions about meaning, virtue, and the art of living well.',
+  Science: 'Big ideas from history, biology, and the frontiers of human knowledge.',
+  Advaita: 'The non-dual wisdom of Adi Shankaracharya — the path of self-realization.',
+};
+
 /* ----- State ----- */
 const state = {
   books: BOOKS,
@@ -859,6 +869,7 @@ const state = {
   saved: new Set(JSON.parse(localStorage.getItem('margins-saved') || '[]')),
   currentBook: null,
   summaryOpen: false,
+  previousRoute: '#/',
 };
 
 /* ----- DOM refs ----- */
@@ -1080,6 +1091,7 @@ function openSummary(id) {
   if (!book) return;
   state.currentBook = book;
   state.summaryOpen = true;
+  state.previousRoute = currentHash().startsWith('#/book/') ? '#/' : currentHash();
 
   const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
 
@@ -1191,9 +1203,11 @@ function openSummary(id) {
   });
 
   updateSummaryProgress();
+  setHash('#/book/' + encodeURIComponent(id));
 }
 
-function closeSummary() {
+function closeSummary(updateHash) {
+  if (updateHash === undefined) updateHash = true;
   state.summaryOpen = false;
   summaryView.classList.remove('open');
   summaryScrim.classList.remove('open');
@@ -1201,6 +1215,9 @@ function closeSummary() {
   document.body.style.overflow = '';
   state.currentBook = null;
   summaryView.scrollTop = 0;
+  if (updateHash && currentHash().startsWith('#/book/')) {
+    setHash(state.previousRoute || '#/');
+  }
 }
 
 function updateSummaryProgress() {
@@ -1241,17 +1258,80 @@ searchClear.addEventListener('click', () => {
   searchInput.focus();
 });
 
+/* ----- Routing ----- */
+function currentHash() { return location.hash || '#/'; }
+
+function setHash(h) {
+  if (location.hash !== h) location.hash = h;
+}
+
+function updateCatLinksActive() {
+  $$('.cat-link').forEach(b => b.classList.toggle('active', b.dataset.filter === state.activeCategory));
+}
+
+function showHomeView() {
+  state.activeCategory = 'all';
+  updateCatLinksActive();
+  const hero = document.querySelector('.hero');
+  if (hero) hero.style.display = '';
+  document.getElementById('recent').hidden = false;
+  document.getElementById('categoryBanner').hidden = true;
+  const title = document.getElementById('libraryTitle');
+  title.textContent = 'The library';
+  title.hidden = false;
+  renderLibrary();
+}
+
+function showCategoryView(cat) {
+  const exists = state.books.some(b => b.category === cat);
+  if (!exists) { showHomeView(); return; }
+  state.activeCategory = cat;
+  updateCatLinksActive();
+  const hero = document.querySelector('.hero');
+  if (hero) hero.style.display = 'none';
+  document.getElementById('recent').hidden = true;
+  const banner = document.getElementById('categoryBanner');
+  banner.hidden = false;
+  document.getElementById('categoryTitle').textContent = cat;
+  document.getElementById('categoryDesc').textContent = CATEGORY_META[cat] || 'Browse all summaries in this category.';
+  const count = state.books.filter(b => b.category === cat).length;
+  document.getElementById('categoryCount').textContent = `${count} ${count === 1 ? 'book' : 'books'}`;
+  document.getElementById('libraryTitle').hidden = true;
+  renderLibrary();
+  window.scrollTo({ top: 0 });
+}
+
+function renderRoute() {
+  const hash = currentHash();
+  const bookMatch = hash.match(/^#\/book\/(.+)$/);
+  if (bookMatch) {
+    const id = decodeURIComponent(bookMatch[1]);
+    if (!state.books.some(b => b.id === id)) { showHomeView(); return; }
+    const alreadyOpen = state.summaryOpen && state.currentBook && state.currentBook.id === id;
+    if (!alreadyOpen) {
+      if (currentHash().startsWith('#/book/') && hash !== '#/book/' + id) {
+        // switching books directly
+      }
+      openSummary(id);
+    }
+    return;
+  }
+  if (state.summaryOpen) closeSummary(false);
+  const catMatch = hash.match(/^#\/category\/(.+)$/);
+  if (catMatch) {
+    showCategoryView(decodeURIComponent(catMatch[1]));
+  } else {
+    showHomeView();
+  }
+}
+
 /* ----- Category ----- */
 function bindCategory(btn) {
   btn.addEventListener('click', () => {
-    $$('.cat-link').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    state.activeCategory = btn.dataset.filter;
-    renderLibrary();
     closeMobileNav();
-    if (window.innerWidth > 768) {
-      document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
-    }
+    const filter = btn.dataset.filter;
+    if (filter === 'all') setHash('#/');
+    else setHash('#/category/' + encodeURIComponent(filter));
   });
 }
 catLinks.forEach(bindCategory);
@@ -1368,8 +1448,9 @@ if (heroBookCount) heroBookCount.textContent = state.books.length;
 setupMobileNav();
 initHero();
 renderRecent();
-renderLibrary();
 updateBookmarkUI();
+renderRoute();
+window.addEventListener('hashchange', renderRoute);
 
 /* ----- Summary scroll tracking ----- */
 summaryView.addEventListener('scroll', updateSummaryProgress, { passive: true });

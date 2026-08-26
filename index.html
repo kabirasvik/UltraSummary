@@ -125,9 +125,16 @@
     <!-- ======================= LIBRARY ======================= -->
     <section class="library" id="library">
       <div class="container">
-        <div class="section-head">
+        <div class="category-banner" id="categoryBanner" hidden>
+          <p class="eyebrow">Category</p>
+          <h1 class="category-title" id="categoryTitle">Category</h1>
+          <p class="category-desc" id="categoryDesc">Browse all summaries in this category.</p>
+          <span class="category-count" id="categoryCount"></span>
+        </div>
+
+        <div class="section-head" id="libraryHead">
           <div>
-            <h2 class="section-title">The library</h2>
+            <h2 class="section-title" id="libraryTitle">The library</h2>
             <p class="section-sub" id="resultCount">All titles, ranked by relevance.</p>
           </div>
           <div class="view-toggle" role="group" aria-label="View options">

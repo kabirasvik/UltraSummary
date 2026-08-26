@@ -308,6 +308,22 @@ ul { list-style: none; }
 .view-all:hover::after { transform: translateX(3px); }
 
 /* ============================================================
+   CATEGORY BANNER
+   ============================================================ */
+.category-banner {
+  padding: 32px 0 28px; border-bottom: 1px solid var(--border-light); margin-bottom: 28px;
+}
+.category-banner .eyebrow { margin-bottom: 8px; }
+.category-title {
+  font-size: 36px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 8px;
+}
+.category-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+.category-count {
+  display: inline-block; font-size: 13px; font-weight: 600; color: var(--text-secondary);
+  padding: 4px 14px; border-radius: 20px; background: var(--bg-alt);
+}
+
+/* ============================================================
    SUMMARY VIEW
    ============================================================ */
 .summary-scrim {
