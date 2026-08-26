@@ -37,7 +37,7 @@ html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); }
 
 body {
   font-family: var(--font);
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.65;
   color: var(--text);
   background: var(--bg);
@@ -259,8 +259,8 @@ ul { list-style: none; }
 .book-body { padding: 16px 20px 20px; display: flex; flex-direction: column; flex: 1; }
 .book-category { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px; }
 .book-title { font-size: 17px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 4px; }
-.book-author { font-size: 13px; color: var(--text-secondary); margin-bottom: 10px; }
-.book-summary { font-size: 13px; color: var(--text-secondary); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
+.book-author { font-size: 14px; color: var(--text-secondary); margin-bottom: 10px; }
+.book-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
 .book-meta { display: flex; align-items: center; gap: 12px; margin-top: auto; }
 .book-meta .chip { font-size: 11px; padding: 3px 10px; }
 .read-time { font-size: 12px; color: var(--text-tertiary); }
@@ -354,7 +354,7 @@ ul { list-style: none; }
 .summary-meta { display: flex; flex-direction: column; justify-content: center; }
 .summary-title { font-size: 36px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 8px; }
 .summary-author { font-size: 16px; color: var(--text-secondary); margin-bottom: 16px; }
-.summary-blurb { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
+.summary-blurb { font-size: 16px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; }
 .summary-facts { display: flex; flex-wrap: wrap; gap: 20px; }
 .fact { font-size: 13px; color: var(--text-tertiary); }
 .fact strong { font-weight: 600; color: var(--text); }
@@ -389,19 +389,19 @@ ul { list-style: none; }
 
 .section-card ul { display: flex; flex-direction: column; gap: 12px; }
 .section-card li {
-  padding-left: 20px; position: relative; font-size: 14px; line-height: 1.55; color: var(--text-secondary);
+  padding-left: 20px; position: relative; font-size: 15px; line-height: 1.6; color: var(--text-secondary);
 }
 .section-card li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
 .section-card li strong, .section-card li b { color: var(--text); font-weight: 600; }
-.section-card p { font-size: 14px; color: var(--text-secondary); line-height: 1.65; }
+.section-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
 
 /* Quotes block */
 .quote-block {
   background: var(--accent-subtle); border-left: 3px solid var(--accent); padding: 20px 24px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 8px 0;
 }
-.quote-block blockquote { font-size: 15px; font-style: italic; color: var(--text); line-height: 1.65; }
+.quote-block blockquote { font-size: 16px; font-style: italic; color: var(--text); line-height: 1.65; }
 .quote-block cite { font-size: 12px; color: var(--text-tertiary); font-style: normal; display: block; margin-top: 8px; }
 
 /* Final takeaway */
@@ -409,7 +409,7 @@ ul { list-style: none; }
   background: var(--text); border-radius: var(--radius); padding: 28px 32px; color: var(--white);
 }
 .final-block h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-.final-block p { font-size: 15px; line-height: 1.7; color: rgba(255,255,255,0.85); }
+.final-block p { font-size: 16px; line-height: 1.7; color: rgba(255,255,255,0.85); }
 
 /* ============================================================
    DRAWER
