@@ -641,6 +641,57 @@ const BOOKS = [
       { text: 'Without effort, your talent is nothing more than unmet potential. Without effort, your skill is nothing more than what you could have done but did not.', cite: 'Angela Duckworth' },
     ],
     finalTakeaway: 'Grit redefines what it takes to succeed. Duckworth\'s research shows that passion and perseverance — not talent — are the most reliable predictors of achievement. The good news is that grit can be cultivated. By developing deep interests, connecting work to purpose, practicing deliberately, and maintaining hope, anyone can grow their grit.'
+  },
+  {
+    id: '100-things-successful-people-do',
+    title: '100 Things Successful People Do',
+    author: 'Nigel Cumberland',
+    category: 'Psychology',
+    color: '#1b3a3a',
+    accent: '#c8a96e',
+    readingTime: 6,
+    pages: 352,
+    year: 2020,
+    rating: 4.3,
+    summary: 'One hundred practical, time-tested habits for building a successful, meaningful life — distilled into one clear guide.',
+    keyIdeas: [
+      '<b>Success is personal</b> — it starts with a dream you choose, not others\' expectations. Define what success means on your own terms.',
+      '<b>Emotional intelligence</b> outweighs raw IQ. How you react, empathize, and manage impulses determines 90% of life outcomes.',
+      'Apply the <b>Serenity test</b>: focus energy on what you can control; accept what you cannot. Worrying about the uncontrollable wastes your power.',
+      'Your <b>daily habits compound</b> into who you become — how you start each day, sleep, health, and focus all shape your trajectory.',
+      '<b>Turn work into play</b> — you spend thousands of hours at work each year. If you do not enjoy it, change the work or change how you approach it.',
+      '<b>Grit and persistence</b> beat talent. Fail fast, learn, and never give up early. Most people quit right before the breakthrough.',
+      'Your <b>tribe and environment</b> define you. You become the people you surround yourself with. Choose wisely.',
+    ],
+    mainTakeaways: [
+      '<b>Relationships and character</b> matter more than wealth, status, or titles. Genuine success is built on integrity, likeability, and deep connections.',
+      '<b>Manage your mind</b> — thoughts become feelings, and feelings become actions. Watch for negative loops and reframe them deliberately.',
+      '<b>Protect your foundations</b>: health, sleep, time, and boundaries come first. Everything else rests on them.',
+      '<b>Do the opposite of the crowd</b> when it matters. If the crowd gets average results, be willing to stand out and be uncomfortable.',
+      'Live with <b>purpose and gratitude</b> — count what you have, practice daily gratitude, connect to something bigger than yourself, and plan the legacy you want to leave.',
+    ],
+    importantConcepts: [
+      '<b>The Serenity Test</b> — a framework for distinguishing what you can influence from what you cannot, saving energy for what actually matters.',
+      '<b>Emotional intelligence (EQ)</b> — self-awareness, empathy, impulse control, and social skill. More predictive of success than IQ.',
+      '<b>Parkinson\'s Law and Pomodoro</b> for focus — work expands to fill time; short bursts with breaks produce better results.',
+      'The "Will I regret saying no?" test as a filter for every opportunity — if the answer is no, say yes. If it is not a hell yes, say no.',
+      '<b>Your tribe and circle of influence</b> — you become the average of the five people you spend the most time with. Curate your circle.',
+    ],
+    practicalLessons: [
+      '<b>Start each day well</b> — wake earlier, eat well, plan the day, and arrive calm rather than rushed.',
+      '<b>Pause before reacting and before pressing "Send."</b> Impulsive messages and reactions damage relationships and reputations.',
+      'Keep a <b>gratitude journal</b> — end each day by writing one thing that gave your day meaning.',
+      '<b>Set boundaries</b> — get home on time, take full annual leave, disconnect from devices, and say no to what does not serve you.',
+      'Practice <b>daily deliberate learning</b> — ask every evening: "What did I learn today?" Stay a student of life.',
+    ],
+    bestQuotes: [
+      { text: 'Success is not about what others think of you — it is about being true to the person you want to become.', cite: 'Nigel Cumberland' },
+      { text: 'Focus on what you can control and accept what you cannot. That single distinction changes everything.', cite: 'Nigel Cumberland' },
+      { text: 'You are the sum of your habits, your tribe, and the thoughts you choose to keep.', cite: 'Nigel Cumberland' },
+      { text: 'How you start the day determines how you perform. Begin well and the rest follows.', cite: 'Nigel Cumberland' },
+      { text: 'The regret you fear from trying is nothing compared to the regret of never having tried at all.', cite: 'Nigel Cumberland' },
+    ],
+    finalTakeaway: '100 Things Successful People Do is not a promise of overnight success — it is a practical toolkit of habits that compound over a lifetime. The book distills decades of coaching wisdom into actionable daily practices: manage your mind, protect your health, build genuine relationships, persist through failure, and define success on your own terms. The core message is simple but profound: a successful life is built one intentional choice at a time.'
   }
 ];
 
@@ -1087,6 +1138,8 @@ drawerScrim.addEventListener('click', closeDrawer);
 
 /* ----- Init ----- */
 statBooks.textContent = state.books.length;
+const heroBookCount = document.getElementById('heroBookCount');
+if (heroBookCount) heroBookCount.textContent = state.books.length;
 initHero();
 renderLibrary();
 updateBookmarkUI();
