@@ -1,5 +1,5 @@
 /* ============================================================
-   Margins – Application
+   Ultra Summary – Application
    ============================================================ */
 
 /* ----- Book Data ----- */
@@ -695,6 +695,26 @@ const BOOKS = [
   }
 ];
 
+/* ----- Added dates (recently added first) ----- */
+const ADDED_DATES = {
+  '100-things-successful-people-do': '2026-08-26',
+  'atomic-habits': '2026-08-22',
+  'deep-work': '2026-08-20',
+  'the-psychology-of-money': '2026-08-18',
+  'grit': '2026-08-16',
+  'essentialism': '2026-08-14',
+  'mans-search-for-meaning': '2026-08-12',
+  'meditations': '2026-08-10',
+  'sapiens': '2026-08-08',
+  'start-with-why': '2026-08-06',
+  'thinking-fast-and-slow': '2026-08-04',
+  'the-power-of-now': '2026-08-02',
+  'the-alchemist': '2026-07-31',
+  'the-4-hour-workweek': '2026-07-28',
+};
+BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
+BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
+
 /* ----- State ----- */
 const state = {
   books: BOOKS,
@@ -897,6 +917,23 @@ function renderLibrary() {
   updateBookmarkUI();
 }
 
+/* ----- Recently Added ----- */
+function renderRecent() {
+  const row = document.getElementById('recentRow');
+  if (!row) return;
+  const recent = state.books.slice(0, 4);
+  row.innerHTML = '';
+  recent.forEach(book => {
+    const card = renderBookCard(book);
+    card.classList.add('recent-card');
+    const badge = document.createElement('span');
+    badge.className = 'recent-badge';
+    badge.textContent = 'New';
+    card.querySelector('.book-cover').appendChild(badge);
+    row.appendChild(card);
+  });
+}
+
 /* ----- Summary View ----- */
 function openSummary(id) {
   const book = state.books.find(b => b.id === id);
@@ -1052,15 +1089,50 @@ searchClear.addEventListener('click', () => {
 });
 
 /* ----- Category ----- */
-catLinks.forEach(btn => {
+function bindCategory(btn) {
   btn.addEventListener('click', () => {
-    catLinks.forEach(b => b.classList.remove('active'));
+    $$('.cat-link').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
     state.activeCategory = btn.dataset.filter;
     renderLibrary();
-    // Scroll to library
-    document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+    closeMobileNav();
+    if (window.innerWidth > 768) {
+      document.getElementById('library').scrollIntoView({ behavior: 'smooth' });
+    }
   });
+}
+catLinks.forEach(bindCategory);
+
+/* ----- Mobile nav ----- */
+const menuBtn = $('#menuBtn');
+const mobileNav = $('#mobileNav');
+
+function setupMobileNav() {
+  const categories = [...new Set(state.books.map(b => b.category))];
+  const filters = ['all', ...categories];
+  mobileNav.innerHTML = filters.map(f => {
+    const label = f === 'all' ? 'All' : f;
+    return `<button class="cat-link ${f === state.activeCategory ? 'active' : ''}" data-filter="${f}">${label}</button>`;
+  }).join('');
+  $$('.mobile-nav .cat-link').forEach(bindCategory);
+}
+
+function toggleMobileNav(force) {
+  const open = typeof force === 'boolean' ? force : mobileNav.hidden;
+  mobileNav.hidden = !open;
+  menuBtn.setAttribute('aria-expanded', String(open));
+  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+}
+
+function closeMobileNav() {
+  toggleMobileNav(false);
+}
+
+menuBtn.addEventListener('click', () => toggleMobileNav());
+document.addEventListener('click', e => {
+  if (!mobileNav.hidden && !e.target.closest('.site-header')) {
+    closeMobileNav();
+  }
 });
 
 /* ----- View toggle ----- */
@@ -1079,8 +1151,8 @@ clearFilters.addEventListener('click', () => {
   state.searchQuery = '';
   searchClear.hidden = true;
   state.activeCategory = 'all';
-  catLinks.forEach(b => b.classList.remove('active'));
-  catLinks[0].classList.add('active');
+  $$('.cat-link').forEach(b => b.classList.remove('active'));
+  $$('.cat-link[data-filter="all"]').forEach(b => b.classList.add('active'));
   renderLibrary();
 });
 
@@ -1140,7 +1212,9 @@ drawerScrim.addEventListener('click', closeDrawer);
 statBooks.textContent = state.books.length;
 const heroBookCount = document.getElementById('heroBookCount');
 if (heroBookCount) heroBookCount.textContent = state.books.length;
+setupMobileNav();
 initHero();
+renderRecent();
 renderLibrary();
 updateBookmarkUI();
 
