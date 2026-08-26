@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Margins — Read less. Understand more.</title>
+  <meta name="description" content="A calm, distraction-free library of book summaries. Read less, understand more." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Margins home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">Margins</span>
+      </a>
+
+      <nav class="category-nav" aria-label="Categories">
+        <button class="cat-link active" data-filter="all">All</button>
+        <button class="cat-link" data-filter="Psychology">Psychology</button>
+        <button class="cat-link" data-filter="Business">Business</button>
+        <button class="cat-link" data-filter="Productivity">Productivity</button>
+        <button class="cat-link" data-filter="Philosophy">Philosophy</button>
+        <button class="cat-link" data-filter="Science">Science</button>
+      </nav>
+
+      <div class="header-actions">
+        <div class="search-wrap">
+          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
+          </svg>
+          <input type="search" id="searchInput" class="search-input" placeholder="Search titles or authors…" autocomplete="off" aria-label="Search books" />
+          <button class="search-clear" id="searchClear" type="button" aria-label="Clear search" hidden>&times;</button>
+        </div>
+        <button class="icon-btn" id="bookmarkBtn" type="button" aria-label="Saved books" aria-pressed="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span class="icon-badge" id="bookmarkCount" hidden>0</span>
+        </button>
+        <button class="avatar" type="button" aria-label="Profile" title="Profile">K</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ======================= HERO ======================= -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A calm library of ideas</p>
+          <h1>Read less.<br /><em>Understand more.</em></h1>
+          <p class="hero-sub">
+            Every idea worth having, distilled into a focused, scannable summary.
+            No fluff, no filler — just the core of great books.
+          </p>
+          <div class="hero-actions">
+            <a href="#library" class="btn btn-primary">Browse the library</a>
+            <span class="hero-note">21 books · 4 minutes each</span>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <strong id="statBooks">21</strong>
+              <span>book summaries</span>
+            </div>
+            <div class="stat">
+              <strong>4<small>m</small></strong>
+              <span>avg. reading time</span>
+            </div>
+            <div class="stat">
+              <strong>120<small>k</small></strong>
+              <span>readers monthly</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-feature" id="heroFeature">
+          <div class="feature-card">
+            <span class="feature-tag">Featured summary</span>
+            <div class="feature-cover" id="featureCover"></div>
+            <div class="feature-info">
+              <h2 id="featureTitle">Atomic Habits</h2>
+              <p class="feature-author" id="featureAuthor">James Clear</p>
+              <p class="feature-blurb" id="featureBlurb">
+                Tiny changes, remarkable results. How 1% daily improvement compounds into extraordinary outcomes.
+              </p>
+              <div class="feature-meta">
+                <span class="chip">Self-Improvement</span>
+                <span class="chip">5 min read</span>
+              </div>
+              <a class="btn btn-dark" id="featureLink" href="#">Read the summary</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= LIBRARY ======================= -->
+    <section class="library" id="library">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2 class="section-title">The library</h2>
+            <p class="section-sub" id="resultCount">All titles, ranked by relevance.</p>
+          </div>
+          <div class="view-toggle" role="group" aria-label="View options">
+            <button class="view-btn active" data-view="grid" aria-label="Grid view">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"></rect><rect x="14" y="3" width="7" height="7" rx="1"></rect><rect x="3" y="14" width="7" height="7" rx="1"></rect><rect x="14" y="14" width="7" height="7" rx="1"></rect></svg>
+            </button>
+            <button class="view-btn" data-view="list" aria-label="List view">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"></line><line x1="4" y1="12" x2="20" y2="12"></line><line x1="4" y1="18" x2="20" y2="18"></line></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="book-grid" id="bookGrid" aria-live="polite"></div>
+
+        <div class="empty-state" id="emptyState" hidden>
+          <div class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
+          </div>
+          <h3>No books found</h3>
+          <p>Try a different keyword or clear your filters.</p>
+          <button class="btn btn-primary" id="clearFilters" type="button">Reset everything</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FOOTER ======================= -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <a href="#top" class="brand">
+            <span class="brand-mark" aria-hidden="true"></span>
+            <span class="brand-name">Margins</span>
+          </a>
+          <p>Read less. Understand more.</p>
+        </div>
+        <p class="footer-note">Summaries are original distillations of published works. © 2026 Margins.</p>
+      </div>
+    </footer>
+  </main>
+
+  <!-- ======================= SAVED DRAWER ======================= -->
+  <div class="drawer-scrim" id="drawerScrim" hidden></div>
+  <aside class="drawer" id="savedDrawer" aria-hidden="true" aria-label="Saved books">
+    <div class="drawer-head">
+      <h2>Saved <span class="drawer-count" id="drawerCount">0</span></h2>
+      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close saved drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawerBody">
+      <p class="drawer-empty" id="drawerEmpty">Nothing saved yet. Tap the bookmark on any book to keep it here.</p>
+      <ul class="drawer-list" id="drawerList"></ul>
+    </div>
+  </aside>
+
+  <!-- ======================= SUMMARY VIEW ======================= -->
+  <div class="summary-scrim" id="summaryScrim" hidden></div>
+  <section class="summary" id="summaryView" aria-hidden="true" aria-label="Book summary" tabindex="-1">
+    <header class="summary-header">
+      <div class="container summary-header-inner">
+        <button class="back-btn" id="summaryBack" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+          Back to library
+        </button>
+        <div class="summary-progress" aria-hidden="true"><span id="summaryProgress"></span></div>
+        <div class="summary-actions">
+          <button class="icon-btn bookmark-ctrl" id="summaryBookmark" type="button" aria-label="Save this book">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" id="summaryClose" type="button" aria-label="Close summary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="container summary-body">
+      <!-- Book masthead -->
+      <div class="summary-masthead">
+        <div class="summary-cover" id="summaryCover"></div>
+        <div class="summary-meta">
+          <p class="eyebrow" id="summaryCategory">Psychology</p>
+          <h1 class="summary-title" id="summaryTitle">Book Title</h1>
+          <p class="summary-author">by <span id="summaryAuthor">Author</span></p>
+          <p class="summary-blurb" id="summaryBlurb">A short description of the book.</p>
+          <div class="summary-facts">
+            <span class="fact"><strong id="factPages">—</strong> pages</span>
+            <span class="fact"><strong id="factTime">—</strong> min to read</span>
+            <span class="fact"><strong id="factYear">—</strong> first published</span>
+            <span class="fact"><strong id="factRating">—</strong> rating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-anchors" id="summaryAnchors" aria-label="Sections"></div>
+
+      <div class="summary-sections" id="summarySections"></div>
+    </div>
+  </section>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
