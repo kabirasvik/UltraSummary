@@ -971,7 +971,6 @@ const state = {
   currentView: 'grid',
   activeCategory: 'all',
   searchQuery: '',
-  saved: new Set(JSON.parse(localStorage.getItem('margins-saved') || '[]')),
   currentBook: null,
   summaryOpen: false,
   previousRoute: '#/',
@@ -1007,16 +1006,6 @@ const factRating = $('#factRating');
 const summaryAnchors = $('#summaryAnchors');
 const summarySections = $('#summarySections');
 const summaryProgress = $('#summaryProgress');
-const summaryBookmark = $('#summaryBookmark');
-const bookmarkBtn = $('#bookmarkBtn');
-const bookmarkCount = $('#bookmarkCount');
-const drawer = $('#savedDrawer');
-const drawerScrim = $('#drawerScrim');
-const drawerClose = $('#drawerClose');
-const drawerBody = $('#drawerBody');
-const drawerList = $('#drawerList');
-const drawerEmpty = $('#drawerEmpty');
-const drawerCount = $('#drawerCount');
 const statBooks = $('#statBooks');
 
 /* ----- Toast ----- */
@@ -1053,92 +1042,11 @@ function showToast(msg) {
   toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
 }
 
-/* ----- Bookmark ----- */
-function saveState() {
-  localStorage.setItem('margins-saved', JSON.stringify([...state.saved]));
-  updateBookmarkUI();
-}
-
-function updateBookmarkUI() {
-  const count = state.saved.size;
-  bookmarkCount.textContent = count;
-  bookmarkCount.hidden = count === 0;
-  bookmarkBtn.setAttribute('aria-pressed', count > 0);
-  $$('.book-card').forEach(card => {
-    card.classList.toggle('bookmarked', state.saved.has(card.dataset.id));
-  });
-  if (drawer.classList.contains('open')) renderDrawer();
-}
-
-function toggleBookmark(id) {
-  if (state.saved.has(id)) {
-    state.saved.delete(id);
-    showToast('Removed from saved');
-  } else {
-    state.saved.add(id);
-    showToast('Saved to your library');
-  }
-  saveState();
-}
-
-/* ----- Drawer ----- */
-function renderDrawer() {
-  const ids = [...state.saved];
-  drawerCount.textContent = ids.length;
-  if (ids.length === 0) {
-    drawerList.innerHTML = '';
-    drawerEmpty.hidden = false;
-    return;
-  }
-  drawerEmpty.hidden = true;
-  drawerList.innerHTML = ids.map(id => {
-    const book = state.books.find(b => b.id === id);
-    if (!book) return '';
-    return `<li>
-      <div class="drawer-cover" style="background:${book.color}">
-        <span class="cover-initials">${book.title.charAt(0)}</span>
-      <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
-      </div>
-      <div class="drawer-info"><strong>${book.title}</strong><span>${book.author}</span></div>
-      <button class="drawer-remove" data-id="${book.id}" aria-label="Remove ${book.title}">&times;</button>
-    </li>`;
-  }).join('');
-  $$('.drawer-remove').forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.stopPropagation();
-      toggleBookmark(btn.dataset.id);
-      if (state.saved.size === 0) closeDrawer();
-    });
-  });
-}
-
-function openDrawer() {
-  renderDrawer();
-  drawer.classList.add('open');
-  drawerScrim.hidden = false;
-  requestAnimationFrame(() => drawerScrim.classList.add('open'));
-  document.body.style.overflow = 'hidden';
-}
-
-function closeDrawer() {
-  drawer.classList.remove('open');
-  drawerScrim.classList.remove('open');
-  drawerScrim.hidden = true;
-  document.body.style.overflow = '';
-}
-
 /* ----- Render ----- */
-function avatarColor(name) {
-  const colors = ['#2d3436','#1a1a2e','#2c1810','#1e272e','#1b3a2b','#1a2634','#1e2a2a','#1a1f2e'];
-  let hash = 0;
-  for (let i = 0; i < name.length; i++) hash = name.charCodeAt(i) + ((hash << 5) - hash);
-  return colors[Math.abs(hash) % colors.length];
-}
-
 function renderBookCard(book) {
   const isComingSoon = book.status === 'coming-soon';
   const card = document.createElement('div');
-  card.className = 'book-card' + (state.saved.has(book.id) ? ' bookmarked' : '') + (isComingSoon ? ' card-coming-soon' : '');
+  card.className = 'book-card' + (isComingSoon ? ' card-coming-soon' : '');
   card.dataset.id = book.id;
   card.tabIndex = 0;
   card.setAttribute('role', 'button');
@@ -1152,11 +1060,8 @@ function renderBookCard(book) {
   card.innerHTML = `
     <div class="book-cover" style="background:${book.color}">
       <span class="cover-initials">${initials}</span>
-        <img src="images/covers/drawer/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="drawer" loading="lazy" onerror="coverError(this)">
+        <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
       ${comingSoon}
-      <span class="bookmark-badge" aria-hidden="true">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-      </span>
     </div>
     <div class="book-body">
       <span class="book-category">${book.category}</span>
@@ -1198,7 +1103,6 @@ function renderLibrary() {
   const frag = document.createDocumentFragment();
   filtered.forEach(book => frag.appendChild(renderBookCard(book)));
   bookGrid.appendChild(frag);
-  updateBookmarkUI();
 }
 
 /* ----- Summary View ----- */
@@ -1222,10 +1126,6 @@ function openSummary(id) {
   factTime.textContent = book.readingTime;
   factYear.textContent = book.year;
   factRating.textContent = book.rating.toFixed(1);
-
-  summaryBookmark.innerHTML = state.saved.has(book.id)
-    ? '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="currentColor"></path>'
-    : '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>';
 
   if (book.status === 'coming-soon') {
     summaryAnchors.innerHTML = '';
@@ -1564,25 +1464,31 @@ summaryBack.addEventListener('click', closeSummary);
 summaryClose.addEventListener('click', closeSummary);
 summaryScrim.addEventListener('click', closeSummary);
 
-summaryBookmark.addEventListener('click', () => {
-  if (state.currentBook) {
-    toggleBookmark(state.currentBook.id);
-    const isSaved = state.saved.has(state.currentBook.id);
-    summaryBookmark.innerHTML = isSaved
-      ? '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z" fill="currentColor"></path>'
-      : '<path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>';
-  }
-});
-
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && state.summaryOpen) closeSummary();
-  if (e.key === 'Escape' && drawer.classList.contains('open')) closeDrawer();
 });
 
-/* ----- Bookmark drawer ----- */
-bookmarkBtn.addEventListener('click', openDrawer);
-drawerClose.addEventListener('click', closeDrawer);
-drawerScrim.addEventListener('click', closeDrawer);
+/* ----- Theme ----- */
+const themeToggle = document.getElementById('themeToggle');
+
+function getTheme() {
+  return localStorage.getItem('ultra-theme') || 'light';
+}
+
+function setTheme(theme, persist = true) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
+  }
+  if (persist) localStorage.setItem('ultra-theme', theme);
+}
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    setTheme(getTheme() === 'dark' ? 'light' : 'dark');
+  });
+}
 
 /* ----- Init ----- */
 statBooks.textContent = state.books.length;
@@ -1590,7 +1496,7 @@ const heroBookCount = document.getElementById('heroBookCount');
 if (heroBookCount) heroBookCount.textContent = state.books.length;
 setupMobileNav();
 initHero();
-updateBookmarkUI();
+setTheme(getTheme(), false);
 renderRoute();
 window.addEventListener('hashchange', renderRoute);
 

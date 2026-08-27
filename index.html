@@ -7,8 +7,11 @@
   <meta name="description" content="A calm, distraction-free library of book summaries. Read less, understand more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script>
+    if (localStorage.getItem('ultra-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -17,8 +20,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#top" class="brand" aria-label="Ultra Summary home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-name">Ultra Summary</span>
+        <img src="images/logo-black.png" alt="" class="brand-logo logo-light" />
+        <img src="images/logo-white.png" alt="" class="brand-logo logo-dark" />
       </a>
 
       <nav class="category-nav" aria-label="Categories">
@@ -41,13 +44,22 @@
       </div>
 
       <div class="header-actions">
-        <button class="icon-btn" id="bookmarkBtn" type="button" aria-label="Saved books" aria-pressed="false">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
           </svg>
-          <span class="icon-badge" id="bookmarkCount" hidden>0</span>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
         </button>
-        <button class="avatar" type="button" aria-label="Profile" title="Profile">K</button>
         <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-haspopup="true">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
         </button>
@@ -151,8 +163,8 @@
       <div class="container footer-inner">
         <div class="footer-brand">
           <a href="#top" class="brand">
-            <span class="brand-mark" aria-hidden="true"></span>
-            <span class="brand-name">Ultra Summary</span>
+            <img src="images/logo-black.png" alt="" class="brand-logo logo-light" />
+            <img src="images/logo-white.png" alt="" class="brand-logo logo-dark" />
           </a>
           <p>Read less. Understand more.</p>
         </div>
@@ -160,21 +172,6 @@
       </div>
     </footer>
   </main>
-
-  <!-- ======================= SAVED DRAWER ======================= -->
-  <div class="drawer-scrim" id="drawerScrim" hidden></div>
-  <aside class="drawer" id="savedDrawer" aria-hidden="true" aria-label="Saved books">
-    <div class="drawer-head">
-      <h2>Saved <span class="drawer-count" id="drawerCount">0</span></h2>
-      <button class="icon-btn" id="drawerClose" type="button" aria-label="Close saved drawer">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-      </button>
-    </div>
-    <div class="drawer-body" id="drawerBody">
-      <p class="drawer-empty" id="drawerEmpty">Nothing saved yet. Tap the bookmark on any book to keep it here.</p>
-      <ul class="drawer-list" id="drawerList"></ul>
-    </div>
-  </aside>
 
   <!-- ======================= SUMMARY VIEW ======================= -->
   <div class="summary-scrim" id="summaryScrim" hidden></div>
@@ -187,11 +184,6 @@
         </button>
         <div class="summary-progress" aria-hidden="true"><span id="summaryProgress"></span></div>
         <div class="summary-actions">
-          <button class="icon-btn bookmark-ctrl" id="summaryBookmark" type="button" aria-label="Save this book">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
-            </svg>
-          </button>
           <button class="icon-btn" id="summaryClose" type="button" aria-label="Close summary">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
           </button>
