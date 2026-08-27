@@ -361,7 +361,7 @@ ul { list-style: none; }
   background: var(--accent-subtle); color: var(--accent);
   font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
 }
-.verse-text { font-size: 15px; line-height: 1.7; color: var(--text-secondary); }
+.verse-text { font-size: calc(15px * var(--fs)); line-height: 1.7; color: var(--text-secondary); }
 
 .translation-toggle {
   display: flex; align-items: center; gap: 8px; margin: 24px auto 0;
@@ -482,7 +482,7 @@ ul { list-style: none; }
   background: var(--text); border-radius: var(--radius); padding: 28px 32px; color: var(--white);
 }
 .final-block h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; }
-.final-block p { font-size: 16px; line-height: 1.7; color: var(--white); opacity: 0.85; }
+.final-block p { font-size: calc(16px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.85; }
 
 /* ============================================================
    TOAST & TOP
@@ -587,6 +587,7 @@ ul { list-style: none; }
   .summary-header-inner { gap: 8px; }
   .back-btn { font-size: 0; gap: 0; padding: 8px; }
   .back-btn::after { content: 'Back'; font-size: 13px; }
+  .font-btn { width: 34px; height: 34px; font-size: 18px; }
   .to-top { bottom: 20px; right: 20px; }
 }
 
