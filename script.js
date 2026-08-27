@@ -5,6 +5,80 @@
 /* ----- Book Data ----- */
 const BOOKS = [
   {
+    id: 'svarupanusandhanashtakam',
+    title: 'Svarupanusandhanashtakam',
+    author: 'Adi Shankaracharya',
+    category: 'Advaita',
+    color: '#2a1f1a',
+    accent: '#d4a574',
+    readingTime: 2,
+    pages: 5,
+    year: 800,
+    rating: 4.8,
+    summary: 'Eight Verses for Continuous Inquiry into One\'s True Nature, a meditation text that points directly to the recognition of what one truly is.',
+    keyIdeas: [
+      'The <b>Svarupanusandhanashtakam</b> ("Eight Verses for Continuous Inquiry into One\'s True Nature") is a meditation text meant to be <b>practised, not just read</b>.',
+      'The title is the instruction: <b>svarupa</b> means one\'s own true nature, <b>anusandhana</b> means continuous inquiry or remembrance, and <b>ashtakam</b> means eight verses.',
+      'Each verse describes the Self in the language of <b>pure awareness</b>, unborn, without beginning or end, free from the three states, untouched by the body and senses.',
+      'The language is <b>direct and declarative</b>, pointing at a living recognition rather than proving a philosophical point.',
+      'The verses serve as <b>prompts</b> for the recognition of the Self to be fresh and immediate, not merely remembered from a past experience.',
+      'It is one of Shankaracharya\'s <b>shorter and less well known</b> compositions, but highly regarded for its quality of presence and suitability for daily recitation.',
+    ],
+    mainTakeaways: [
+      'The text is meant to be <b>practised</b>, each verse is a reminder to return, again and again, to the recognition of what one truly is.',
+      'The Self is described as <b>pure awareness</b>, unborn, free from the three states, untouched by the body, senses, time, or change.',
+      'Shankaracharya is <b>pointing at a living recognition</b>, not arguing a philosophical position.',
+      'Regular recitation <b>cuts through mental noise</b> and re-establishes the sense of one\'s own natural peace.',
+    ],
+    importantConcepts: [
+      '<b>Svarupa:</b> One\'s own nature or true form, the subject of continuous inquiry.',
+      '<b>Anusandhana:</b> Continuous inquiry or remembrance, the practice the verses support.',
+      '<b>Turiya:</b> The Fourth, the state beyond waking, dream, and deep sleep.',
+      '<b>Neti Neti:</b> "Not this, not this", the method of negation that reveals the Full.',
+      '<b>Aham Brahmasmi:</b> "I am Brahman", the mental modification through which the Self is attained.',
+      '<b>Phalashruti:</b> The closing verse declaring the fruit of reciting the hymn.',
+    ],
+    practicalLessons: [
+      'Recite the verses <b>daily with reverence</b> as a practice of inquiry into your true nature.',
+      'Return <b>again and again</b> to the recognition of what you truly are, beyond body and mind.',
+      'Use the <b>rhythm and directness</b> of the language to cut through mental noise.',
+      'Meditate on the Self as <b>pure awareness</b>, free from the three states of waking, dream, and deep sleep.',
+    ],
+    bestQuotes: [
+      { text: 'That supreme, eternal Brahman which one attains, having renounced all, that very Brahman I myself am.', cite: 'Svarupanusandhanashtakam' },
+      { text: 'That whose nature is bliss, whose very essence is pure luminous consciousness, the Fourth (Turiya) beyond the three states, that alone I am.', cite: 'Svarupanusandhanashtakam' },
+      { text: 'That which is infinite, all-pervading, free from distinctions, formless, supremely radiant, and free from death, that eternal supreme Brahman alone am I.', cite: 'Svarupanusandhanashtakam' },
+      { text: 'That devout person who recites this hymn with reverence shall become Vishnu himself in this very world.', cite: 'Svarupanusandhanashtakam' },
+    ],
+    finalTakeaway: 'Svarupanusandhanashtakam is a meditation text meant to be practised. In eight verses, Shankaracharya points directly to the Self as pure awareness: unborn, free from the three states, untouched by time or change. The direct, declarative language serves as a prompt for the living recognition of one\'s true nature. Regular recitation cuts through mental noise and re-establishes one\'s natural peace.',
+    translation: {
+      translator: 'Swami Chinmayananda',
+      publisher: 'Chinmaya Mission, Mumbai',
+      sanskritVerses: [
+        'तपोयज्ञदानादिभिः शुद्धबुद्धि-र्विरक्तो नृपादेः पदे तुच्छबुद्ध्या । परित्यज्य सर्वं यदाप्नोति तत्त्वं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ १॥',
+        'दयालुं गुरुं ब्रह्मनिष्ठं प्रशान्तं समाराध्य मत्या विचार्य स्वरूपम् । यदाप्नोति तत्त्वं निदिध्यास विद्वान्-परं ब्रह्म नित्यं तदेवाहमस्मि ॥ २॥',
+        'यदानन्दरूपं प्रकाशस्वरूपं निरस्तप्रपञ्चं परिच्छेदहीनम् । अहम्ब्रह्मवृत्त्यैकगम्यं तुरीयं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ३॥',
+        'यदज्ञानतो भाति विश्वं समस्तं विनष्टं च सद्यो यदात्मप्रबोधे । मनोवागतीतं विशुद्धं विमुक्तं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ४॥',
+        'निषेधे कृते नेति नेतीति वाक्यैः समाधिस्थितानां यदाभाति पूर्णम् । अवस्थात्रयातीतमद्वैतमेकं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ५॥',
+        'यदानन्दलेशैः समानन्दि विश्वं यदाभाति सत्त्वे तदाभाति सर्वम् । यदालोकने रूपमन्यत्समस्तं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ६॥',
+        'अनन्तं विभुं निर्विकल्पं निरीहं शिवं सङ्गहीनं यदोङ्कारगम्यम् । निराकारमत्युज्ज्वलं मृत्युहीनं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ७॥',
+        'यदानन्द सिन्धौ निमग्नः पुमान्स्या-दविद्याविलासः समस्तप्रपञ्चः । तदा नः स्फुरत्यद्भुतं यन्निमित्तं परं ब्रह्म नित्यं तदेवाहमस्मि ॥ ८॥',
+        'स्वरूपानुसन्धानरूपां स्तुतिं यः पठेदादराद्भक्तिभावो मनुष्यः । श्रुणोतीह वा नित्यमुद्युक्तचित्तो भवेद्विष्णुरत्रैव वेदप्रमाणात् ॥ ९॥',
+      ],
+      verses: [
+        'That supreme, eternal Brahman which one attains, one whose intellect has been purified through austerity, sacrifice, charity and the like, who is dispassionate, regarding the rank of kings and the rest as trifling, and who, renouncing all, reaches that Truth, that very Brahman I myself am.',
+        'Having worshipped with devotion the compassionate Guru, one established in Brahman and utterly serene, and having inquired into one\'s own true nature with the intellect, the wise one, meditating deeply, attains that Reality: the supreme, eternal Brahman. That very One I am.',
+        'That whose nature is bliss, whose very essence is pure luminous consciousness, in which all the manifold universe is dissolved, which is utterly free of all limitation and division, attainable solely through the mental modification "I am Brahman", the Fourth (Turiya) that lies beyond the three states, the supreme, eternal Brahman, that alone I am.',
+        'That through ignorance of which the entire universe appears, and which is instantly dissolved upon the awakening to the Self; that which is beyond mind and speech, utterly pure, perfectly free, that eternal supreme Brahman, that alone am I.',
+        'When all negation has been completed through the sayings "not this, not this" (neti neti), that which then shines forth as the Full to those established in samadhi, beyond the three states, non-dual, one, the supreme eternal Brahman, that alone I am.',
+        'That by whose mere fragments of bliss the whole universe rejoices; that by whose shining alone, in existence itself, all things shine forth; in whose sight every other form is beheld, that eternal supreme Brahman, that very One I am.',
+        'That which is infinite, all-pervading, free from distinctions, and desireless; the auspicious one, unattached, which is reached through the syllable Om; formless, supremely radiant, and free from death, that eternal supreme Brahman alone am I.',
+        'When a person becomes wholly immersed in the ocean of bliss, then the entire manifest universe, that mere play of ignorance, dissolves for us. That wondrous reality on account of which all this shines forth, the eternal supreme Brahman, verily That am I.',
+        'That devout person who recites this hymn, which takes the form of an inquiry into one\'s own true nature, with reverence, or who listens to it here daily with an eager and attentive mind, shall become Vishnu himself in this very world, on the authority of the Vedas.',
+      ]
+    }
+  },
+  {
     id: 'sadhana-panchakam',
     title: 'Sadhana Panchakam',
     author: 'Adi Shankaracharya',
@@ -1607,6 +1681,7 @@ function closeSummary(updateHash) {
   document.body.style.overflow = '';
   state.currentBook = null;
   summaryView.scrollTop = 0;
+  toTop.classList.remove('show');
   document.removeEventListener('keydown', trapFocus);
   const mainEl = document.getElementById('main');
   if (mainEl) {
@@ -1815,15 +1890,22 @@ function initHero() {
 
 /* ----- Scroll ----- */
 function handleScroll() {
-  const scrollY = window.scrollY;
-  toTop.classList.toggle('show', scrollY > 400);
+  const isScrolled = state.summaryOpen ? summaryView.scrollTop > 400 : window.scrollY > 400;
+  toTop.classList.toggle('show', isScrolled);
   if (state.summaryOpen) {
     updateSummaryProgress();
   }
 }
 
 window.addEventListener('scroll', handleScroll, { passive: true });
-toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+summaryView.addEventListener('scroll', handleScroll, { passive: true });
+toTop.addEventListener('click', () => {
+  if (state.summaryOpen) {
+    summaryView.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+});
 
 /* ----- Summary events ----- */
 summaryBack.addEventListener('click', closeSummary);

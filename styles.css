@@ -451,7 +451,7 @@ ul { list-style: none; }
 .attrib-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--border); margin: 0 4px; }
 
 .translation-verses {
-  list-style: none; display: flex; flex-direction: column; gap: 14px;
+  list-style: none; display: flex; flex-direction: column; gap: 24px;
   max-height: 360px; overflow: hidden; position: relative;
   padding-top: 14px;
   transition: max-height 400ms var(--ease);
@@ -638,6 +638,7 @@ ul { list-style: none; }
   opacity: 0; transform: translateY(16px); transition: var(--transition); z-index: 50;
   pointer-events: none;
 }
+.summary.open ~ .to-top { z-index: 400; }
 .to-top.show { opacity: 1; transform: translateY(0); pointer-events: auto; }
 @media (hover: hover) {
   .to-top:hover { background: var(--text); color: var(--white); border-color: var(--text); }
