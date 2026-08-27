@@ -20,8 +20,8 @@
   <header class="site-header" id="siteHeader">
     <div class="container header-inner">
       <a href="#/" class="brand" aria-label="Ultra Summary home">
-        <img src="images/logo-black.png" alt="" class="brand-logo logo-light" />
-        <img src="images/logo-white.png" alt="" class="brand-logo logo-dark" />
+        <img src="images/logo-black.png" alt="" class="brand-logo logo-light" loading="lazy" />
+        <img src="images/logo-white.png" alt="" class="brand-logo logo-dark" loading="lazy" />
       </a>
 
       <nav class="category-nav" aria-label="Categories">
@@ -34,14 +34,14 @@
         <button class="cat-link" data-filter="Advaita">Advaita</button>
       </nav>
 
-      <div class="search-wrap">
+      <form class="search-wrap" role="search" aria-label="Search books">
         <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="11" cy="11" r="7"></circle>
           <line x1="21" y1="21" x2="16.5" y2="16.5"></line>
         </svg>
-        <input type="search" id="searchInput" class="search-input" placeholder="Search titles or authors…" autocomplete="off" aria-label="Search books" />
+        <input type="search" id="searchInput" class="search-input" placeholder="Search titles or authors…" autocomplete="off" aria-label="Search books" enterkeyhint="search" />
         <button class="search-clear" id="searchClear" type="button" aria-label="Clear search" hidden>&times;</button>
-      </div>
+      </form>
 
       <div class="header-actions">
         <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
@@ -175,7 +175,7 @@
 
   <!-- ======================= SUMMARY VIEW ======================= -->
   <div class="summary-scrim" id="summaryScrim" hidden></div>
-  <section class="summary" id="summaryView" aria-hidden="true" aria-label="Book summary" tabindex="-1">
+  <section class="summary" id="summaryView" aria-hidden="true" aria-label="Book summary" tabindex="-1" role="dialog" aria-modal="true">
     <header class="summary-header">
       <div class="container summary-header-inner">
         <button class="back-btn" id="summaryBack" type="button">

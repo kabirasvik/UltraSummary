@@ -974,6 +974,7 @@ const state = {
   currentBook: null,
   summaryOpen: false,
   previousRoute: '#/',
+  previouslyFocused: null,
 };
 
 /* ----- DOM refs ----- */
@@ -1106,12 +1107,34 @@ function renderLibrary() {
 }
 
 /* ----- Summary View ----- */
+function trapFocus(e) {
+  if (!state.summaryOpen) return;
+  const focusable = summaryView.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])');
+  if (!focusable.length) return;
+  const first = focusable[0];
+  const last = focusable[focusable.length - 1];
+  if (e.key === 'Tab') {
+    if (e.shiftKey) {
+      if (document.activeElement === first || !summaryView.contains(document.activeElement)) {
+        e.preventDefault();
+        last.focus();
+      }
+    } else {
+      if (document.activeElement === last || !summaryView.contains(document.activeElement)) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  }
+}
+
 function openSummary(id) {
   const book = state.books.find(b => b.id === id);
   if (!book) return;
   state.currentBook = book;
   state.summaryOpen = true;
   state.previousRoute = currentHash().startsWith('#/book/') ? '#/' : currentHash();
+  state.previouslyFocused = document.activeElement;
 
   const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
 
@@ -1269,6 +1292,12 @@ function openSummary(id) {
   requestAnimationFrame(() => {
     summaryScrim.classList.add('open');
     summaryView.focus();
+    document.addEventListener('keydown', trapFocus);
+    const mainEl = document.getElementById('main');
+    if (mainEl) {
+      mainEl.setAttribute('inert', '');
+      mainEl.setAttribute('aria-hidden', 'true');
+    }
   });
 
   updateSummaryProgress();
@@ -1284,6 +1313,15 @@ function closeSummary(updateHash) {
   document.body.style.overflow = '';
   state.currentBook = null;
   summaryView.scrollTop = 0;
+  document.removeEventListener('keydown', trapFocus);
+  const mainEl = document.getElementById('main');
+  if (mainEl) {
+    mainEl.removeAttribute('inert');
+    mainEl.removeAttribute('aria-hidden');
+  }
+  if (state.previouslyFocused && typeof state.previouslyFocused.focus === 'function') {
+    state.previouslyFocused.focus();
+  }
   if (updateHash && currentHash().startsWith('#/book/')) {
     setHash(state.previousRoute || '#/');
   }
@@ -1326,6 +1364,17 @@ searchClear.addEventListener('click', () => {
   renderLibrary();
   searchInput.focus();
 });
+
+const searchForm = document.querySelector('.search-wrap');
+if (searchForm) {
+  searchForm.addEventListener('submit', e => {
+    e.preventDefault();
+    clearTimeout(searchDebounce);
+    state.searchQuery = searchInput.value.trim();
+    searchClear.hidden = !state.searchQuery;
+    renderLibrary();
+  });
+}
 
 /* ----- Routing ----- */
 function currentHash() { return location.hash || '#/'; }
