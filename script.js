@@ -1141,48 +1141,57 @@ function openSummary(id) {
   } else {
     // Build anchor nav
     const sections = [
-      { id: 'key-ideas', label: 'Key Ideas', icon: '✦' },
-      { id: 'takeaways', label: 'Takeaways', icon: '◆' },
-      { id: 'concepts', label: 'Concepts', icon: '●' },
-      { id: 'lessons', label: 'Lessons', icon: '▸' },
-      { id: 'quotes', label: 'Quotes', icon: '❝' },
+      { id: 'key-ideas', label: 'Key Ideas' },
+      { id: 'takeaways', label: 'Takeaways' },
+      { id: 'concepts', label: 'Concepts' },
+      { id: 'lessons', label: 'Lessons' },
+      { id: 'quotes', label: 'Quotes' },
     ];
-    if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: '◈' });
-    sections.push({ id: 'final', label: 'Final', icon: '★' });
+    if (book.translation) sections.push({ id: 'translation', label: 'Translation' });
+    sections.push({ id: 'final', label: 'Final' });
 
   summaryAnchors.innerHTML = sections.map(s =>
     `<a href="#summary-${s.id}" data-section="${s.id}">${s.label}</a>`
   ).join('');
 
   // Build section content
+  const ICONS = {
+    key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path></svg>',
+    takeaways: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>',
+    concepts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>',
+    lessons: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
+    quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
+    translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+    final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
+  };
   const sectionHTML = `
     <section id="summary-key-ideas">
       <div class="section-card">
-        <h2><span class="section-icon">✦</span> Key Ideas</h2>
+        <h2><span class="section-icon">${ICONS.key}</span> Key Ideas</h2>
         <ul>${book.keyIdeas.map(idea => `<li>${idea}</li>`).join('')}</ul>
       </div>
     </section>
     <section id="summary-takeaways">
       <div class="section-card">
-        <h2><span class="section-icon">◆</span> Main Takeaways</h2>
+        <h2><span class="section-icon">${ICONS.takeaways}</span> Main Takeaways</h2>
         <ul>${book.mainTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>
       </div>
     </section>
     <section id="summary-concepts">
       <div class="section-card">
-        <h2><span class="section-icon">●</span> Important Concepts</h2>
+        <h2><span class="section-icon">${ICONS.concepts}</span> Important Concepts</h2>
         <ul>${book.importantConcepts.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
     </section>
     <section id="summary-lessons">
       <div class="section-card">
-        <h2><span class="section-icon">▸</span> Practical Lessons</h2>
+        <h2><span class="section-icon">${ICONS.lessons}</span> Practical Lessons</h2>
         <ul>${book.practicalLessons.map(l => `<li>${l}</li>`).join('')}</ul>
       </div>
     </section>
     <section id="summary-quotes">
       <div class="section-card">
-        <h2><span class="section-icon">❝</span> Best Quotes</h2>
+        <h2><span class="section-icon">${ICONS.quotes}</span> Best Quotes</h2>
         ${book.bestQuotes.map(q => `
           <div class="quote-block">
             <blockquote>${q.text}</blockquote>
@@ -1195,7 +1204,7 @@ function openSummary(id) {
     <section id="summary-translation">
       <div class="section-card translation-card" id="translationCard">
         <div class="translation-head">
-          <h2><span class="section-icon">◈</span> Full Translation</h2>
+          <h2><span class="section-icon">${ICONS.translation}</span> Full Translation</h2>
           <span class="translation-badge">${book.translation.verses.length} verses</span>
         </div>
         <p class="translation-attrib">
@@ -1216,7 +1225,7 @@ function openSummary(id) {
     ` : ''}
     <section id="summary-final">
       <div class="final-block">
-        <h2>★ Final Takeaway</h2>
+        <h2>${ICONS.final} Final Takeaway</h2>
         <p>${book.finalTakeaway}</p>
       </div>
     </section>
