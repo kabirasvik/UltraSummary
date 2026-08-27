@@ -172,17 +172,27 @@ ul { list-style: none; }
 [data-theme="dark"] .logo-light { display: none; }
 [data-theme="dark"] .logo-dark { display: block; }
 
-.category-nav { display: flex; gap: 4px; flex: 1; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; }
+.category-nav { display: flex; gap: 6px; flex: 1; overflow-x: auto; -ms-overflow-style: none; scrollbar-width: none; }
 .category-nav::-webkit-scrollbar { display: none; }
 
 .cat-link {
-  padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; color: var(--text-secondary);
-  white-space: nowrap; transition: var(--transition);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  transition: var(--transition);
+  position: relative;
 }
 @media (hover: hover) {
   .cat-link:hover { color: var(--text); background: var(--surface-hover); }
 }
-.cat-link.active { color: var(--white); background: var(--text); }
+.cat-link.active {
+  color: var(--white);
+  background: var(--text);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
 
 .mobile-nav {
   display: flex; flex-wrap: wrap; gap: 6px; padding: 14px 16px 18px;
@@ -357,16 +367,60 @@ ul { list-style: none; }
    CATEGORY BANNER
    ============================================================ */
 .category-banner {
-  padding: 32px 0 28px; border-bottom: 1px solid var(--border-light); margin-bottom: 28px;
+  position: relative;
+  padding: 36px 24px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--bg-alt) 100%);
+  border: 1px solid var(--border-light);
+  margin-bottom: 32px;
+  overflow: hidden;
 }
-.category-banner .eyebrow { margin-bottom: 8px; }
+.category-banner::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-hover));
+  border-radius: 4px 0 0 4px;
+}
+.category-banner .eyebrow { margin-bottom: 10px; }
 .category-title {
-  font-size: 36px; font-weight: 800; letter-spacing: -1.5px; line-height: 1.1; margin-bottom: 8px;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.category-desc { font-size: 16px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 16px; }
+.category-desc {
+  font-size: 16px;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+  max-width: 640px;
+}
 .category-count {
-  display: inline-block; font-size: 13px; font-weight: 600; color: var(--text-secondary);
-  padding: 4px 14px; border-radius: 20px; background: var(--bg-alt);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 20px;
+  background: var(--accent-subtle);
+  border: 1px solid var(--accent-light);
+}
+.category-count::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-subtle);
 }
 
 /* ============================================================
@@ -606,6 +660,7 @@ ul { list-style: none; }
   .hero-feature { max-width: 480px; }
   .summary-masthead { grid-template-columns: 1fr; gap: 24px; }
   .summary-cover { width: 160px; height: 225px; font-size: 40px; }
+  .category-title { font-size: 32px; }
 }
 
 @media (max-width: 900px) {
@@ -636,6 +691,8 @@ ul { list-style: none; }
 
   .book-grid { gap: 16px; }
   .section-title { font-size: 24px; }
+  .category-title { font-size: 28px; }
+  .category-banner { padding: 24px 16px; }
   .summary-title { font-size: 28px; }
   .summary-anchors { gap: 4px; }
   .section-card { padding: 20px; }
@@ -656,6 +713,8 @@ ul { list-style: none; }
   .book-grid { grid-template-columns: 1fr; }
   .book-grid.list-view .book-cover { width: 90px; min-height: 120px; }
   .section-head { align-items: center; }
+  .category-title { font-size: 24px; }
+  .category-banner { padding: 20px 16px; }
   .summary-masthead { grid-template-columns: 1fr; }
   .summary-cover { width: 120px; height: 170px; font-size: 30px; }
   .summary-title { font-size: 24px; }
