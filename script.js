@@ -1490,6 +1490,38 @@ if (themeToggle) {
   });
 }
 
+/* ----- Font size ----- */
+const fontMinus = document.getElementById('fontMinus');
+const fontPlus = document.getElementById('fontPlus');
+const FS_KEY = 'ultra-font-scale';
+const MIN_FS = 0.8, MAX_FS = 1.5, FS_STEP = 0.1;
+
+function getFontScale() {
+  return parseFloat(localStorage.getItem(FS_KEY)) || 1;
+}
+
+function applyFontScale(scale) {
+  summaryView.style.setProperty('--fs', scale.toFixed(1));
+  const pct = Math.round(scale * 100);
+  if (fontMinus) {
+    fontMinus.disabled = scale <= MIN_FS;
+    fontMinus.setAttribute('aria-label', `Decrease text size (currently ${pct}%)`);
+  }
+  if (fontPlus) {
+    fontPlus.disabled = scale >= MAX_FS;
+    fontPlus.setAttribute('aria-label', `Increase text size (currently ${pct}%)`);
+  }
+}
+
+function setFontScale(scale) {
+  const clamped = Math.min(MAX_FS, Math.max(MIN_FS, Math.round(scale * 10) / 10));
+  localStorage.setItem(FS_KEY, clamped);
+  applyFontScale(clamped);
+}
+
+if (fontMinus) fontMinus.addEventListener('click', () => setFontScale(getFontScale() - FS_STEP));
+if (fontPlus) fontPlus.addEventListener('click', () => setFontScale(getFontScale() + FS_STEP));
+
 /* ----- Init ----- */
 statBooks.textContent = state.books.length;
 const heroBookCount = document.getElementById('heroBookCount');
@@ -1497,6 +1529,7 @@ if (heroBookCount) heroBookCount.textContent = state.books.length;
 setupMobileNav();
 initHero();
 setTheme(getTheme(), false);
+applyFontScale(getFontScale());
 renderRoute();
 window.addEventListener('hashchange', renderRoute);
 
