@@ -1204,7 +1204,7 @@ function openSummary(id) {
     <section id="summary-translation">
       <div class="section-card translation-card" id="translationCard">
         <div class="translation-head">
-          <h2><span class="section-icon">${ICONS.translation}</span> Full Translation</h2>
+          <h2><span class="section-icon">${ICONS.translation}</span> Translation</h2>
           <span class="translation-badge">${book.translation.verses.length} verses</span>
         </div>
         <p class="translation-attrib">
@@ -1216,7 +1216,7 @@ function openSummary(id) {
           ${book.translation.verses.map((v, i) => `<li class="verse"><span class="verse-num" aria-hidden="true">${i + 1}</span><span class="verse-text">${v}</span></li>`).join('')}
         </ol>
         <button class="translation-toggle" id="translationToggle" type="button" aria-expanded="false">
-          <span class="toggle-label">Show full translation</span>
+          <span class="toggle-label">See translation</span>
           <span class="toggle-count">(${book.translation.verses.length} verses)</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
@@ -1250,10 +1250,10 @@ function openSummary(id) {
     translationToggle.addEventListener('click', () => {
       const expanded = card.classList.toggle('expanded');
       if (expanded) {
-        label.textContent = 'Hide full translation';
+        label.textContent = 'Hide translation';
         if (count) count.textContent = '';
       } else {
-        label.textContent = 'Show full translation';
+        label.textContent = 'See translation';
         if (count) count.textContent = `(${book.translation.verses.length} verses)`;
       }
       translationToggle.setAttribute('aria-expanded', String(expanded));
