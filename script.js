@@ -1194,10 +1194,17 @@ function openSummary(id) {
     ${book.translation ? `
     <section id="summary-translation">
       <div class="section-card translation-card" id="translationCard">
-        <h2><span class="section-icon">◈</span> Full Translation</h2>
-        <p class="translation-attrib">Translated by <strong>${book.translation.translator}</strong> · Published by ${book.translation.publisher}</p>
+        <div class="translation-head">
+          <h2><span class="section-icon">◈</span> Full Translation</h2>
+          <span class="translation-badge">${book.translation.verses.length} verses</span>
+        </div>
+        <p class="translation-attrib">
+          Translated by <strong>${book.translation.translator}</strong>
+          <span class="attrib-sep" aria-hidden="true"></span>
+          Published by <strong>${book.translation.publisher}</strong>
+        </p>
         <ol class="translation-verses" id="translationVerses">
-          ${book.translation.verses.map((v, i) => `<li><span class="verse-num">${i + 1}</span><span class="verse-text">${v}</span></li>`).join('')}
+          ${book.translation.verses.map((v, i) => `<li class="verse"><span class="verse-num" aria-hidden="true">${i + 1}</span><span class="verse-text">${v}</span></li>`).join('')}
         </ol>
         <button class="translation-toggle" id="translationToggle" type="button" aria-expanded="false">
           <span class="toggle-label">Show full translation</span>
@@ -1230,9 +1237,16 @@ function openSummary(id) {
   if (translationToggle) {
     const card = document.getElementById('translationCard');
     const label = translationToggle.querySelector('.toggle-label');
+    const count = translationToggle.querySelector('.toggle-count');
     translationToggle.addEventListener('click', () => {
       const expanded = card.classList.toggle('expanded');
-      label.textContent = expanded ? 'Hide translation' : 'Show full translation';
+      if (expanded) {
+        label.textContent = 'Hide full translation';
+        if (count) count.textContent = '';
+      } else {
+        label.textContent = 'Show full translation';
+        if (count) count.textContent = `(${book.translation.verses.length} verses)`;
+      }
       translationToggle.setAttribute('aria-expanded', String(expanded));
     });
   }

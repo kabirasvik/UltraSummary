@@ -339,33 +339,57 @@ ul { list-style: none; }
    FULL TRANSLATION
    ============================================================ */
 .translation-card { overflow: hidden; }
-#summary-translation .section-card h2 { justify-content: center; }
+
+.translation-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  margin-bottom: 6px;
+}
+.translation-head h2 { margin-bottom: 0; }
+.translation-badge {
+  font-size: 11px; font-weight: 600; color: var(--accent);
+  background: var(--accent-subtle); padding: 4px 12px; border-radius: 20px; flex-shrink: 0;
+}
+
 .translation-attrib {
-  font-size: 13px; color: var(--text-tertiary); margin-top: -12px; margin-bottom: 22px; text-align: center;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 4px 8px;
+  font-size: 13px; color: var(--text-tertiary); margin-bottom: 24px; text-align: center;
 }
 .translation-attrib strong { color: var(--text-secondary); font-weight: 600; }
+.attrib-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--border); margin: 0 4px; }
 
 .translation-verses {
-  list-style: none; display: flex; flex-direction: column; gap: 18px;
-  max-height: 340px; overflow: hidden; position: relative;
+  list-style: none; display: flex; flex-direction: column; gap: 10px;
+  max-height: 360px; overflow: hidden; position: relative;
   transition: max-height 400ms var(--ease);
-  -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 76%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 76%, transparent 100%);
 }
 .translation-card.expanded .translation-verses {
   max-height: none; -webkit-mask-image: none; mask-image: none;
 }
-.translation-verses li { display: flex; flex-direction: column; align-items: center; gap: 8px; text-align: center; }
-.verse-num {
-  flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
-  background: var(--accent-subtle); color: var(--accent);
-  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+.translation-verses .verse {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 14px 16px; text-align: left;
+  background: var(--bg); border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
 }
-.verse-text { font-size: calc(15px * var(--fs)); line-height: 1.7; color: var(--text-secondary); }
+.translation-verses .verse::before { display: none; }
+.translation-verses .verse:hover { border-color: var(--border); }
+.verse-num {
+  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--white);
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  margin-top: 1px; box-shadow: var(--shadow-sm);
+}
+.verse-text {
+  flex: 1; min-width: 0;
+  font-size: calc(15px * var(--fs)); line-height: 1.7; color: var(--text-secondary);
+}
 
 .translation-toggle {
-  display: flex; align-items: center; gap: 8px; margin: 24px auto 0;
-  padding: 10px 18px; border-radius: var(--radius-sm); background: var(--text); color: var(--white);
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 20px auto 0; padding: 10px 18px; border-radius: var(--radius-sm);
+  background: var(--text); color: var(--white);
   font-size: 13px; font-weight: 600; transition: var(--transition);
 }
 .translation-toggle:hover { background: var(--text-hover); }
