@@ -465,7 +465,7 @@ ul { list-style: none; }
 .section-card li::before { content: ''; position: absolute; left: 0; top: 8px; width: 5px; height: 5px; border-radius: 50%; background: var(--accent); }
 
 .section-card li strong, .section-card li b { color: var(--text); font-weight: 600; }
-.section-card p { font-size: 15px; color: var(--text-secondary); line-height: 1.65; }
+.section-card p { font-size: calc(15px * var(--fs)); color: var(--text-secondary); line-height: 1.65; }
 
 /* Quotes block */
 /* Quotes block */
@@ -474,7 +474,7 @@ ul { list-style: none; }
   background: var(--accent-subtle); border-left: 3px solid var(--accent); padding: 20px 24px;
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0; margin: 8px 0; text-align: center;
 }
-.quote-block blockquote { font-size: 16px; font-style: italic; color: var(--text); line-height: 1.65; }
+.quote-block blockquote { font-size: calc(16px * var(--fs)); font-style: italic; color: var(--text); line-height: 1.65; }
 .quote-block cite { font-size: 12px; color: var(--text-tertiary); font-style: normal; display: block; margin-top: 8px; }
 
 /* Final takeaway */
