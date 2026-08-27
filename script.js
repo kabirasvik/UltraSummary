@@ -1022,6 +1022,30 @@ const statBooks = $('#statBooks');
 /* ----- Toast ----- */
 let toastTimer;
 
+function coverError(img, fallbackText) {
+  const base = `images/covers/${img.dataset.folder}/${img.dataset.bookId}`;
+  if (!img.dataset.triedPng) {
+    img.dataset.triedPng = '1';
+    img.src = `${base}.png`;
+    return;
+  }
+  img.remove();
+  if (fallbackText && img.parentElement) img.parentElement.textContent = fallbackText;
+}
+
+function mountCover(container, book, folder, fallbackText) {
+  container.textContent = '';
+  container.style.background = book.color;
+  const img = document.createElement('img');
+  img.className = 'cover-img';
+  img.alt = '';
+  img.dataset.bookId = book.id;
+  img.dataset.folder = folder;
+  img.onerror = () => coverError(img, fallbackText);
+  img.src = `images/covers/${folder}/${book.id}.jpg`;
+  container.appendChild(img);
+}
+
 function showToast(msg) {
   toast.textContent = msg;
   toast.classList.add('show');
@@ -1073,7 +1097,7 @@ function renderDrawer() {
     return `<li>
       <div class="drawer-cover" style="background:${book.color}">
         <span class="cover-initials">${book.title.charAt(0)}</span>
-        <img src="images/covers/${book.id}.jpg" alt="" class="cover-img" loading="lazy" onerror="this.remove()">
+      <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
       </div>
       <div class="drawer-info"><strong>${book.title}</strong><span>${book.author}</span></div>
       <button class="drawer-remove" data-id="${book.id}" aria-label="Remove ${book.title}">&times;</button>
@@ -1128,7 +1152,7 @@ function renderBookCard(book) {
   card.innerHTML = `
     <div class="book-cover" style="background:${book.color}">
       <span class="cover-initials">${initials}</span>
-      <img src="images/covers/${book.id}.jpg" alt="" class="cover-img" loading="lazy" onerror="this.remove()">
+        <img src="images/covers/drawer/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="drawer" loading="lazy" onerror="coverError(this)">
       ${comingSoon}
       <span class="bookmark-badge" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
@@ -1177,23 +1201,6 @@ function renderLibrary() {
   updateBookmarkUI();
 }
 
-/* ----- Recently Added ----- */
-function renderRecent() {
-  const row = document.getElementById('recentRow');
-  if (!row) return;
-  const recent = state.books.slice(0, 4);
-  row.innerHTML = '';
-  recent.forEach(book => {
-    const card = renderBookCard(book);
-    card.classList.add('recent-card');
-    const badge = document.createElement('span');
-    badge.className = 'recent-badge';
-    badge.textContent = 'New';
-    card.querySelector('.book-cover').appendChild(badge);
-    row.appendChild(card);
-  });
-}
-
 /* ----- Summary View ----- */
 function openSummary(id) {
   const book = state.books.find(b => b.id === id);
@@ -1206,12 +1213,7 @@ function openSummary(id) {
 
   summaryCover.textContent = '';
   summaryCover.style.background = book.color;
-  const coverImg = document.createElement('img');
-  coverImg.src = `images/covers/${book.id}.jpg`;
-  coverImg.alt = '';
-  coverImg.className = 'cover-img';
-  coverImg.onerror = () => { coverImg.remove(); summaryCover.textContent = initials; };
-  summaryCover.appendChild(coverImg);
+  mountCover(summaryCover, book, 'summary', initials);
   summaryTitle.textContent = book.title;
   summaryAuthor.textContent = book.author;
   summaryCategory.textContent = book.category;
@@ -1418,7 +1420,6 @@ function showHomeView() {
   updateCatLinksActive();
   const hero = document.querySelector('.hero');
   if (hero) hero.style.display = '';
-  document.getElementById('recent').hidden = false;
   document.getElementById('categoryBanner').hidden = true;
   const title = document.getElementById('libraryTitle');
   title.textContent = 'The library';
@@ -1433,7 +1434,6 @@ function showCategoryView(cat) {
   updateCatLinksActive();
   const hero = document.querySelector('.hero');
   if (hero) hero.style.display = 'none';
-  document.getElementById('recent').hidden = true;
   const banner = document.getElementById('categoryBanner');
   banner.hidden = false;
   document.getElementById('categoryTitle').textContent = cat;
@@ -1537,14 +1537,7 @@ clearFilters.addEventListener('click', () => {
 function initHero() {
   const feature = state.books[0];
   const initials = feature.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-  const cover = document.getElementById('featureCover');
-  cover.style.background = feature.color;
-  const coverImg = document.createElement('img');
-  coverImg.src = `images/covers/${feature.id}.jpg`;
-  coverImg.alt = '';
-  coverImg.className = 'cover-img';
-  coverImg.onerror = () => { coverImg.remove(); cover.textContent = initials; };
-  cover.appendChild(coverImg);
+  mountCover(document.getElementById('featureCover'), feature, 'feature', initials);
   document.getElementById('featureTitle').textContent = feature.title;
   document.getElementById('featureAuthor').textContent = feature.author;
   document.getElementById('featureBlurb').textContent = feature.summary;
@@ -1597,7 +1590,6 @@ const heroBookCount = document.getElementById('heroBookCount');
 if (heroBookCount) heroBookCount.textContent = state.books.length;
 setupMobileNav();
 initHero();
-renderRecent();
 updateBookmarkUI();
 renderRoute();
 window.addEventListener('hashchange', renderRoute);

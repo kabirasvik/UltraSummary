@@ -293,28 +293,6 @@ ul { list-style: none; }
 .empty-state p { color: var(--text-secondary); margin-bottom: 20px; }
 
 /* ============================================================
-   RECENTLY ADDED
-   ============================================================ */
-.recent { padding: 8px 0 40px; }
-.recent .section-head { margin-bottom: 24px; }
-.recent-row {
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 20px;
-}
-.recent-card .recent-badge {
-  position: absolute; top: 12px; left: 12px; padding: 3px 10px; border-radius: 20px;
-  background: rgba(255, 255, 255, 0.92); color: var(--text); font-size: 10px; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.8px; box-shadow: var(--shadow-sm);
-  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
-}
-.view-all {
-  font-size: 13px; font-weight: 600; color: var(--text-secondary); transition: var(--transition);
-  display: inline-flex; align-items: center; gap: 4px; padding: 8px 4px;
-}
-.view-all:hover { color: var(--text); }
-.view-all::after { content: '→'; transition: transform var(--transition); }
-.view-all:hover::after { transform: translateX(3px); }
-
-/* ============================================================
    CATEGORY BANNER
    ============================================================ */
 .category-banner {
@@ -585,15 +563,6 @@ ul { list-style: none; }
   .hero-stats { gap: 20px; }
   .hero-stats .stat strong { font-size: 22px; }
 
-  .recent { padding: 4px 0 32px; }
-  .recent-row {
-    display: flex; overflow-x: auto; scroll-snap-type: x mandatory; gap: 14px;
-    padding: 2px 2px 12px; margin: 0 -16px; padding-left: 16px; padding-right: 16px;
-    -webkit-overflow-scrolling: touch;
-  }
-  .recent-row::-webkit-scrollbar { display: none; }
-  .recent-row .book-card { flex: 0 0 240px; width: 240px; scroll-snap-align: start; }
-
   .book-grid { gap: 16px; }
   .section-title { font-size: 24px; }
   .summary-title { font-size: 28px; }
@@ -618,7 +587,6 @@ ul { list-style: none; }
 
   .book-grid { grid-template-columns: 1fr; }
   .book-grid.list-view .book-cover { width: 90px; min-height: 120px; }
-  .recent-row .book-card { flex: 0 0 220px; width: 220px; }
   .section-head { align-items: center; }
   .summary-masthead { grid-template-columns: 1fr; }
   .summary-cover { width: 120px; height: 170px; font-size: 30px; }
