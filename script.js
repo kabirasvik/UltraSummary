@@ -1071,7 +1071,10 @@ function renderDrawer() {
     const book = state.books.find(b => b.id === id);
     if (!book) return '';
     return `<li>
-      <div class="drawer-cover" style="background:${book.color}">${book.title.charAt(0)}</div>
+      <div class="drawer-cover" style="background:${book.color}">
+        <span class="cover-initials">${book.title.charAt(0)}</span>
+        <img src="images/covers/${book.id}.jpg" alt="" class="cover-img" loading="lazy" onerror="this.remove()">
+      </div>
       <div class="drawer-info"><strong>${book.title}</strong><span>${book.author}</span></div>
       <button class="drawer-remove" data-id="${book.id}" aria-label="Remove ${book.title}">&times;</button>
     </li>`;
@@ -1124,7 +1127,8 @@ function renderBookCard(book) {
 
   card.innerHTML = `
     <div class="book-cover" style="background:${book.color}">
-      ${initials}
+      <span class="cover-initials">${initials}</span>
+      <img src="images/covers/${book.id}.jpg" alt="" class="cover-img" loading="lazy" onerror="this.remove()">
       ${comingSoon}
       <span class="bookmark-badge" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
@@ -1200,8 +1204,14 @@ function openSummary(id) {
 
   const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
 
-  summaryCover.textContent = initials;
+  summaryCover.textContent = '';
   summaryCover.style.background = book.color;
+  const coverImg = document.createElement('img');
+  coverImg.src = `images/covers/${book.id}.jpg`;
+  coverImg.alt = '';
+  coverImg.className = 'cover-img';
+  coverImg.onerror = () => { coverImg.remove(); summaryCover.textContent = initials; };
+  summaryCover.appendChild(coverImg);
   summaryTitle.textContent = book.title;
   summaryAuthor.textContent = book.author;
   summaryCategory.textContent = book.category;
@@ -1527,8 +1537,14 @@ clearFilters.addEventListener('click', () => {
 function initHero() {
   const feature = state.books[0];
   const initials = feature.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-  document.getElementById('featureCover').textContent = initials;
-  document.getElementById('featureCover').style.background = feature.color;
+  const cover = document.getElementById('featureCover');
+  cover.style.background = feature.color;
+  const coverImg = document.createElement('img');
+  coverImg.src = `images/covers/${feature.id}.jpg`;
+  coverImg.alt = '';
+  coverImg.className = 'cover-img';
+  coverImg.onerror = () => { coverImg.remove(); cover.textContent = initials; };
+  cover.appendChild(coverImg);
   document.getElementById('featureTitle').textContent = feature.title;
   document.getElementById('featureAuthor').textContent = feature.author;
   document.getElementById('featureBlurb').textContent = feature.summary;
