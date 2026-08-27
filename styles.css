@@ -1,5 +1,5 @@
 /* ============================================================
-   Margins – Design System
+   Margins - Design System
    ============================================================ */
 
 /* ----- Reset & Base ----- */
@@ -451,8 +451,9 @@ ul { list-style: none; }
 .attrib-sep { width: 4px; height: 4px; border-radius: 50%; background: var(--border); margin: 0 4px; }
 
 .translation-verses {
-  list-style: none; display: flex; flex-direction: column; gap: 10px;
+  list-style: none; display: flex; flex-direction: column; gap: 14px;
   max-height: 360px; overflow: hidden; position: relative;
+  padding-top: 14px;
   transition: max-height 400ms var(--ease);
   -webkit-mask-image: linear-gradient(to bottom, black 76%, transparent 100%);
   mask-image: linear-gradient(to bottom, black 76%, transparent 100%);
@@ -461,8 +462,9 @@ ul { list-style: none; }
   max-height: none; -webkit-mask-image: none; mask-image: none;
 }
 .translation-verses .verse {
-  display: flex; align-items: flex-start; gap: 14px;
-  padding: 14px 16px; text-align: left;
+  position: relative;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 24px 16px 16px; text-align: center;
   background: var(--bg); border: 1px solid var(--border-light);
   border-radius: var(--radius-sm);
 }
@@ -471,10 +473,12 @@ ul { list-style: none; }
   .translation-verses .verse:hover { border-color: var(--border); }
 }
 .verse-num {
-  flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%;
+  position: absolute; top: -14px; left: 50%;
+  transform: translateX(-50%);
+  width: 28px; height: 28px; border-radius: 50%;
   background: var(--accent); color: var(--white);
   font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
-  margin-top: 1px; box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-sm);
 }
 .verse-text {
   flex: 1; min-width: 0;
