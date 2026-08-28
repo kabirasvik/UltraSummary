@@ -2200,20 +2200,6 @@ clearFilters.addEventListener('click', () => {
   renderLibrary();
 });
 
-/* ----- Hero feature ----- */
-function initHero() {
-  const feature = state.books[0];
-  const initials = feature.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-  mountCover(document.getElementById('featureCover'), feature, 'feature', initials);
-  document.getElementById('featureTitle').textContent = feature.title;
-  document.getElementById('featureAuthor').textContent = feature.author;
-  document.getElementById('featureBlurb').textContent = feature.summary;
-  document.getElementById('featureLink').addEventListener('click', e => {
-    e.preventDefault();
-    openSummary(feature.id);
-  });
-}
-
 /* ----- Scroll ----- */
 function handleScroll() {
   const isScrolled = state.summaryOpen ? summaryView.scrollTop > 400 : window.scrollY > 400;
@@ -2301,7 +2287,6 @@ statBooks.textContent = state.books.length;
 const heroBookCount = document.getElementById('heroBookCount');
 if (heroBookCount) heroBookCount.textContent = state.books.length;
 setupMobileNav();
-initHero();
 setTheme(getTheme(), false);
 applyFontScale(getFontScale());
 renderRoute();
