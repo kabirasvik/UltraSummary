@@ -1905,7 +1905,7 @@ function openSummary(id) {
     </section>
     <section id="summary-quotes">
       <div class="section-card">
-        <h2>Best quotes</h2>
+        <h2><span class="quote-mark">${ICONS.quotes}</span> Best quotes</h2>
         ${book.bestQuotes.map(q => `
           <div class="quote-block">
             <blockquote>${q.text}</blockquote>
