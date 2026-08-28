@@ -2447,22 +2447,28 @@ const moreBtn = $('#moreBtn');
 const moreMenu = $('#moreMenu');
 const moreDropdown = moreBtn.closest('.more-dropdown');
 if (moreBtn && moreMenu) {
+  const openMore = () => {
+    moreDropdown.classList.add('open');
+    moreBtn.setAttribute('aria-expanded', 'true');
+  };
+  const closeMore = () => {
+    moreDropdown.classList.remove('open');
+    moreBtn.setAttribute('aria-expanded', 'false');
+  };
   moreBtn.addEventListener('click', e => {
     e.stopPropagation();
-    const open = moreDropdown.classList.toggle('open');
-    moreBtn.setAttribute('aria-expanded', String(open));
+    if (moreDropdown.classList.contains('open')) closeMore();
+    else openMore();
   });
+  if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
+    moreDropdown.addEventListener('mouseenter', openMore);
+    moreDropdown.addEventListener('mouseleave', closeMore);
+  }
   document.addEventListener('click', e => {
-    if (moreDropdown.classList.contains('open') && !e.target.closest('.more-dropdown')) {
-      moreDropdown.classList.remove('open');
-      moreBtn.setAttribute('aria-expanded', 'false');
-    }
+    if (moreDropdown.classList.contains('open') && !e.target.closest('.more-dropdown')) closeMore();
   });
   moreMenu.querySelectorAll('.cat-link').forEach(btn => {
-    btn.addEventListener('click', () => {
-      moreDropdown.classList.remove('open');
-      moreBtn.setAttribute('aria-expanded', 'false');
-    });
+    btn.addEventListener('click', closeMore);
   });
 }
 
