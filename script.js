@@ -1579,7 +1579,7 @@ function openSummary(id) {
     </section>
     <section id="summary-quotes">
       <div class="section-card">
-        <h2><span class="section-icon">${ICONS.quotes}</span> Best Quotes</h2>
+        <h2>Best quotes</h2>
         ${book.bestQuotes.map(q => `
           <div class="quote-block">
             <blockquote>${q.text}</blockquote>
