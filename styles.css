@@ -341,11 +341,11 @@ ul { list-style: none; }
 .hero-actions { display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 48px; }
 .hero-note { font-size: 13px; color: var(--text-tertiary); }
 
-.hero-stats { display: flex; justify-content: center; gap: 40px; padding-top: 32px; border-top: 1px solid var(--border-light); }
-.stat { display: flex; flex-direction: column; }
-.stat strong { font-size: 28px; font-weight: 700; letter-spacing: -1px; line-height: 1; }
-.stat strong small { font-size: 14px; font-weight: 500; color: var(--text-tertiary); }
-.stat span { font-size: 13px; color: var(--text-tertiary); margin-top: 4px; }
+.hero-stats { display: flex; justify-content: center; align-items: flex-start; gap: 40px; padding-top: 32px; border-top: 1px solid var(--border-light); }
+.stat { display: flex; flex-direction: column; align-items: center; text-align: center; min-width: 120px; }
+.stat strong { font-size: 28px; font-weight: 700; letter-spacing: -1px; line-height: 1; white-space: nowrap; }
+.stat strong small { font-size: 14px; font-weight: 500; color: var(--text-tertiary); margin-left: 2px; letter-spacing: 0; }
+.stat span { font-size: 13px; color: var(--text-tertiary); margin-top: 6px; white-space: nowrap; }
 
 /* ============================================================
    LIBRARY
@@ -967,6 +967,7 @@ ul { list-style: none; }
   .hero-copy h1 { font-size: 36px; letter-spacing: -1px; }
   .hero-sub { font-size: 15px; }
   .hero-stats { gap: 20px; }
+  .hero-stats .stat { min-width: 100px; }
   .hero-stats .stat strong { font-size: 22px; }
 
   .book-grid { gap: 16px; }
@@ -989,6 +990,7 @@ ul { list-style: none; }
   .hero-actions { flex-direction: column; align-items: center; gap: 12px; }
   .hero-actions .btn { width: 100%; }
   .hero-stats { gap: 16px; padding-top: 24px; }
+  .hero-stats .stat { min-width: 90px; }
   .hero-stats .stat strong { font-size: 20px; }
 
   .book-grid { grid-template-columns: 1fr; }
