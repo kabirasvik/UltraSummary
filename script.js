@@ -12,7 +12,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 3,
-    pages: 144,
     year: 800,
     rating: 4.8,
     summary: 'Direct Self-Realization, an introductory guide to realizing the non-dual Self directly, beyond intellectual understanding.',
@@ -358,7 +357,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 2,
-    pages: 5,
     year: 800,
     rating: 4.8,
     summary: 'Eight Verses for Continuous Inquiry into One\'s True Nature, a meditation text that points directly to the recognition of what one truly is.',
@@ -432,7 +430,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 2,
-    pages: 5,
     year: 800,
     rating: 4.8,
     summary: 'Five Verses on Spiritual Practice, a compact step-by-step guide to the complete Vedantic path, from the very beginning of spiritual life to liberation.',
@@ -499,7 +496,6 @@ const BOOKS = [
     color: '#1a1a1a',
     accent: '#b8954a',
     readingTime: 5,
-    pages: 320,
     year: 2018,
     rating: 4.8,
     summary: 'Tiny changes, remarkable results. How 1% daily improvement compounds into extraordinary outcomes.',
@@ -549,7 +545,6 @@ const BOOKS = [
     color: '#2d3436',
     accent: '#0984e3',
     readingTime: 6,
-    pages: 499,
     year: 2011,
     rating: 4.6,
     summary: 'The two systems that drive your mind, and how cognitive biases shape every decision you make.',
@@ -598,7 +593,6 @@ const BOOKS = [
     color: '#1e272e',
     accent: '#0be881',
     readingTime: 4,
-    pages: 296,
     year: 2016,
     rating: 4.5,
     summary: 'Master the lost art of focused, distraction-free concentration. Deep work is the superpower of the 21st century.',
@@ -647,7 +641,6 @@ const BOOKS = [
     color: '#3d2b1f',
     accent: '#c9a96e',
     readingTime: 4,
-    pages: 256,
     year: 180,
     rating: 4.7,
     summary: 'The private journal of a Roman emperor, timeless Stoic wisdom on discipline, resilience, and the art of living.',
@@ -696,7 +689,6 @@ const BOOKS = [
     color: '#1a2634',
     accent: '#f9ca24',
     readingTime: 4,
-    pages: 256,
     year: 2020,
     rating: 4.6,
     summary: 'How your emotions, biases, and personal history shape your financial decisions more than any spreadsheet ever could.',
@@ -745,7 +737,6 @@ const BOOKS = [
     color: '#2c1810',
     accent: '#e17055',
     readingTime: 6,
-    pages: 443,
     year: 2011,
     rating: 4.7,
     summary: 'A brief history of humankind, how a clever ape conquered the world through stories, cooperation, and agriculture.',
@@ -794,7 +785,6 @@ const BOOKS = [
     color: '#1b3a2b',
     accent: '#a3d9a5',
     readingTime: 4,
-    pages: 236,
     year: 1997,
     rating: 4.4,
     summary: 'A guide to spiritual enlightenment, escaping the prison of your mind by living fully in the present moment.',
@@ -843,7 +833,6 @@ const BOOKS = [
     color: '#1a1f2e',
     accent: '#3498db',
     readingTime: 4,
-    pages: 256,
     year: 2009,
     rating: 4.3,
     summary: 'Great leaders and companies inspire action by communicating their purpose, the "why", before the "what" or "how."',
@@ -892,7 +881,6 @@ const BOOKS = [
     color: '#2c1810',
     accent: '#d4a574',
     readingTime: 4,
-    pages: 184,
     year: 1946,
     rating: 4.8,
     summary: 'A psychiatrist\'s experience in Nazi concentration camps reveals that the search for meaning is the primary human motivation.',
@@ -941,7 +929,6 @@ const BOOKS = [
     color: '#1e2a2a',
     accent: '#6ab04c',
     readingTime: 4,
-    pages: 272,
     year: 2014,
     rating: 4.4,
     summary: 'The disciplined pursuit of less, doing fewer things better instead of more things adequately.',
@@ -990,7 +977,6 @@ const BOOKS = [
     color: '#1a2a1a',
     accent: '#d4af37',
     readingTime: 3,
-    pages: 197,
     year: 1988,
     rating: 4.3,
     summary: 'A shepherd boy journeys across the desert in search of treasure, and discovers that the journey itself is the real reward.',
@@ -1039,7 +1025,6 @@ const BOOKS = [
     color: '#1a1a2e',
     accent: '#e74c3c',
     readingTime: 5,
-    pages: 416,
     year: 2007,
     rating: 4.1,
     summary: 'Escape the 9-5, live anywhere, and join the new rich, design a lifestyle of freedom, not a life of deferred dreams.',
@@ -1088,7 +1073,6 @@ const BOOKS = [
     color: '#1e1e2a',
     accent: '#9b59b6',
     readingTime: 4,
-    pages: 352,
     year: 2016,
     rating: 4.5,
     summary: 'Passion and perseverance are better predictors of success than talent, IQ, or luck. The power of sustained effort over time.',
@@ -1137,7 +1121,6 @@ const BOOKS = [
     color: '#1b3a3a',
     accent: '#c8a96e',
     readingTime: 6,
-    pages: 352,
     year: 2020,
     rating: 4.3,
     summary: 'One hundred practical, time-tested habits for building a successful, meaningful life, distilled into one clear guide.',
@@ -1188,7 +1171,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 5,
-    pages: 520,
     year: 800,
     rating: 4.9,
     summary: 'The Crest-Jewel of Discrimination, a systematic guide to discerning the Real Self from the transient, leading to liberation.',
@@ -1238,7 +1220,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 3,
-    pages: 68,
     year: 800,
     rating: 4.8,
     summary: 'Self-Knowledge, a concise yet profound exposition of the nature of the Self and the path to liberation.',
@@ -1434,7 +1415,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 2,
-    pages: 57,
     year: 800,
     rating: 4.7,
     summary: 'Knowledge of Truth, a primer on the essential tenets of Advaita Vedanta, presented as a dialogue between a student and his teacher.',
@@ -1542,7 +1522,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 2,
-    pages: 5,
     year: 800,
     rating: 4.8,
     summary: 'Five Verses on the Loincloth, a joyful celebration of the sannyasi\'s life of complete inner and outer freedom.',
@@ -1607,7 +1586,6 @@ const BOOKS = [
     color: '#2a1f1a',
     accent: '#d4a574',
     readingTime: 2,
-    pages: 42,
     year: 800,
     rating: 4.7,
     summary: 'The Seer and the Seen, a short but powerful text on discriminating the perceiver from the perceived.',
@@ -1623,25 +1601,28 @@ const BOOKS = [
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
-  'vivekachudamani': '2026-08-26',
-  'atma-bodha': '2026-08-26',
-  'tattva-bodha': '2026-08-26',
-  'drig-drishya-viveka': '2026-08-26',
-  'aparokshanubhuti': '2026-08-26',
-  '100-things-successful-people-do': '2026-08-26',
-  'atomic-habits': '2026-08-22',
-  'deep-work': '2026-08-20',
-  'the-psychology-of-money': '2026-08-18',
-  'grit': '2026-08-16',
-  'essentialism': '2026-08-14',
-  'mans-search-for-meaning': '2026-08-12',
-  'meditations': '2026-08-10',
-  'sapiens': '2026-08-08',
-  'start-with-why': '2026-08-06',
-  'thinking-fast-and-slow': '2026-08-04',
-  'the-power-of-now': '2026-08-02',
-  'the-alchemist': '2026-07-31',
-  'the-4-hour-workweek': '2026-07-28',
+  "aparokshanubhuti": "2026-08-28",
+  "svarupanusandhanashtakam": "2026-08-24",
+  "sadhana-panchakam": "2026-08-20",
+  "atomic-habits": "2026-08-16",
+  "thinking-fast-and-slow": "2026-08-12",
+  "deep-work": "2026-08-08",
+  "meditations": "2026-08-04",
+  "the-psychology-of-money": "2026-07-31",
+  "sapiens": "2026-07-27",
+  "the-power-of-now": "2026-07-23",
+  "start-with-why": "2026-07-19",
+  "mans-search-for-meaning": "2026-07-15",
+  "essentialism": "2026-07-11",
+  "the-alchemist": "2026-07-07",
+  "the-4-hour-workweek": "2026-07-03",
+  "grit": "2026-06-29",
+  "100-things-successful-people-do": "2026-06-25",
+  "vivekachudamani": "2026-06-21",
+  "atma-bodha": "2026-06-17",
+  "tattva-bodha": "2026-06-13",
+  "kaupina-panchakam": "2026-06-09",
+  "drig-drishya-viveka": "2026-06-05",
 };
 BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
 BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
@@ -1691,7 +1672,6 @@ const summaryTitle = $('#summaryTitle');
 const summaryAuthor = $('#summaryAuthor');
 const summaryCategory = $('#summaryCategory');
 const summaryBlurb = $('#summaryBlurb');
-const factPages = $('#factPages');
 const factTime = $('#factTime');
 const factYear = $('#factYear');
 const factRating = $('#factRating');
@@ -1762,7 +1742,7 @@ function renderBookCard(book) {
       <p class="book-summary">${book.summary}</p>
       <div class="book-meta">
         <span class="chip">${book.readingTime} min</span>
-        <span class="read-time">${book.pages} pages</span>
+        <span class="added-date">${new Date(book.added + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
       </div>
     </div>
   `;
@@ -1836,7 +1816,6 @@ function openSummary(id) {
   summaryAuthor.textContent = book.author;
   summaryCategory.textContent = book.category;
   summaryBlurb.textContent = book.summary;
-  factPages.textContent = book.pages;
   factTime.textContent = book.readingTime;
   factYear.textContent = book.year;
   factRating.textContent = book.rating.toFixed(1);
@@ -2162,8 +2141,9 @@ function setupMobileNav() {
 }
 
 function toggleMobileNav(force) {
-  const open = typeof force === 'boolean' ? force : mobileNav.hidden;
-  mobileNav.hidden = !open;
+  const open = typeof force === 'boolean' ? force : !mobileNav.classList.contains('open');
+  mobileNav.classList.toggle('open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
   menuBtn.setAttribute('aria-expanded', String(open));
   menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
 }
@@ -2174,7 +2154,7 @@ function closeMobileNav() {
 
 menuBtn.addEventListener('click', () => toggleMobileNav());
 document.addEventListener('click', e => {
-  if (!mobileNav.hidden && !e.target.closest('.site-header')) {
+  if (mobileNav.classList.contains('open') && !e.target.closest('#mobileNav') && !e.target.closest('#menuBtn')) {
     closeMobileNav();
   }
 });
