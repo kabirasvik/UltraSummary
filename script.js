@@ -506,6 +506,169 @@ const BOOKS = [
     }
   },
   {
+    id: '48-laws-of-power',
+    title: 'The 48 Laws of Power',
+    author: 'Robert Greene',
+    category: 'Strategy',
+    color: '#3a1f1f',
+    accent: '#c9a227',
+    readingTime: 18,
+    year: 1998,
+    rating: 4.6,
+    summary: 'A ruthless and timeless study of power drawn from three thousand years of history, distilling the strategies, tricks and laws of Machiavelli, Sun Tzu and history\'s great schemers into forty-eight practical rules.',
+    keyIdeas: [
+      'The 48 Laws of Power distills <b>three thousand years of history</b> into 48 practical rules, drawn from figures like Machiavelli, Sun Tzu, Catherine the Great, and the Medici.',
+      'Power is in many ways a <b>game of appearances</b>: those who control their image and words control how others see them.',
+      'The book refuses to moralize — it presents the <b>mechanics of power as they are</b>, not as we wish them to be, showing how both the powerful and the powerless have used these laws throughout history.',
+      'The laws are grouped into sections on <b>self-preservation, social intelligence, reputation, and manipulation</b>, each illustrated with historical anecdotes and their "transgressions" and "observances."',
+      'Many of the laws are <b>counter-intuitive</b>: say less, seem dumber, surrender, avoid perfection, and stay formless.',
+      'The overarching lesson is that <b>power is not about force but about strategy</b> — patience, calculation, and the ability to read and influence people.',
+    ],
+    mainTakeaways: [
+      'Never outshine the master: <b>make those above you appear more brilliant</b> than they are, or they will destroy you.',
+      '<b>Say less than necessary</b>: words once spoken cannot be taken back, and silence makes you appear greater and more powerful.',
+      '<b>Guard your reputation with your life</b> — doubt and rumor are the most powerful weapons against it.',
+      '<b>Court attention at all costs</b>: it is better to be slandered and attacked than ignored.',
+      '<b>Win through action, never through argument</b> — demonstrate, do not explain.',
+      '<b>Create value through scarcity</b>: use absence to increase strength and honor.',
+      '<b>Plan all the way to the end</b>, and keep yourself adaptable, fluid, and formless.',
+    ],
+    importantConcepts: [],
+    laws: [
+      { num: 1, title: 'Never Outshine the Master', detail: 'Make your masters appear more brilliant than they are and you will attain the heights of power. Outshining the master is perhaps the worst mistake of all; never take your position for granted, and never let favors you receive go to your head.' },
+      { num: 2, title: 'Never Put Too Much Trust in Friends, Learn How to Use Enemies', detail: 'A former enemy has more to prove and will be more loyal than a friend. You have more to fear from friends than from enemies — honesty rarely strengthens friendship. Keep friends for friendship, but work with the skilled and competent.' },
+      { num: 3, title: 'Conceal Your Intentions', detail: 'Use decoyed objects and desires, and red herrings, to throw people off the scent. Hide your intentions not by closing up, but by talking endlessly about your goals — just not your real ones. As Kierkegaard wrote, "The world wants to be deceived."' },
+      { num: 4, title: 'Always Say Less Than Necessary', detail: 'Power cannot accrue to those who squander their treasure of words. Once the words are out, you cannot take them back; keep them under control. When you say less than necessary, you inevitably appear greater and more powerful than you are.' },
+      { num: 5, title: 'So Much Depends on Reputation — Guard It with Your Life', detail: 'Be alert to potential attacks and thwart them before they happen. Learn to destroy your enemies by opening holes in their own reputations, then stand aside and let public opinion hang them. Doubt is a powerful weapon.' },
+      { num: 6, title: 'Court Attention at All Costs', detail: 'Surround your name with the sensational and the scandalous. Better to be slandered and attacked than ignored. Create an air of mystery — by holding back, keeping silent, and acting in the subtlest of ways, you will emanate an aura people magnify by trying to interpret.' },
+      { num: 7, title: 'Get Others to Do the Work for You, but Always Take the Credit', detail: '' },
+      { num: 8, title: 'Make Other People Come to You, Use Bait If Necessary', detail: 'For negotiations or meetings, lure others into your territory, or the territory of your choice. You have your bearings, while they see nothing familiar and are subtly placed on the defensive.' },
+      { num: 9, title: 'Win Through Your Actions, Never Through Argument', detail: '' },
+      { num: 10, title: 'Infection: Avoid the Unhappy and the Unlucky', detail: 'When you suspect you are in the presence of an infector, do not argue, do not try to help, and do not pass the person on to your friends — you will become enmeshed. Flee the infector\'s presence or suffer the consequences.' },
+      { num: 11, title: 'Learn to Keep People Dependent on You', detail: '' },
+      { num: 12, title: 'Use Selective Honesty and Generosity to Disarm Your Victim', detail: '' },
+      { num: 13, title: 'When Asking for Help, Appeal to People\'s Self-Interest, Never Their Mercy or Gratitude', detail: '' },
+      { num: 14, title: 'Pose as a Friend, Work as a Spy', detail: '' },
+      { num: 15, title: 'Crush Your Enemy Totally', detail: '' },
+      { num: 16, title: 'Use Absence to Increase Strength and Honor', detail: 'The more you are seen and heard from, the more common you appear. If you are established in a group, temporary withdrawal will make you more talked about and more admired. Create value through scarcity, and learn when to leave.' },
+      { num: 17, title: 'Keep Others in Suspended Terror: Cultivate an Air of Unpredictability', detail: 'Patterns are powerful, and you can terrify people by disrupting them. But too much unpredictability reads as indecisiveness or instability, so use this power judiciously.' },
+      { num: 18, title: 'Do Not Build a Fortress to Protect Yourself — Isolation Is Dangerous', detail: '' },
+      { num: 19, title: 'Know Who You\'re Dealing With — Do Not Offend the Wrong Person', detail: '' },
+      { num: 20, title: 'Do Not Commit to Anyone', detail: 'Do not commit to anyone, but be courted by all. When you hold yourself back, you incur not anger but a kind of respect — you make yourself ungraspable. Every moment wasted on the affairs of others subtracts from your strength.' },
+      { num: 21, title: 'Play a Sucker to Catch a Sucker — Seem Dumber Than Your Mark', detail: 'Given how important intelligence is to most people\'s vanity, it is critical never to inadvertently insult or impugn a person\'s brain power.' },
+      { num: 22, title: 'Use the Surrender Tactic: Transform Weakness into Power', detail: 'When someone pushes you, do not resist or fight back — yield, turn the other cheek, bend. By surrendering, you have an opportunity to coil around your enemy and strike with your fangs from close up.' },
+      { num: 23, title: 'Concentrate Your Forces', detail: 'Intensity defeats extensity every time.' },
+      { num: 24, title: 'Play the Perfect Courtier', detail: 'Avoid ostentation, practice nonchalance, be frugal with flattery, arrange to be noticed, alter your style according to the person, never be the bearer of bad news, never criticize those above you directly, master your emotions, and be the source of pleasure.' },
+      { num: 25, title: 'Re-Create Yourself', detail: 'Be the master of your own image rather than letting others define it. The world wants to assign you a role in life, and once you accept that role you are doomed. Remake yourself into a character of power, beginning with self-consciousness.' },
+      { num: 26, title: 'Keep Your Hands Clean', detail: 'Conceal your mistakes and have a scapegoat around to blame. Make use of the cat\'s paw.' },
+      { num: 27, title: 'Play on People\'s Need to Believe to Create a Cult-Like Following', detail: 'Keep it vague and simple; emphasize the visual and sensational over the intellectual; borrow the forms of organized religion; disguise your source of income; and set up an us vs. them dynamic.' },
+      { num: 28, title: 'Enter Action with Boldness', detail: 'The bolder the lie, the better. Boldness strikes fear, and fear creates authority. Hesitation creates gaps, boldness obliterates them. When you are small and obscure, find a Goliath to attack — the larger the target, the more attention you gain.' },
+      { num: 29, title: 'Plan All the Way to the End', detail: '' },
+      { num: 30, title: 'Make Your Accomplishments Seem Effortless', detail: '' },
+      { num: 31, title: 'Control the Options: Get Others to Play with the Cards You Deal', detail: 'Color the choices — propose three or four options and present them so the one you prefer seems best. Give people a sense of how things will fall apart without you. Shrink the options by raising the price each time the buyer hesitates.' },
+      { num: 32, title: 'Play to People\'s Fantasies', detail: 'People rarely believe that their problems arise from their own misdeeds and stupidity; someone or something out there is to blame. Therefore salvation comes from the outside as well — play to that fantasy.' },
+      { num: 33, title: 'Discover Each Man\'s Thumbscrew', detail: 'Everyone has a weakness, a gap in the castle wall — usually an insecurity, an uncontrollable emotion or need, or a small secret pleasure. Once found, it is a thumbscrew you can turn to your advantage.' },
+      { num: 34, title: 'Be Royal in Your Own Fashion: Act Like a King to Be Treated Like One', detail: '' },
+      { num: 35, title: 'Master the Art of Timing', detail: '' },
+      { num: 36, title: 'Disdain Things You Cannot Have: Ignoring Them Is the Best Revenge', detail: 'You choose to let things bother you — you can just as easily choose not to notice the irritating offender. The more you want something, the more it eludes you; uncontrollable desire makes you seem weak, unworthy, pathetic.' },
+      { num: 37, title: 'Create Compelling Spectacles', detail: '' },
+      { num: 38, title: 'Think as You Like but Behave Like Others', detail: 'If Machiavelli had a prince for a disciple, the first thing he would recommend would be to write a book against Machiavellism. Blend in while thinking independently.' },
+      { num: 39, title: 'Stir Up Waters to Catch Fish', detail: 'Anger and emotion are strategically counterproductive — you must always stay calm and objective. But if you can make your enemies angry while staying calm yourself, you gain a decided advantage.' },
+      { num: 40, title: 'Despise the Free Lunch', detail: 'The worth of money is not in its possession, but in its use.' },
+      { num: 41, title: 'Avoid Stepping into a Great Man\'s Shoes', detail: '' },
+      { num: 42, title: 'Strike the Shepherd and the Sheep Will Scatter', detail: 'Trouble within any group can most often be traced to a single source — the unhappy, chronically dissatisfied one who stirs up dissension. Act before it becomes impossible to disentangle.' },
+      { num: 43, title: 'Work on the Hearts and Minds of Others', detail: 'The key to persuasion is softening people up and breaking them down gently. Seduce them with a two-pronged approach: work on their emotions and play on their intellectual weaknesses.' },
+      { num: 44, title: 'Disarm and Infuriate with the Mirror Effect', detail: 'When you mirror your enemies, doing exactly as they do, they cannot figure out your strategy. The mirror effect mocks and humiliates them, making them overreact.' },
+      { num: 45, title: 'Preach the Need to Change, but Never Reform Too Much at Once', detail: 'If change is necessary, make it feel like a gentle improvement on the past. People understand the need for renewal, but are irritated by changes that affect them personally.' },
+      { num: 46, title: 'Never Appear Too Perfect', detail: 'Envy creates silent enemies. It is smart to occasionally display defects and admit to harmless vices, to deflect envy and appear more human and approachable.' },
+      { num: 47, title: 'Do Not Go Past the Mark You Aimed For: In Victory, Know When to Stop', detail: '' },
+      { num: 48, title: 'Assume Formlessness', detail: 'By taking a shape, by having a visible plan, you open yourself to attack. Keep yourself adaptable and on the move. Be as fluid and formless as water; never bet on stability or lasting order, for everything changes.' },
+    ],
+    practicalLessons: [
+      '<b>Make your masters appear more brilliant than they are</b> and never let favors go to your head — outshining the master is the worst mistake of all.',
+      '<b>Hire former enemies over friends</b>: an enemy turned ally has more to prove; you have more to fear from friends than enemies.',
+      '<b>Control your words</b>: be careful with sarcasm — the momentary satisfaction is outweighed by the price you pay.',
+      '<b>Thwart attacks on your reputation</b> before they happen, and destroy enemies by opening holes in their own reputations.',
+      '<b>Yield instead of fighting back</b>: surrendering lets you coil around your enemy and strike from close up.',
+      '<b>Boldly enter action</b> — hesitation creates gaps and breeds contempt; audacity separates you from the herd.',
+      '<b>Stay fluid and formless</b>: never bet on stability or lasting order, for everything changes.',
+    ],
+    bestQuotes: [
+      { text: 'Once the words are out, you cannot take them back. Keep them under control.', cite: 'Law 4 — Always say less than necessary' },
+      { text: 'The world wants to be deceived.', cite: 'Søren Kierkegaard, in Law 3' },
+      { text: 'Better to be slandered and attacked than ignored.', cite: 'Law 6 — Court attention at all costs' },
+      { text: 'Intensity defeats extensity every time.', cite: 'Law 23 — Concentrate your forces' },
+      { text: 'The world wants to assign you a role in life. And once you accept that role you are doomed.', cite: 'Law 25 — Re-Create Yourself' },
+      { text: 'The best way to protect yourself is to be as fluid and formless as water; never bet on stability or lasting order. Everything changes.', cite: 'Law 48 — Assume formlessness' },
+    ],
+    finalTakeaway: 'The 48 Laws of Power is a dark but honest study of the mechanics of influence, drawn from three thousand years of history. Its central insight is that power is a game of appearances: reputation, self-control, timing and strategy matter more than force or argument. The laws are counter-intuitive — say less, conceal your intentions, use enemies, surrender, avoid perfection, remain formless — yet each is grounded in the repeated patterns of history. Read as a warning rather than a manual, the book reveals both how power operates and how readily it corrupts.'
+  },
+  {
+    id: 'art-of-seduction',
+    title: 'The Art of Seduction',
+    author: 'Robert Greene',
+    category: 'Strategy',
+    color: '#3a1a2a',
+    accent: '#d4a574',
+    readingTime: 16,
+    year: 2001,
+    rating: 4.5,
+    summary: 'A controversial masterwork on psychology, influence, and social dynamics, arguing that seduction is not merely a sexual pursuit but the ultimate form of soft power and manipulation.',
+    keyIdeas: [
+      'Seduction does not begin with tactics; it begins with your <b>character</b>. Greene identifies <b>nine distinct seductive archetypes</b>, each appealing to a specific human vulnerability.',
+      'The <b>nine archetypes</b>: the Siren (raw sensual release), the Rake (obsessive pursuer), the Ideal Lover (mirrors unfulfilled desires), the Dandy (ambiguous, self-created), the Natural (child-like innocence), the Coquette (push-pull tension), the Charmer (deflects attention onto the target), the Charismatic (intense magnetic energy), and the Star (glamorous object of worship).',
+      'The <b>Anti-Seducer</b> chapter warns against types that kill attraction: the Brute (impatient, insensitive), the Bore (talks only of themselves), the Tightwad (cheap in spirit), the Windbag (loves the sound of their own voice), and the Moralizer (highly judgmental).',
+      'The seductive process is organized into <b>24 maneuvers across four phases</b>: Separation (stirring interest), Lead Astray (pleasure and confusion), The Precipice (extreme measures), and The Kill (physical and mental surrender).',
+      '<b>Phase 1 — Separation (steps 1-8)</b>: choose the right victim, approach indirectly, send mixed signals, create triangles of desire, stir discontent, master insinuation, enter their spirit, create temptation.',
+      '<b>Phase 2 — Lead Astray (steps 9-15)</b>: keep them in suspense, use words to sow confusion, pay attention to detail, poeticize your presence, disarm through vulnerability, confuse desire with reality, isolate the victim.',
+      '<b>Phase 3 — The Precipice (steps 16-20)</b>: prove yourself through action, effect a regression to childhood, stir the transgressive and taboo, use spiritual lures, mix pleasure with pain.',
+      '<b>Phase 4 — The Kill (steps 21-24)</b>: give them space to fall, use physical lures, master the bold move, beware of the aftereffects.',
+      'Greene\'s framework has been classified as drawing on the <b>Dark Triad</b> (Machiavellianism, narcissism, psychopathy) and heavily criticized in modern ethical discourse for encouraging boundary-crossing and disregarding consent.',
+    ],
+    mainTakeaways: [
+      'Seduction is the <b>ultimate form of soft power</b> — in modern egalitarian societies where direct force is unacceptable, power has gone underground into influence and manipulation.',
+      '<b>Character before tactics</b>: you must embody a seductive archetype before applying any maneuver; the archetype does the heavy lifting.',
+      'Human desire responds to <b>tension, absence, and scarcity</b> — the Coquette\'s push-pull dynamic is the single most powerful seductive pattern.',
+      '<b>Isolation is essential</b>: to fully influence someone, you must pull them away from their support networks — friends, family, and familiar environments.',
+      'The book can be read as a <b>diagnostic map rather than a manual</b>: by understanding the patterns, one can recognize when being manipulated by politicians, marketers, toxic partners, or cult leaders.',
+    ],
+    importantConcepts: [],
+    chapters: [
+      { num: 1, title: 'The Siren', detail: '<b>Concept:</b> The ultimate male fantasy — a pure, unrestrained release of sexual energy coupled with an air of danger. Historically, men are burdened by the pressure to be rational, responsible, and in control; the Siren offers an escape from this burden. <b>Mechanics:</b> a slow, breathy, musical voice; a hyper-feminine, theatrical, visually arresting look (often with water, mirrors, and lavish fabrics); a distant yet intensely focused demeanor. <b>Exemplar:</b> Cleopatra — not the most beautiful woman in Egypt, but a master of theatrical spectacle, arriving to meet Mark Antony on a gilded barge dressed as Venus. <b>Danger:</b> appearing too calculating or aggressive triggers suspicion and destroys the mystique.' },
+      { num: 2, title: 'The Rake', detail: '<b>Concept:</b> The ultimate female fantasy — an insatiable, obsessive pursuer willing to cross any boundary to conquer. Men fear the Rake as a rival, but women are drawn to his reputation for infidelity and his intense, singular focus. <b>Mechanics:</b> poetic, urgent, hyperbolic declarations of love; a track record of broken hearts that paradoxically makes him more attractive (women want to be the one who finally tames him); open defiance of societal norms. <b>Exemplar:</b> Lord Byron or Gabriele D\'Annunzio — Byron\'s scandalous lifestyle and dark poetic focus made him irresistible to nineteenth-century women trapped in conventional marriages. <b>Danger:</b> overstaying his welcome — his appeal is fleeting, and if he settles down or loses his edge he becomes pathetic.' },
+      { num: 3, title: 'The Ideal Lover', detail: '<b>Concept:</b> Most people harbor shattered childhood dreams and unfulfilled ideals; the Ideal Lover senses what is missing in the target\'s life and reflects it back, acting as a mirror of their fantasy self. <b>Mechanics:</b> meticulous observation to discover what the target lacks (adventure, romance, intellectual validation), then shaping one\'s identity to fill that void — representing bohemian freedom for someone bored by corporate life. <b>Exemplar:</b> Casanova — he observed his lovers\' deepest unfulfilled longings and fulfilled them, whether for intellectual discourse, high society, or simple adventure. <b>Danger:</b> exhaustion — maintaining a projection of another person\'s ideal self is emotionally and physically taxing.' },
+      { num: 4, title: 'The Dandy', detail: '<b>Concept:</b> Plays with gender roles, social conventions, and identity — ambiguous, non-conformist, self-created. By refusing traditional masculinity or femininity, the Dandy projects a captivating independence. <b>Mechanics:</b> androgyny (blending male and female traits — a man with delicate refined taste, a woman with cold intellectual authority); indifference (dressing and acting to please oneself, not others, which makes others desperate to please them). <b>Exemplar:</b> Rudolf Valentino or Beau Brummell — Valentino combined masculine strength with delicate, almost feminine vulnerability, driving early twentieth-century audiences wild. <b>Danger:</b> insolence — if too arrogant, cold, or self-absorbed, they alienate people.' },
+      { num: 5, title: 'The Natural', detail: '<b>Concept:</b> As we grow older we suppress our playfulness, innocence, and spontaneity; the Natural accesses these lost childhood qualities. Honest, unpretentious, vulnerable, and playful, they bypass intellectual defenses. <b>Mechanics:</b> a child-like aura — acting without calculation, showing weakness without shame, displaying wonder; and the Imp — playfully rebellious, teasing, pushing boundaries without malice. <b>Exemplar:</b> Charlie Chaplin or Josephine Baker — Baker won over Parisian society with wild, uninhibited, seemingly innocent energy that bypassed the intellectual defenses of the French elite. <b>Danger:</b> if the innocence is exposed as a calculated act, the Natural becomes a manipulative fraud.' },
+      { num: 6, title: 'The Coquette', detail: '<b>Concept:</b> Seduction relies on tension, and the Coquette is the master of the push-and-pull dynamic — promising pleasure and warmth, then withdrawing it, leaving the target insecure, obsessed, and desperate to win back their favor. <b>Mechanics:</b> cold and hot (alternating between intense attention and cold indifference); self-sufficiency (presenting complete independence — they do not need you; you need them). <b>Exemplar:</b> Andy Warhol — he captivated the elite art world by remaining passive, silent, and emotionally unavailable, forcing socialites and artists to compete for his attention. <b>Danger:</b> playing too cold for too long makes the target grow tired and abandon the pursuit.' },
+      { num: 7, title: 'The Charmer', detail: '<b>Concept:</b> While other archetypes attract attention to themselves, the Charmer deflects attention entirely onto the target, making them feel beautiful, intelligent, understood, and superior. <b>Mechanics:</b> validation — agreeing with the target\'s opinions, validating their insecurities, praising their strengths; deflecting conflict — never arguing, finding ways to agree or bypass confrontation gracefully. <b>Exemplar:</b> Benjamin Franklin — at the court of Louis XVI he did not demand aid for the American Revolution; he flattered the French, adopted their customs, and charmed the entire court. <b>Danger:</b> being exposed as disingenuous or spineless.' },
+      { num: 8, title: 'The Charismatic', detail: '<b>Concept:</b> Charisma is an intense, magnetic energy that radiates from within, often rooted in a deep sense of purpose, self-belief, or a connection to the divine or unconscious. <b>Mechanics:</b> the stare (intense, penetrating eye contact); the savior complex (presenting oneself as a leader who can deliver people from suffering); the mystery (keeping parts of one\'s background and intentions hidden). <b>Exemplar:</b> Joan of Arc or Rasputin — Rasputin\'s intense, unblinking gaze and absolute confidence in his spiritual authority allowed him to manipulate the Russian royal family. <b>Danger:</b> charisma is fragile — if the leader fails to deliver or shows vulnerability or fear, the illusion instantly shatters.' },
+      { num: 9, title: 'The Star', detail: '<b>Concept:</b> The Star is an object of worship — glamorous, distant, larger-than-life, living in a world of illusion, luxury, and style, allowing ordinary people to escape their mundane lives through them. <b>Mechanics:</b> ethereal quality (standing out through impeccable style and posture); blank slate (remaining mysterious so others can project their own desires onto them). <b>Exemplar:</b> Marilyn Monroe or John F. Kennedy — Monroe was a master of lighting, angles, and breathy vulnerability, turning herself from a normal girl into an idealized cinematic goddess. <b>Danger:</b> becoming too distant — if a Star is too detached, they become cold and unrelatable.' },
+      { num: 10, title: 'The Anti-Seducer', detail: '<b>Concept:</b> A warning of what not to do — Anti-Seducers are insecure, self-absorbed, and blind to the psychology of others. <b>The Brute:</b> impatient, demanding, insensitive to nuance. <b>The Bore:</b> talks only about themselves and their narrow interests. <b>The Tightwad:</b> cheapness in money translates to cheapness of spirit and emotion. <b>The Windbag:</b> loves the sound of their own voice; never listens. <b>The Moralizer:</b> wants you to conform to their standards; highly judgmental.' },
+      { num: 11, title: 'Phase 1: Separation — Stirring Interest (Steps 1-8)', detail: '<b>Step 1 — Choose the Right Victim:</b> do not target the naturally resistant or fully satisfied; look for the bored, lonely, or discontent. <b>Step 2 — Approach Indirectly:</b> never make intentions obvious; approach through a third party or platonic friendship, letting them feel in control. <b>Step 3 — Send Mixed Signals:</b> inconsistency captures attention and makes them think about you constantly. <b>Step 4 — Create Triangles:</b> appear to be an object of desire; social proof bypasses skepticism. <b>Step 5 — Create a Need:</b> subtly point out their flaws and discontent, then position yourself as the solution. <b>Step 6 — Master Insinuation:</b> plant ideas through subtext and glances; let them believe the thoughts were their own. <b>Step 7 — Enter Their Spirit:</b> adapt to their mood, tastes, and lifestyle to lower their guard. <b>Step 8 — Create Temptation:</b> find the target\'s secret, repressed desire and offer a glimpse of it.' },
+      { num: 12, title: 'Phase 2: Lead Astray — Pleasure and Confusion (Steps 9-15)', detail: '<b>Step 9 — Keep Them in Suspense:</b> predictability kills romance; surprise them and change plans. <b>Step 10 — Use the Demonic Power of Words:</b> use language to alter emotional states, not convey information — hyperbole, sweet phrases, poetic vagueness. <b>Step 11 — Pay Attention to Detail:</b> seduction is aesthetic; master lighting, scent, and thoughtful gifts. <b>Step 12 — Poeticize Your Presence:</b> hide mundane struggles, cultivate romance, let absences be felt. <b>Step 13 — Strategic Weakness:</b> reveal a vulnerability to trigger protective instincts. <b>Step 14 — The Perfect Illusion:</b> create a dream world, a theatrical escape from harsh reality. <b>Step 15 — Isolate the Victim:</b> pull them away from friends, family, and familiar environments so they rely on you.' },
+      { num: 13, title: 'Phase 3: The Precipice — Extreme Measures (Steps 16-20)', detail: '<b>Step 16 — Prove Yourself:</b> actions prove depth; act heroically in a crisis to dispel doubts. <b>Step 17 — Effect a Regression:</b> tap into childhood memories to trigger a vulnerable, childlike state. <b>Step 18 — Stir the Transgressive and Taboo:</b> shared guilt and excitement of crossing a boundary binds you together. <b>Step 19 — Use Spiritual Lures:</b> frame the connection as destiny, soulmates, or cosmic — making seduction feel pure and noble. <b>Step 20 — Mix Pleasure with Pain:</b> a sudden calculated bout of pain (coldness, jealousy, withdrawal) doubles the pleasure when you return with warmth.' },
+      { num: 14, title: 'Phase 4: The Kill — Physical and Mental Surrender (Steps 21-24)', detail: '<b>Step 21 — Give Them Space to Fall:</b> back off at the peak of tension; the target will panic, pursue you, and convince themselves they are the seducer. <b>Step 22 — Use Physical Lures:</b> shift from mind to body — lingering touches, intense eye contact, sensuous environments. <b>Step 23 — Master the Bold Move:</b> do not hesitate; make a bold, decisive, aggressive move when the target is confused, isolated, and primed. <b>Step 24 — Beware the Aftereffects:</b> manage the aftermath — continue minor seductions to keep them, or end it cleanly without lingering resentment.' },
+    ],
+    practicalLessons: [
+      '<b>Choose your target wisely:</b> look for the bored, lonely, or discontent — a fully content person cannot be seduced.',
+      '<b>Never approach directly:</b> indirect approaches bypass psychological defenses; let the target feel in control.',
+      '<b>Send mixed signals:</b> inconsistency makes people think about you constantly, trying to solve the puzzle.',
+      '<b>Create triangles of desire:</b> humans desire what others want — social proof bypasses skepticism.',
+      '<b>Master push-pull:</b> alternate between warmth and cold indifference to create obsession.',
+      '<b>Isolate the victim:</b> pull them away from friends and family to become their sole source of validation.',
+      '<b>Know when to make the bold move:</b> hesitation shows weakness; be decisive when the target is confused and primed.',
+    ],
+    bestQuotes: [
+      { text: 'Seduction does not begin with tactics; it begins with your character.', cite: 'The Art of Seduction — Introduction' },
+      { text: 'The Siren offers an escape from the burden of rationality and control.', cite: 'Chapter 1 — The Siren' },
+      { text: 'A completely content person cannot be seduced.', cite: 'Step 5 — Stir Anxiety and Discontent' },
+      { text: 'Predictability kills romance.', cite: 'Step 9 — Keep Them in Suspense' },
+      { text: 'If you can provide a theatrical, idealized escape — reminiscent of movies or fairy tales — they will lose all connection to reality.', cite: 'Step 14 — The Perfect Illusion' },
+      { text: 'Power has gone underground. Seduction becomes the ultimate democratic weapon — allowing the socially weak to overpower the strong.', cite: 'Critical Perspective — Seduction as Soft Power' },
+    ],
+    finalTakeaway: 'The Art of Seduction is a complex, controversial work that sits at the intersection of psychology, history, and social dynamics. Greene\'s central argument — that seduction is the ultimate form of soft power, operating through nine archetypes and twenty-four maneuvers — reveals both how influence works in modern society and how easily it can be exploited. The book is best read as a diagnostic map: by understanding these patterns, one can recognize them in politics, marketing, cult leaders, and toxic relationships. The ethical critique is essential — the techniques Greene describes have been co-opted by manipulative subcultures, and the book\'s assumption that "no" is often a defense mechanism rather than a true refusal is deeply problematic in contemporary discourse on consent.'
+  },
+  {
     id: 'aparokshanubhuti',
     title: 'Aparokshanubhuti',
     author: 'Adi Shankarāchārya',
@@ -2102,6 +2265,8 @@ const BOOKS = [
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
+  "art-of-seduction": "2026-08-28",
+  "48-laws-of-power": "2026-08-28",
   "kaivalya-upanishad": "2026-08-28",
   "isha-upanishad": "2026-08-28",
   "kathopanishad": "2026-08-28",
@@ -2352,7 +2517,7 @@ function openSummary(id) {
     const sections = [
       { id: 'key-ideas', label: 'Key Ideas', icon: 'key' },
       { id: 'takeaways', label: 'Takeaways', icon: 'takeaways' },
-      { id: 'concepts', label: 'Concepts', icon: 'concepts' },
+      { id: 'concepts', label: book.laws ? 'Laws' : book.chapters ? 'Chapters' : 'Concepts', icon: 'concepts' },
       { id: 'lessons', label: 'Lessons', icon: 'lessons' },
       { id: 'quotes', label: 'Quotes', icon: 'quotes' },
     ];
@@ -2394,12 +2559,64 @@ function openSummary(id) {
         <ul>${book.mainTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>
       </div>
     </section>
+    ${book.laws ? `
+    <section id="summary-concepts">
+      <div class="section-card laws-card" id="lawsCard">
+        <div class="translation-head">
+          <h2><span class="section-icon">${ICONS.concepts}</span> The 48 Laws</h2>
+          <span class="translation-badge">${book.laws.length} laws</span>
+        </div>
+        <ol class="laws-list" id="lawsList">
+          ${book.laws.map(law => `
+            <li class="law">
+              <span class="law-num" aria-hidden="true">${law.num}</span>
+              <span class="law-text">
+                <span class="law-title">${law.title}</span>
+                ${law.detail ? `<span class="law-detail">${law.detail}</span>` : ''}
+              </span>
+            </li>
+          `).join('')}
+        </ol>
+        <button class="translation-toggle" id="lawsToggle" type="button" aria-expanded="false">
+          <span class="toggle-label">See all laws</span>
+          <span class="toggle-count">(${book.laws.length} laws)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </section>
+    ` : book.chapters ? `
+    <section id="summary-concepts">
+      <div class="section-card laws-card" id="lawsCard">
+        <div class="translation-head">
+          <h2><span class="section-icon">${ICONS.concepts}</span> Chapters</h2>
+          <span class="translation-badge">${book.chapters.length} chapters</span>
+        </div>
+        <ol class="laws-list" id="lawsList">
+          ${book.chapters.map(ch => `
+            <li class="law">
+              <span class="law-num" aria-hidden="true">${ch.num}</span>
+              <span class="law-text">
+                <span class="law-title">${ch.title}</span>
+                ${ch.detail ? `<span class="law-detail">${ch.detail}</span>` : ''}
+              </span>
+            </li>
+          `).join('')}
+        </ol>
+        <button class="translation-toggle" id="lawsToggle" type="button" aria-expanded="false">
+          <span class="toggle-label">See all chapters</span>
+          <span class="toggle-count">(${book.chapters.length} chapters)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </section>
+    ` : `
     <section id="summary-concepts">
       <div class="section-card">
         <h2><span class="section-icon">${ICONS.concepts}</span> Important Concepts</h2>
         <ul>${book.importantConcepts.map(c => `<li>${c}</li>`).join('')}</ul>
       </div>
     </section>
+    `}
     <section id="summary-lessons">
       <div class="section-card">
         <h2><span class="section-icon">${ICONS.lessons}</span> Practical Lessons</h2>
@@ -2460,6 +2677,27 @@ function openSummary(id) {
       if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  // Laws / Chapters toggle
+  const lawsToggle = document.getElementById('lawsToggle');
+  if (lawsToggle) {
+    const card = document.getElementById('lawsCard');
+    const label = lawsToggle.querySelector('.toggle-label');
+    const count = lawsToggle.querySelector('.toggle-count');
+    const items = book.laws || book.chapters || [];
+    const unit = book.laws ? 'laws' : 'chapters';
+    lawsToggle.addEventListener('click', () => {
+      const expanded = card.classList.toggle('expanded');
+      if (expanded) {
+        label.textContent = 'Hide';
+        if (count) count.textContent = '';
+      } else {
+        label.textContent = 'See all';
+        if (count) count.textContent = `(${items.length} ${unit})`;
+      }
+      lawsToggle.setAttribute('aria-expanded', String(expanded));
+    });
+  }
 
   // Translation toggle
   const translationToggle = document.getElementById('translationToggle');

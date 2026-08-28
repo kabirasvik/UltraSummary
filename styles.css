@@ -570,6 +570,57 @@ ul { list-style: none; }
 .translation-card.expanded .translation-toggle svg { transform: rotate(180deg); }
 
 /* ============================================================
+   LAWS LIST (48 Laws of Power)
+   ============================================================ */
+.laws-card { overflow: hidden; }
+.laws-card.expanded .laws-list { max-height: none; -webkit-mask-image: none; mask-image: none; }
+.laws-card.expanded .translation-toggle svg { transform: rotate(180deg); }
+
+.laws-list {
+  list-style: none; display: flex; flex-direction: column; gap: 24px;
+  max-height: 460px; overflow: hidden; position: relative;
+  padding-top: 18px;
+  transition: max-height 400ms var(--ease);
+  -webkit-mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 82%, transparent 100%);
+}
+.laws-list .law {
+  position: relative;
+  display: flex; align-items: flex-start; justify-content: center;
+  padding: 24px 16px 16px; text-align: center;
+  background: var(--bg); border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+}
+.laws-list .law::before { display: none; }
+@media (hover: hover) {
+  .laws-list .law:hover { border-color: var(--border); }
+}
+.law-num {
+  position: absolute; top: -14px; left: 50%;
+  transform: translateX(-50%);
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--white);
+  font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--shadow-sm);
+}
+.law-text {
+  flex: 1; min-width: 0;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.law-title {
+  font-family: var(--font-display);
+  font-size: calc(15.5px * var(--fs)); font-weight: 600; color: var(--text);
+  line-height: 1.35;
+}
+.law-detail {
+  font-size: calc(14px * var(--fs)); line-height: 1.65; color: var(--text-secondary);
+}
+@media (max-width: 560px) {
+  .laws-list .law { padding-top: 20px; }
+}
+
+
+/* ============================================================
    SUMMARY VIEW
    ============================================================ */
 .summary-scrim {
