@@ -5,9 +5,304 @@
 /* ----- Book Data ----- */
 const BOOKS = [
   {
+    id: 'kathopanishad',
+    title: 'Kathopanishad',
+    author: 'Ancient Seers',
+    category: 'Upanishads',
+    color: '#3a2b1a',
+    accent: '#c9a227',
+    readingTime: 6,
+    year: -500,
+    rating: 4.9,
+    summary: 'The legendary dialogue between the boy Nachiketa and Yama, the god of death, on the nature of the Self, knowledge and liberation.',
+    keyIdeas: [
+        'The <b>Kathopanishad</b> is the legendary dialogue between the boy <b>Nachiketa</b> and <b>Yama</b>, the god of death, on the nature of the Self (Atman), knowledge and liberation (Moksha).',
+        'It is embedded in the <b>Krishna Yajurveda</b>, a Mukhya Upanishad listed as <b>#3 in the Muktika canon</b>, with two chapters (adhyayas) of three Vallis each, containing 119 mantras.',
+        'Nachiketa\'s <b>three boons</b> lead to the supreme question: what happens to a person after death? Yama\'s reluctant answer reveals the <b>eternal, unborn Atman</b>.',
+        'The famous <b>chariot analogy</b>: the body is the chariot, the intellect the charioteer, the mind the reins, and the senses the horses.',
+        'The <b>good (shreya)</b> and the <b>pleasant (preya)</b> are opposed; the wise choose the good, while the fool chooses the pleasant.',
+        'The Self is <b>not attained by argument</b> but by the grace of the Self itself, which reveals Its own form to the one it chooses.',
+    ],
+    mainTakeaways: [
+        'The Self (Atman) is <b>unborn, eternal, and not killed when the body is killed</b>.',
+        '<b>Choose the good over the pleasant</b>, for the pleasant leads to bondage and death.',
+        'The body is a chariot; the wise make <b>discrimination their charioteer and the mind their reins</b>.',
+        'Brahman is <b>not attained by argument or study alone</b>, but by the one whom It chooses.',
+        'When <b>all the desires of the heart fall away</b>, the mortal becomes immortal and attains Brahman.',
+    ],
+    importantConcepts: [
+        '<b>Nachiketa:</b> The young seeker who chose wisdom over wealth and immortality over pleasure.',
+        '<b>Yama:</b> The god of death, who reluctantly becomes the teacher of the highest truth.',
+        '<b>Shreya and Preya:</b> The good and the pleasant, the two paths that bind a man.',
+        '<b>The Chariot Analogy:</b> The body as chariot, intellect as charioteer, mind as reins, senses as horses.',
+        '<b>Om:</b> The syllable that is Brahman, the best and highest support.',
+        '<b>The Asvattha Tree:</b> The eternal tree with its root above, symbolising Brahman as the source of all.',
+    ],
+    practicalLessons: [
+        'Face the <b>fear of death</b> by inquiring into the nature of the Self, as Nachiketa did.',
+        'Cultivate <b>discrimination (viveka)</b> between the good and the pleasant in every choice.',
+        'Keep the senses <b>controlled, like good horses</b> under a skilled charioteer.',
+        'Meditate on <b>Om</b>, the syllable that is Brahman and the highest support.',
+        'Attain the state where <b>all desires of the heart fall away</b>, making the mortal immortal.',
+    ],
+    bestQuotes: [
+      { text: 'Arise! Awake! Approach the great and learn. Like the sharp edge of a razor is that path, so the wise say, hard to tread and difficult to cross.', cite: 'Kathopanishad 1.3.14' },
+      { text: 'The knowing Self is not born; It does not die. Birthless, eternal, everlasting and ancient, It is not killed when the body is killed.', cite: 'Kathopanishad 1.2.18' },
+      { text: 'The sun does not shine there, nor the moon and the stars, nor these lightnings. He shining, everything shines after Him. By His light all this is lighted.', cite: 'Kathopanishad 2.2.15' },
+      { text: 'When all the desires that dwell in the heart fall away, then the mortal becomes immortal and here attains Brahman.', cite: 'Kathopanishad 2.3.14' },
+    ],
+    finalTakeaway: 'The Kathopanishad presents the eternal truths of Vedanta in the form of a moving narrative: the boy Nachiketa, granted three boons by the god of death, refuses wealth and pleasure and asks instead the deepest question, what happens to a man after death. Yama\'s answer reveals the Atman, the unborn, eternal Self, attained not by argument but by the grace of the Self itself. Through the chariot analogy, the distinction of the good and the pleasant, and the affirmation of Om as Brahman, the Upanishad guides the seeker to the state where all desires of the heart fall away and the mortal becomes immortal.',
+    translation: {
+      translator: 'Swami Sivananda',
+      publisher: 'Divine Life Society',
+      sanskritVerses: [
+        'ॐ उशन् ह वै वाजश्रवसः सर्ववेदसं ददौ । तस्य ह नचिकेता नाम पुत्र आस ॥ १॥',
+        'तँ ह कुमारँ सन्तं दक्षिणासु नीयमानासु श्रद्धाविवेश सोऽमन्यत ॥ २॥',
+        'पीतोदका जग्धतृणा दुग्धदोहा निरिन्द्रियाः । अनन्दा नाम ते लोकास्तान् स गच्छति ता ददत् ॥ ३॥',
+        'स होवाच पितरं तत कस्मै मां दास्यसीति । द्वितीयं तृतीयं तँ होवाच मृत्यवे त्वा ददामीति ॥ ४॥',
+        'बहूनामेमि प्रथमो बहूनामेमि मध्यमः । किँ स्विद्यमस्य कर्तव्यं यन्मयाऽद्य करिष्यति ॥ ५॥',
+        'अनुपश्य यथा पूर्वे प्रतिपश्य तथाऽपरे । सस्यमिव मर्त्यः पच्यते सस्यमिवाजायते पुनः ॥ ६॥',
+        'वैश्वानरः प्रविशत्यतिथिर्ब्राह्मणो गृहान् । तस्यैताँ शान्तिं कुर्वन्ति हर वैवस्वतोदकम् ॥ ७॥',
+        'आशाप्रतीक्षे संगतँ सूनृतां चेष्टापूर्ते पुत्रपशूँश्च सर्वान् । एतद्वृङ्क्ते पुरुषस्याल्पमेधसो यस्यानश्नन्वसति ब्राह्मणो गृहे ॥ ८॥',
+        'तिस्रो रात्रीर्यदवात्सीर्गृहे मेऽनश्नन् ब्रह्मन्नतिथिर्नमस्यः । नमस्तेऽस्तु ब्रह्मन् स्वस्ति मेऽस्तु तस्मात्प्रति त्रीन्वरान्वृणीष्व ॥ ९॥',
+        'शान्तसंकल्पः सुमना यथा स्याद् वीतमन्युर्गौतमो माऽभि मृत्यो । त्वत्प्रसृष्टं माऽभिवदेत्प्रतीत एतत् त्रयाणां प्रथमं वरं वृणे ॥ १०॥',
+        'यथा पुरस्ताद् भविता प्रतीत औद्दालकिरारुणिर्मत्प्रसृष्टः । सुखँ रात्रीः शयिता वीतमन्युः त्वां ददृशिवान्मृत्युमुखात् प्रमुक्तम् ॥ ११॥',
+        'स्वर्गे लोके न भयं किंचनास्ति न तत्र त्वं न जरया बिभेति । उभे तीर्त्वाऽशनायापिपासे शोकातिगो मोदते स्वर्गलोके ॥ १२॥',
+        'स त्वमग्निँ स्वर्ग्यमध्येषि मृत्यो प्रब्रूहि त्वँ श्रद्दधानाय मह्यम् । स्वर्गलोका अमृतत्वं भजन्त एतद् द्वितीयेन वृणे वरेण ॥ १३॥',
+        'प्र ते ब्रवीमि तदु मे निबोध स्वर्ग्यमग्निं नचिकेतः प्रजानन् । अनन्तलोकाप्तिमथो प्रतिष्ठां विद्धि त्वमेतं निहितं गुहायाम् ॥ १४॥',
+        'लोकादिमग्निं तमुवाच तस्मै या इष्टका यावतीर्वा यथा वा । स चापि तत्प्रत्यवदद्यथोक्तं अथास्य मृत्युः पुनरेवाह तुष्टः ॥ १५॥',
+        'तमब्रवीत् प्रीयमाणो महात्मा वरं तवेहाद्य ददामि भूयः । तवैव नाम्ना भविताऽयमग्निः सृङ्कां चेमामनेकरूपां गृहाण ॥ १६॥',
+        'त्रिणाचिकेतस्त्रिभिरेत्य सन्धिं त्रिकर्मकृत्तरति जन्ममृत्यू । ब्रह्मजज्ञं देवमीड्यं विदित्वा निचाय्येमाँ शान्तिमत्यन्तमेति ॥ १७॥',
+        'त्रिणाचिकेतस्त्रयमेतद्विदित्वा य एवं विद्वाँश्चिनुते नाचिकेतम् । स मृत्युपाशान् पुरतः प्रणोद्य शोकातिगो मोदते स्वर्गलोके ॥ १८॥',
+        'एष तेऽग्निर्नचिकेतः स्वर्ग्यो यमवृणीथा द्वितीयेन वरेण । एतमग्निं तवैव प्रवक्ष्यन्ति जनासः तृतीयं वरं नचिकेतो वृणीष्व ॥ १९॥',
+        'येयं प्रेते विचिकित्सा मनुष्येऽस्तीत्येके नायमस्तीति चैके । एतद्विद्यामनुशिष्टस्त्वयाऽहं वराणामेष वरस्तृतीयः ॥ २०॥',
+        'देवैरत्रापि विचिकित्सितं पुरा न हि सुविज्ञेयमणुरेष धर्मः । अन्यं वरं नचिकेतो वृणीष्व मा मोपरोत्सीरति मा सृजैनम् ॥ २१॥',
+        'देवैरत्रापि विचिकित्सितं किल त्वं च मृत्यो यन्न सुज्ञेयमात्थ । वक्ता चास्य त्वादृगन्यो न लभ्यो नान्यो वरस्तुल्य एतस्य कश्चित् ॥ २२॥',
+        'शतायुषः पुत्रपौत्रान्वृणीष्वा बहून्पशून् हस्तिहिरण्यमश्वान् । भूमेर्महदायतनं वृणीष्व स्वयं च जीव शरदो यावदिच्छसि ॥ २३॥',
+        'एतत्तुल्यं यदि मन्यसे वरं वृणीष्व वित्तं चिरजीविकां च । महाभूमौ नचिकेतस्त्वमेधि कामानां त्वा कामभाजं करोमि ॥ २४॥',
+        'ये ये कामा दुर्लभा मर्त्यलोके सर्वान् कामाँश्छन्दतः प्रार्थयस्व । इमा रामाः सरथाः सतूर्या न हीदृशा लम्भनीया मनुष्यैः । आभिर्मत्प्रत्ताभिः परिचारयस्व नचिकेतो मरणं माऽनुप्राक्षीः ॥ २५॥',
+        'श्वोभावा मर्त्यस्य यदन्तकैतत् सर्वेंद्रियाणां जरयंति तेजः । अपि सर्वं जीवितमल्पमेव तवैव वाहास्तव नृत्यगीते ॥ २६॥',
+        'न वित्तेन तर्पणीयो मनुष्यो लप्स्यामहे वित्तमद्राक्ष्म चेत्त्वा । जीविष्यामो यावदीशिष्यसि त्वं वरस्तु मे वरणीयः स एव ॥ २७॥',
+        'अजीर्यताममृतानामुपेत्य जीर्यन्मर्त्यः क्वधःस्थः प्रजानन् । अभिध्यायन् वर्णरतिप्रमोदान् अतिदीर्घे जीविते को रमेत ॥ २८॥',
+        'यस्मिन्निदं विचिकित्सन्ति मृत्यो यत्साम्पराये महति ब्रूहि नस्तत् । योऽयं वरो गूढमनुप्रविष्टो नान्यं तस्मान्नचिकेता वृणीते ॥ २९॥',
+        'अन्यच्छ्रेयोऽन्यदुतैव प्रेय-स्ते उभे नानार्थे पुरुषँ सिनीतः । तयोः श्रेय आददानस्य साधु भवति हीयतेऽर्थाद्य उ प्रेयो वृणीते ॥ १॥',
+        'श्रेयश्च प्रेयश्च मनुष्यमेतः तौ सम्परीत्य विविनक्ति धीरः । श्रेयो हि धीरोऽभि प्रेयसो वृणीते प्रेयो मन्दो योगक्षेमाद्वृणीते ॥ २॥',
+        'स त्वं प्रियान्प्रियरूपांश्च कामान् अभिध्यायन्नचिकेतोऽत्यस्राक्षीः । नैतां सृङ्कां वित्तमयीमवाप्तो यस्यां मज्जन्ति बहवो मनुष्याः ॥ ३॥',
+        'दूरमेते विपरीते विषूची अविद्या या च विद्येति ज्ञाता । विद्याभीप्सिनं नचिकेतसं मन्ये न त्वा कामा बहवोऽलोलुपन्त ॥ ४॥',
+        'अविद्यायामन्तरे वर्तमानाः स्वयं धीराः पण्डितंमन्यमानाः । दन्द्रम्यमाणाः परियन्ति मूढा अन्धेनैव नीयमाना यथान्धाः ॥ ५॥',
+        'न साम्परायः प्रतिभाति बालं प्रमाद्यन्तं वित्तमोहेन मूढम् । अयं लोको नास्ति पर इति मानी पुनः पुनर्वशमापद्यते मे ॥ ६॥',
+        'श्रवणायापि बहुभिर्यो न लभ्यः शृण्वन्तोऽपि बहवो यं न विद्युः । आश्चर्यो वक्ता कुशलोऽस्य लब्धा आश्चर्यो ज्ञाता कुशलानुशिष्टः ॥ ७॥',
+        'न नरेणावरेण प्रोक्त एष सुविज्ञेयो बहुधा चिन्त्यमानः । अनन्यप्रोक्ते गतिरत्र नास्ति अणीयान् ह्यतर्क्यमणुप्रमाणात् ॥ ८॥',
+        'नैषा तर्केण मतिरापनेया प्रोक्तान्येनैव सुज्ञानाय प्रेष्ठ । यां त्वमापः सत्यधृतिर्बतासि त्वादृङ्नो भूयान्नचिकेतः प्रष्टा ॥ ९॥',
+        'जानाम्यहं शेवधिरित्यनित्यं न ह्यध्रुवैः प्राप्यते हि ध्रुवं तत् । ततो मया नाचिकेतश्चितोऽग्निः अनित्यैर्द्रव्यैः प्राप्तवानस्मि नित्यम् ॥ १०॥',
+        'कामस्याप्तिं जगतः प्रतिष्ठां क्रतोरानन्त्यमभयस्य पारम् । स्तोममहदुरुगायं प्रतिष्ठां दृष्ट्वा धृत्या धीरो नचिकेतोऽत्यस्राक्षीः ॥ ११॥',
+        'तं दुर्दर्शं गूढमनुप्रविष्टं गुहाहितं गह्वरेष्ठं पुराणम् । अध्यात्मयोगाधिगमेन देवं मत्वा धीरो हर्षशोकौ जहाति ॥ १२॥',
+        'एतच्छ्रुत्वा सम्परिगृह्य मर्त्यः प्रवृह्य धर्म्यमणुमेतमाप्य । स मोदते मोदनीयँ हि लब्ध्वा विवृतँ सद्म नचिकेतसं मन्ये ॥ १३॥',
+        'अन्यत्र धर्मादन्यत्राधर्मा-दन्यत्रास्मात्कृताकृतात् । अन्यत्र भूताच्च भव्याच्च यत्तत्पश्यसि तद्वद ॥ १४॥',
+        'सर्वे वेदा यत्पदमामनन्ति तपाꣳसि सर्वाणि च यद्वदन्ति । यदिच्छन्तो ब्रह्मचर्यं चरन्ति तत्ते पदꣳ संग्रहेण ब्रवीम्योमित्येतत् ॥ १५॥',
+        'एतद्ध्येवाक्षरं ब्रह्म एतद्ध्येवाक्षरं परम् । एतद्ध्येवाक्षरं ज्ञात्वा यो यदिच्छति तस्य तत् ॥ १६॥',
+        'एतदालम्बनँ श्रेष्ठमेतदालम्बनं परम् । एतदालम्बनं ज्ञात्वा ब्रह्मलोके महीयते ॥ १७॥',
+        'न जायते म्रियते वा विपश्चिन् नायं कुतश्चिन्न बभूव कश्चित् । अजो नित्यः शाश्वतोऽयं पुराणो न हन्यते हन्यमाने शरीरे ॥ १८॥',
+        'हन्ता चेन्मन्यते हन्तुँ हतश्चेन्मन्यते हतम् । उभौ तौ न विजानीतो नायँ हन्ति न हन्यते ॥ १९॥',
+        'अणोरणीयान्महतो महीया-नात्माऽस्य जन्तोर्निहितो गुहायाम् । तमक्रतुः पश्यति वीतशोको धातुप्रसादान्महिमानमात्मनः ॥ २०॥',
+        'आसीनो दूरं व्रजति शयानो याति सर्वतः । कस्तं मदामदं देवं मदन्यो ज्ञातुमर्हति ॥ २१॥',
+        'अशरीरँ शरीरेष्वनवस्थेष्ववस्थितम् । महान्तं विभुमात्मानं मत्वा धीरो न शोचति ॥ २२॥',
+        'नायमात्मा प्रवचनेन लभ्यो न मेधया न बहुना श्रुतेन । यमेवैष वृणुते तेन लभ्यः तस्यैष आत्मा विवृणुते तनूꣳ स्वाम् ॥ २३॥',
+        'नाविरतो दुश्चरितान्नाशान्तो नासमाहितः । नाशान्तमानसो वाऽपि प्रज्ञानेनैनमाप्नुयात् ॥ २४॥',
+        'यस्य ब्रह्म च क्षत्रं च उभे भवत ओदनः । मृत्युर्यस्योपसेचनं क इत्था वेद यत्र सः ॥ २५॥',
+        'ऋतं पिबन्तौ सुकृतस्य लोके गुहां प्रविष्टौ परमे परार्धे । छायातपौ ब्रह्मविदो वदन्ति पञ्चाग्नयो ये च त्रिणाचिकेताः ॥ १॥',
+        'यः सेतुरीजानानामक्षरं ब्रह्म यत् परम् । अभयं तितीर्षतां पारं नाचिकेतँ शकेमहि ॥ २॥',
+        'आत्मानँ रथिनं विद्धि शरीरँ रथमेव तु । बुद्धिं तु सारथिं विद्धि मनः प्रग्रहमेव च ॥ ३॥',
+        'इन्द्रियाणि हयानाहुर्विषयाँ स्तेषु गोचरान् । आत्मेन्द्रियमनोयुक्तं भोक्तेत्याहुर्मनीषिणः ॥ ४॥',
+        'यस्त्वविज्ञानवान्भवत्ययुक्तेन मनसा सदा । तस्येन्द्रियाण्यवश्यानि दुष्टाश्वा इव सारथेः ॥ ५॥',
+        'यस्तु विज्ञानवान्भवति युक्तेन मनसा सदा । तस्येन्द्रियाणि वश्यानि सदश्वा इव सारथेः ॥ ६॥',
+        'यस्त्वविज्ञानवान्भवत्यमनस्कः सदाऽशुचिः । न स तत्पदमाप्नोति संसारं चाधिगच्छति ॥ ७॥',
+        'यस्तु विज्ञानवान्भवति समनस्कः सदा शुचिः । स तु तत्पदमाप्नोति यस्माद्भूयो न जायते ॥ ८॥',
+        'विज्ञानसारथिर्यस्तु मनः प्रग्रहवान्नरः । सोऽध्वनः पारमाप्नोति तद्विष्णोः परमं पदम् ॥ ९॥',
+        'इन्द्रियेभ्यः परा ह्यर्था अर्थेभ्यश्च परं मनः । मनसस्तु परा बुद्धिर्बुद्धेरात्मा महान्परः ॥ १०॥',
+        'महतः परमव्यक्तमव्यक्तात्पुरुषः परः । पुरुषान्न परं किंचित्सा काष्ठा सा परा गतिः ॥ ११॥',
+        'एष सर्वेषु भूतेषु गूढोऽऽत्मा न प्रकाशते । दृश्यते त्वग्र्यया बुद्ध्या सूक्ष्मया सूक्ष्मदर्शिभिः ॥ १२॥',
+        'यच्छेद्वाङ्मनसी प्राज्ञस्तद्यच्छेज्ज्ञान आत्मनि । ज्ञानमात्मनि महति नियच्छेत्तद्यच्छेच्छान्त आत्मनि ॥ १३॥',
+        'उत्तिष्ठत जाग्रत प्राप्य वरान्निबोधत । क्षुरस्य धारा निशिता दुरत्यया दुर्गं पथस्तत्कवयो वदन्ति ॥ १४॥',
+        'अशब्दमस्पर्शमरूपमव्ययं तथाऽरसं नित्यमगन्धवच्च यत् । अनाद्यनन्तं महतः परं ध्रुवं निचाय्य तन्मृत्युमुखात् प्रमुच्यते ॥ १५॥',
+        'नाचिकेतमुपाख्यानं मृत्युप्रोक्तँ सनातनम् । उक्त्वा श्रुत्वा च मेधावी ब्रह्मलोके महीयते ॥ १६॥',
+        'य इमं परमं गुह्यं श्रावयेद् ब्रह्मसंसदि । प्रयतः श्राद्धकाले वा तदानन्त्याय कल्पते ॥ १७॥',
+        'पराञ्चि खानि व्यतृणत् स्वयम्भू-स्तस्मात्पराङ्पश्यति नान्तरात्मन् । कश्चिद्धीरः प्रत्यगात्मानमैक्ष-दावृत्तचक्षुरमृतत्वमिच्छन् ॥ १॥',
+        'पराचः कामाननुयन्ति बाला-स्ते मृत्योर्यन्ति विततस्य पाशम् । अथ धीरा अमृतत्वं विदित्वा ध्रुवमध्रुवेष्विह न प्रार्थयन्ते ॥ २॥',
+        'येन रूपं रसं गन्धं शब्दान् स्पर्शाꣳश्च मैथुनान् । एतेनैव विजानाति किमत्र परिशिष्यते । एतद्वै तत् ॥ ३॥',
+        'स्वप्नान्तं जागरितान्तं चोभौ येनानुपश्यति । महान्तं विभुमात्मानं मत्वा धीरो न शोचति ॥ ४॥',
+        'य इमं मध्वदं वेद आत्मानं जीवमन्तिकात् । ईशानं भूतभव्यस्य न ततो विजुगुप्सते । एतद्वै तत् ॥ ५॥',
+        'यः पूर्वं तपसो जातमद्भ्यः पूर्वमजायत । गुहां प्रविश्य तिष्ठन्तं यो भूतेभिर्व्यपश्यत । एतद्वै तत् ॥ ६॥',
+        'या प्राणेन संभवत्यदितिर्देवतामयी । गुहां प्रविश्य तिष्ठन्तीं या भूतेभिर्व्यजायत । एतद्वै तत् ॥ ७॥',
+        'अरण्योर्निहितो जातवेदा गर्भ इव सुभृतो गर्भिणीभिः । दिवे दिवे ईड्यो जागृवद्भिर्हविष्मद्भिर्मनुष्येभिरग्निः । एतद्वै तत् ॥ ८॥',
+        'यतश्चोदेति सूर्योऽस्तं यत्र च गच्छति । तं देवाः सर्वेऽर्पितास्तदु नात्येति कश्चन । एतद्वै तत् ॥ ९॥',
+        'यदेवेह तदमुत्र यदमुत्र तदन्विह । मृत्योः स मृत्युमाप्नोति य इह नानेव पश्यति ॥ १०॥',
+        'मनसैवेदमाप्तव्यं नेह नानाऽस्ति किंचन । मृत्योः स मृत्युं गच्छति य इह नानेव पश्यति ॥ ११॥',
+        'अङ्गुष्ठमात्रः पुरुषो मध्य आत्मनि तिष्ठति । ईशानं भूतभव्यस्य न ततो विजुगुप्सते । एतद्वै तत् ॥ १२॥',
+        'अङ्गुष्ठमात्रः पुरुषो ज्योतिरिवाधूमकः । ईशानो भूतभव्यस्य स एवाद्य स उ श्वः । एतद्वै तत् ॥ १३॥',
+        'यथोदकं दुर्गे वृष्टं पर्वतेषु विधावति । एवं धर्मान् पृथक् पश्यंस्तानेवानुविधावति ॥ १४॥',
+        'यथोदकं शुद्धे शुद्धमासिक्तं तादृगेव भवति । एवं मुनेर्विजानत आत्मा भवति गौतम ॥ १५॥',
+        'पुरमेकादशद्वारमजस्यावक्रचेतसः । अनुष्ठाय न शोचति विमुक्तश्च विमुच्यते । एतद्वै तत् ॥ १॥',
+        'हँसः शुचिषद्वसुरान्तरिक्षसद्-होता वेदिषदतिथिर्दुरोणसत् । नृषद्वरसदृतसद्व्योमसद् अब्जा गोजा ऋतजा अद्रिजा ऋतं बृहत् ॥ २॥',
+        'ऊर्ध्वं प्राणमुन्नयत्यपानं प्रत्यगस्यति । मध्ये वामनमासीनं विश्वे देवा उपासते ॥ ३॥',
+        'अस्य विस्रंसमानस्य शरीरस्थस्य देहिनः । देहाद्विमुच्यमानस्य किमत्र परिशिष्यते । एतद्वै तत् ॥ ४॥',
+        'न प्राणेन नापानेन मर्त्यो जीवति कश्चन । इतरेण तु जीवन्ति यस्मिन्नेतावुपाश्रितौ ॥ ५॥',
+        'हन्त त इदं प्रवक्ष्यामि गुह्यं ब्रह्म सनातनम् । यथा च मरणं प्राप्य आत्मा भवति गौतम ॥ ६॥',
+        'योनिमन्ये प्रपद्यन्ते शरीरत्वाय देहिनः । स्थाणुमन्येऽनुसंयन्ति यथाकर्म यथाश्रुतम् ॥ ७॥',
+        'य एष सुप्तेषु जागर्ति कामं कामं पुरुषो निर्मिमाणः । तदेव शुक्रं तद्ब्रह्म तदेवामृतमुच्यते । तस्मिँल्लोकाः श्रिताः सर्वे तदु नात्येति कश्चन । एतद्वै तत् ॥ ८॥',
+        'अग्निर्यथैको भुवनं प्रविष्टो रूपं रूपं प्रतिरूपो बभूव । एकस्तथा सर्वभूतान्तरात्मा रूपं रूपं प्रतिरूपो बहिश्च ॥ ९॥',
+        'वायुर्यथैको भुवनं प्रविष्टो रूपं रूपं प्रतिरूपो बभूव । एकस्तथा सर्वभूतान्तरात्मा रूपं रूपं प्रतिरूपो बहिश्च ॥ १०॥',
+        'सूर्यो यथा सर्वलोकस्य चक्षुः न लिप्यते चाक्षुषैर्बाह्यदोषैः । एकस्तथा सर्वभूतान्तरात्मा न लिप्यते लोकदुःखेन बाह्यः ॥ ११॥',
+        'एको वशी सर्वभूतान्तरात्मा एकं रूपं बहुधा यः करोति । तमात्मस्थं येऽनुपश्यन्ति धीराः तेषां सुखं शाश्वतं नेतरेषाम् ॥ १२॥',
+        'नित्योऽनित्यानां चेतनश्चेतनानाम् एको बहूनां यो विदधाति कामान् । तमात्मस्थं येऽनुपश्यन्ति धीराः तेषां शान्तिः शाश्वती नेतरेषाम् ॥ १३॥',
+        'तदेतदिति मन्यन्तेऽनिर्देश्यं परमं सुखम् । कथं नु तद्विजानीयां किमु भाति विभाति वा ॥ १४॥',
+        'न तत्र सूर्यो भाति न चन्द्रतारकं नेमा विद्युतो भान्ति कुतोऽयमग्निः । तमेव भान्तमनुभाति सर्वं तस्य भासा सर्वमिदं विभाति ॥ १५॥',
+        'ऊर्ध्वमूलोऽवाक्शाख एषोऽश्वत्थः सनातनः । तदेव शुक्रं तद्ब्रह्म तदेवामृतमुच्यते । तस्मिँल्लोकाः श्रिताः सर्वे तदु नात्येति कश्चन । एतद्वै तत् ॥ १॥',
+        'यदिदं किं च जगत् सर्वं प्राण एजति निःसृतम् । महद्भयं वज्रमुद्यतं य एतद्विदुरमृतास्ते भवन्ति ॥ २॥',
+        'भयादस्याग्निस्तपति भयात्तपति सूर्यः । भयादिन्द्रश्च वायुश्च मृत्युर्धावति पञ्चमः ॥ ३॥',
+        'इह चेदशकद्बोद्धुं प्राक्षरीरस्य विस्रसः । ततः सर्गेषु लोकेषु शरीरत्वाय कल्पते ॥ ४॥',
+        'यथाऽऽदर्शे तथाऽऽत्मनि यथा स्वप्ने तथा पितृलोके । यथाऽप्सु परीव ददृशे तथा गन्धर्वलोके छायातपयोरिव ब्रह्मलोके ॥ ५॥',
+        'इन्द्रियाणां पृथग्भावमुदयास्तमयौ च यत् । पृथगुत्पद्यमानानां मत्वा धीरो न शोचति ॥ ६॥',
+        'इन्द्रियेभ्यः परं मनो मनसः सत्त्वमुत्तमम् । सत्त्वादधि महानात्मा महतोऽव्यक्तमुत्तमम् ॥ ७॥',
+        'अव्यक्तात्तु परः पुरुषो व्यापकोऽलिङ्ग एव च । यं ज्ञात्वा मुच्यते जन्तुरमृतत्वं च गच्छति ॥ ८॥',
+        'न संदृशे तिष्ठति रूपमस्य न चक्षुषा पश्यति कश्चनैनम् । हृदा मनीषा मनसाऽभिक्लृप्तो य एतद्विदुरमृतास्ते भवन्ति ॥ ९॥',
+        'यदा पञ्चावतिष्ठन्ते ज्ञानानि मनसा सह । बुद्धिश्च न विचेष्टते तामाहुः परमां गतिम् ॥ १०॥',
+        'तां योगमिति मन्यन्ते स्थिरामिन्द्रियधारणाम् । अप्रमत्तस्तदा भवति योगो हि प्रभवाप्ययौ ॥ ११॥',
+        'नैव वाचा न मनसा प्राप्तुं शक्यो न चक्षुषा । अस्तीति ब्रुवतोऽन्यत्र कथं तदुपलभ्यते ॥ १२॥',
+        'अस्तीत्येवोपलब्धव्यस्तत्त्वभावेन चोभयोः । अस्तीत्येवोपलब्धस्य तत्त्वभावः प्रसीदति ॥ १३॥',
+        'यदा सर्वे प्रमुच्यन्ते कामा येऽस्य हृदि श्रिताः । अथ मर्त्योऽमृतो भवत्यत्र ब्रह्म समश्नुते ॥ १४॥',
+        'यदा सर्वे प्रभिद्यन्ते हृदयस्येह ग्रन्थयः । अथ मर्त्योऽमृतो भवत्येतावद्ध्यनुशासनम् ॥ १५॥',
+        'शतं चैका च हृदयस्य नाड्य-स्तासां मूर्धानमभिनिःसृतैका । तयोर्ध्वमायन्नमृतत्वमेति विष्वङ्ङन्या उत्क्रमणे भवन्ति ॥ १६॥',
+        'अङ्गुष्ठमात्रः पुरुषोऽन्तरात्मा सदा जनानां हृदये संनिविष्टः । तं स्वाच्छरीरात्प्रवृहेन्मुञ्जादिवेषीकां धैर्येण । तं विद्याच्छुक्रममृतं तं विद्याच्छुक्रममृतमिति ॥ १७॥',
+        'मृत्युप्रोक्तां नचिकेतोऽथ लब्ध्वा विद्यामेतां योगविधिं च कृत्स्नम् । ब्रह्मप्राप्तो विरजोऽभूद्विमृत्यु-रन्योऽप्येवं यो विदध्यात्ममेव ॥ १८॥',
+      ],
+      verses: [
+        'Vajasravasa, desiring rewards, performed the Visvajit sacrifice, in which he gave away all his property. He had a son named Nachiketa.',
+        'When the gifts were being distributed, faith entered into the heart of Nachiketa, who was still a boy. He said to himself: Joyless, surely, are the worlds to which he goes who gives away cows no longer able to drink, to eat, to give milk, or to calve.',
+        '(These cows) have drunk water for the last time, eaten grass for the last time, have yielded all their milk and are devoid of vigour. Joyless verily are those worlds; them he attains who gives these.',
+        'He said to his father: Father! To whom will you give me? He said this a second and a third time. Then his father replied: Unto death I will give you.',
+        'Among many I am the first; or among many I am the middlemost. But certainly I am never the last. What purpose of the King of Death will my father serve today by thus giving me away to him?',
+        'Nachiketa said: Look back and see how it was with those who came before us and observe how it is with those who are now with us. A mortal ripens like corn and like corn he springs up again.',
+        'Verily, like fire a brahmin guest enters a house; the householder pacifies him by giving him water and a seat. Bring him water. O King of Death!',
+        'The brahmin who dwells in a house, fasting, destroys that foolish householder\'s hopes and expectations, the reward of his intercourse with pious people, the merit of his kindly speech, the good results of his sacrifices and beneficial deeds and his cattle and children as well.',
+        'Yama said: O Brahmin, salutations to you! You are a venerable guest and have dwelt in my house three nights without eating; therefore choose now three boons, one for each night, O Brahmin! May all be well with me!',
+        'Nachiketa said: O Death, may Gautama, my father, be calm, cheerful and free from anger toward me! May he recognise me and greet me when I shall have been sent home by you! This I choose as the first of the three boons.',
+        'Yama said: Through my favour, your father, Auddilaki Aruni, will recognise you and be again toward you as he was before. After having seen you freed from the jaws of death, he will sleep peacefully at night and bear no anger against you.',
+        'Nachiketa said: In heaven there is no fear. You are not there; nor there do they in old age fear. Having crossed both hunger and thirst, one in heaven rejoices being above grief.',
+        'Oh Death! thou knowest the fire which leads to heaven; explain to me who am zealous that (the fire) by which those, whose world is heaven, attain immortality. I pray for this by my second boon.',
+        'Yama said: I know well the Fire-sacrifice, which leads to Heaven and I will explain it to you. Listen to me. Know this Fire to be the means of attaining Heaven. It is the support of the universe; it is hidden in the hearts of the wise.',
+        'Yama then told him about the Fire, which is the source of the worlds and what bricks were to be gathered for the altar and how many and how the sacrificial fire was to be lighted. Nachiketa, too, repeated all this as it had been told him. Then Yama, being pleased with him, spoke again.',
+        'High-souled Death, being well pleased, said to Nachiketa: I will now give you another boon: this fire shall be named after you. Take also from me this many-coloured chain.',
+        'He who has performed three times this Nachiketa sacrifice, having been instructed by the three and also has performed his three duties, overcomes birth and death. Having known this Fire born of Brahman, omniscient, luminous and adorable and realised it, he attains supreme peace.',
+        'He who, having known the three, has performed three times the Nachiketa sacrifice, throws off, even here, the chains of death, overcomes grief and rejoices in Heaven.',
+        'This, O Nachiketa, is your Fire-sacrifice, which leads to Heaven and which you have chosen as your second boon. People will call this Fire by your name. Now, O Nachiketa, choose the third boon.',
+        'Nachiketa said: There is this doubt about a man when he is dead: Some say that he exists; others, that he does not. This I should like to know, taught by you. This is the third of my boons.',
+        'Yama said: On this subject even the gods formerly had their doubts. It is not easy to understand: the nature of Atman is subtle. Choose another boon, O Nachiketa! Do not press me. Release me from that boon.',
+        'Nachiketa said: O Death, even the gods have their doubts about this subject; and you have declared it to be not easy to understand. But another teacher like you cannot be found and surely no other boon is comparable to this.',
+        'Yama said: Choose sons and grandsons who shall live a hundred years; choose elephants, horses, herds of cattle and gold. Choose a vast domain on earth; live here as many years as you desires.',
+        'If you deem any other boon equal to that, choose it; choose wealth and a long life. Be the king, O Nachiketa, of the wide earth. I will make you the enjoyer of all desires.',
+        'Whatever desires are difficult to satisfy in this world of mortals, choose them as you wish: these fair maidens, with their chariots and musical instruments, men cannot obtain them. I give them to you and they shall wait upon you. But do not ask me about death.',
+        'Nachiketa said: But, O Death, these endure only till tomorrow. Furthermore, they exhaust the vigour of all the sense organs. Even the longest life is short indeed. Keep your horses, dances and songs for yourself.',
+        'Wealth can never make a man happy. Moreover, since I have beheld you, I shall certainly obtain wealth; I shall also live as long as you rule. Therefore no boon will be accepted by me but the one that I have asked.',
+        'Who among decaying mortals here below, having approached the undecaying immortals and coming to know that his higher needs may be fulfilled by them, would exult in a life over long, after he had pondered on the pleasures arising from beauty and song?',
+        'Tell me, O Death, of that Great Hereafter about which a man has his doubts.',
+        'Yama said: The good is one thing; the pleasant, another. Both of these, serving different needs, bind a man. It goes well with him who, of the two, takes the good; but he who chooses the pleasant misses the end.',
+        'Both the good and the pleasant present themselves to a man. The calm soul examines them well and discriminates. Yea, he prefers the good to the pleasant; but the fool chooses the pleasant out of greed and avarice.',
+        'O Nachiketa, after pondering well the pleasures that are or seem to he delightful, you have renounced them all. You have not taken the road abounding in wealth, where many men sink.',
+        'Wide apart and leading to different ends are these two: ignorance and what is known as Knowledge. I regard you, O Nachiketa, to be one who desires Knowledge; for even many pleasures could not tempt you away.',
+        'Fools dwelling in darkness, but thinking themselves wise and erudite, go round and round, by various tortuous paths, like the blind led by the blind.',
+        'The Hereafter never reveals itself to a person devoid of discrimination, heedless and perplexed by the delusion of wealth. "This world alone exists," he thinks, "and there is no other." Again and again he comes under my sway.',
+        'Many there are who do not even hear of Atman; though hearing of Him, many do not comprehend. Wonderful is the expounder and rare the hearer; rare indeed is the experiencer of Atman taught by an able preceptor.',
+        'Atman, when taught by an inferior person, is not easily comprehended, because It is diversely regarded by disputants. But when It is taught by him who has become one with Atman, there can remain no more doubt about It. Atman is subtler than the subtlest and not to be known through argument.',
+        'This Knowledge cannot be attained by reasoning. Atman become easy of comprehension, O dearest, when taught by another. You have attained this Knowledge now. You are, indeed, a man of true resolve. May we always have an inquirer like you!',
+        'Yama said: I know that the treasure resulting from action is not eternal; for what is eternal cannot be obtained by the non-eternal. Yet I have performed the Nachiketa sacrifice with the help of non-eternal things and attained this position which is only relatively eternal.',
+        'The fulfilment of desires, the foundation of the universe, the rewards of sacrifices, the shore where there is no fear, that which adorable and great, the wide abode and the goal, all this you have seen; and being wise, you have with firm resolve discarded everything.',
+        'The wise man who, by means of concentration on the Self, realises that ancient, effulgent One, who is hard to be seen, unmanifest, hidden and who dwells in the buddhi and rests in the body, he, indeed, leaves joy and sorrow far behind.',
+        'The mortal who has heard this and comprehended it well, who has separated that Atman, the very soul of dharma, from all physical objects and has realised the subtle essence, rejoices because he has obtained that which is the cause of rejoicing. The Abode of Brahman, I believe, is open for Nachiketa.',
+        'Nachiketa said: That which you see as other than righteousness and unrighteousness, other than all this cause and effect, other than what has been and what is to be, tell me That.',
+        'Yama said: The goal which all the Vedas declare, which all austerities aim at and which men desire when they lead the life of continence, I will tell you briefly: it is Om.',
+        'This syllable Om is indeed Brahman. This syllable is the Highest. Whosoever knows this syllable obtains all that he desires.',
+        'This is the best support; this is the highest support. Whosoever knows this support is adored in the world of Brahma.',
+        'The knowing Self is not born; It does not die. It has not sprung from anything; nothing has sprung from It. Birthless, eternal, everlasting and ancient, It is not killed when the body is killed.',
+        'If the killer thinks he kills and if the killed man thinks he is killed, neither of these apprehends aright. The Self kills not, nor is It killed.',
+        'Atman, smaller than the small, greater than the great, is hidden in the hearts of all living creatures. A man who is free from desires beholds the majesty of the Self through tranquillity of the senses and the mind and becomes free from grief.',
+        'Though sitting still, It travels far; though lying down, It goes everywhere. Who but myself can know that luminous Atman who rejoices and rejoices not?',
+        'The wise man, having realised Atman as dwelling within impermanent bodies but Itself bodiless, vast and all-pervading, does not grieve.',
+        'This Atman cannot be attained by the study of the Vedas, or by intelligence, or by much hearing of sacred books. It is attained by him alone whom It chooses. To such a one Atman reveals Its own form.',
+        'He who has not first turn away from wickedness, who is not tranquil and subdued and whose mind is not at peace, cannot attain Atman. It is realised only through the Knowledge of Reality.',
+        'Who, then, knows where He is, He to whom Brahmins and kshattriyas are mere food and death itself a condiment?',
+        'Two there are who dwell within the body, in the intellect, the supreme akasa of the heart, enjoying the sure rewards of their own actions. The knowers of Brahman describe them as light and shade, as do those householders who have offered oblations in the Five Fires and also those who have thrice performed the Nachiketa sacrifice.',
+        'We know how to perform the Nachiketa sacrifice, which is the bridge for sacrificers; and we know also that supreme, imperishable Brahman, which is sought by those who wish to cross over to the shore where there is no fear.',
+        'Know the atman to be the master of the chariot; the body, chariot; the intellect, the charioteer; and the mind, the reins.',
+        'The senses, they say, are the horses; the objects, the roads. The wise call the atman, united with the body, the senses and the mind, the enjoyer.',
+        'If the buddhi, being related to a mind that is always distracted, loses its discriminations, then the senses become uncontrolled, like the vicious horses of a charioteer.',
+        'But if the buddhi, being related to a mind that is always restrained, possesses discrimination, then the senses come under control, like the good horses of a charioteer.',
+        'If the buddhi, being related to a distracted mind, loses its discrimination and therefore always remains impure, then the embodied soul never attains the goal, but enters into the round of births.',
+        'But if the buddhi, being related to a mind that is restrained, possesses discrimination and therefore always remains pure, then the embodied soul attains that goal from which he is not born again.',
+        'A man who has discrimination for his charioteer and holds the reins of the mind firmly, reaches the end of the road; and that is the supreme position of Vishnu.',
+        'Beyond the senses are the rudiments of its objects; beyond these rudiments is the mind; beyond the mind is atman known as Mahat (great).',
+        'Beyond the great Atman is the Unmanifested; beyond the Unmanifested is the Purusha (the Cosmic Soul); beyond the Purusha there is nothing. That is the end that is the final goal.',
+        'That Self hidden in all beings does not shine forth; but It is seen by subtle seers through their one-pointed and subtle intellects.',
+        'The wise man should merge his speech in his mind and his mind in his intellect. He should merge his intellect in the Cosmic Mind and the Cosmic Mind in the Tranquil Self.',
+        'Arise! Awake! Approach the great and learn. Like the sharp edge of a razor is that path, so the wise say, hard to tread and difficult to cross.',
+        'Having realised Atman, which is soundless, intangible, formless, undecaying and likewise tasteless, eternal and odourless; having realised That which is without beginning and end, beyond the Great and unchanging, one is freed from the jaws of death.',
+        'The wise man who has heard and related the eternal story of Nachiketa, told by Death, is adored in the world of Brahman.',
+        'And he who, practising self-control, recites the supreme secret in an assembly of Brahmins or at a after-death ceremony obtains thereby infinite rewards. Yea, he obtains infinite rewards.',
+        'Yama said: The self-existent Supreme Lord inflicted an injury upon the sense-organs in creating them with outgoing tendencies; therefore a man perceives only outer objects with them and not the inner Self. But a calm person, wishing for Immortality, beholds the inner Self with his eyes closed.',
+        'Children pursue outer pleasures and fall into the net of widespread death; but calm souls, having known what is unshakable Immortality, do not covet any uncertain thing in this world.',
+        'It is through Atman that one knows form, taste, smell, sounds, touches and carnal pleasures. Is there anything that remains unknown to Atman? This, verily, is That.',
+        'It is through Atman that one perceives all objects in sleep or in the waking state. Having realised the vast, all-pervading Atman, the calm soul does not grieve.',
+        'He who knows the individual soul, the experiencer of the fruits of action, as Atman, always near and the Lord of the past and the future, will not conceal himself from others. This, verily, is That.',
+        'He verily knows Brahman who knows the First-born, the offspring of austerity, created prior to the waters and dwelling, with the elements, in the cave of the heart. This, verily, is That.',
+        'He verily knows Brahman who knows Aditi, the soul of all deities, who was born in the form of Prana, who was created with the elements and who, entering into the heart, abides therein. This, verily, is That.',
+        'Agni, hidden in the two fire-sticks and well guarded, like a child in the womb, by its mother, is worshipped day after day by men who are awake and by those who offer oblations in the sacrifices. This, verily, is That.',
+        'Whence the sun rises and whither it goes to set, in whom all the devas are contained and whom none can ever pass beyond. This, verily, is That.',
+        'What is here, the same is there and what is there, the same is here. He goes from death to death who sees any difference here.',
+        'By the mind alone is Brahman to be realised; then one does not see in It any multiplicity whatsoever. He goes from death to death who sees multiplicity in It. This, verily, is That.',
+        'The Purusha, of the size of a thumb, dwells in the body. He is the Lord of the past and the future. After knowing Him, one does not conceal oneself any more. This, verily, is That.',
+        'The Purusha, of the size of a thumb, is like a flame without smoke. The Lord of the past and the future, He is the same today and tomorrow. This, verily, is That.',
+        'As rainwater falling on a mountain peak runs down the rocks in all directions, even so he who sees the attributes as different from Brahman verily runs after them in all directions.',
+        'As pure water poured into pure water becomes one with it, so also, O Gautama, does the Self of the sage who knows.',
+        'There is a city with eleven gates belonging to the unborn Atman of undistorted Consciousness. He who meditates on Him grieves no more; liberated from the bonds of ignorance, he becomes free. This, verily, is That.',
+        'He is the sun dwelling in the bright heavens. He is the air in the interspace. He is the fire dwelling on earth. He is the guest dwelling in the house. He dwells in men, in the gods, in truth, in the sky. He is born in the water, on earth, in the sacrifice, on the mountains. He is the True and the Great.',
+        'He it is who sends prana upward and who leads apana downward. All the devas worship that adorable One seated in the middle.',
+        'When the soul, identified with the body and dwelling in it, is torn away from the body, is freed from it, what then remains? This, verily, is That?',
+        'No mortal ever lives by prana, which goes up, nor by apana, which goes down. Men live by something different, on which these two depend.',
+        'Well then, Gautama, I shall tell you about this profound and eternal Brahman and also about what happens to the atman after meeting death.',
+        'Some jivas enter the womb to be embodied as organic beings and some go into non-organic matter, according to their work and according to their knowledge.',
+        'He, the Purusha, who remains awake while the sense-organs are asleep, shaping one lovely form after another, that indeed is the Pure, that is Brahman and that alone is called the Immortal. All worlds are contained in Him and none can pass beyond. This, verily, is That.',
+        'As the same non-dual fire, after it has entered the world, becomes different according to whatever it burns, so also the same non-dual Atman, dwelling in all beings, becomes different according to whatever It enters. And It exists also without.',
+        'As the same non-dual air, after it has entered the world, becomes different according to whatever it enters, so also the same non-dual Atman, dwelling in all beings, becomes different according to whatever It enters. And It exists also without.',
+        'As the sun, which helps all eyes to see, is not affected by the blemishes of the eyes or of the external things revealed by it, so also the one Atman, dwelling in all beings, is never contaminated by the misery of the world, being outside it.',
+        'There is one Supreme Ruler, the inmost Self of all beings, who makes His one form manifold. Eternal happiness belongs to the wise, who perceive Him within themselves, not to others.',
+        'There is One who is the eternal Reality among non-eternal objects, the one truly conscious Entity among conscious objects and who, though non-dual, fulfils the desires of many. Eternal peace belongs to the wise, who perceive Him within themselves, not to others.',
+        'The sages realise that indescribable Supreme Joy as "This is That." How can I realise It? Is It self-luminous? Does It shine brightly, or not?',
+        'The sun does not shine there, nor the moon and the stars, nor these lightnings, not to speak of this fire. He shining, everything shines after Him. By His light all this is lighted.',
+        'This is that eternal Asvattha Tree with its root above and branches below. That root, indeed, is called the Bright; That is Brahman and That alone is the Immortal. In That all worlds are contained and none can pass beyond. This, verily, is That.',
+        'Whatever there is, the whole universe, vibrates because it has gone forth from Brahman, which exists as its Ground. That Brahman is a great terror, like a poised thunderbolt. Those who know It become immortal.',
+        'From terror of Brahman, fire burns; from terror of It, the sun shines; from terror of It, Indra and Vayu and Death, the fifth, run.',
+        'If a man is able to realise Brahman here, before the falling asunder of his body, then he is liberated; if not, he is embodied again in the created worlds.',
+        'As in a mirror, so in the buddhi; as in a dream, so in the World of the Fathers; as in water, so Brahman is seen in the World of the Gandharvas; as in light and shade, so in the World of Brahma.',
+        'Having understood that the senses have their separate origin and that they are distinct from Atman and also that their rising and setting belong to them alone, a wise man grieves no more.',
+        'Beyond the senses is the mind, beyond the mind is the intellect, higher than the intellect is the Great Atman, higher than the Great Atman is the Unmanifest.',
+        'Beyond the Unmanifest is the Person, all-pervading and imperceptible. Having realised Him, the embodied self becomes liberated and attains Immortality.',
+        'His form is not an object of vision; no one beholds Him with the eye. One can know Him when He is revealed by the intellect free from doubt and by constant meditation. Those who know this become immortal.',
+        'When the five instruments of knowledge stand still, together with the mind and when the intellect does not move, that is called the Supreme State.',
+        'This, the firm Control of the senses, is what is called yoga. One must then be vigilant; for yoga can be both beneficial and injurious.',
+        'Atman cannot be attained by speech, by the mind, or by the eye. How can It be realised in any other way than by the affirmation of him who says: "He is"?',
+        'He is to be realised first as Existence limited by upadhis and then in His true transcendental nature. Of these two aspects, Atman realised as Existence leads the knower to the realisation of His true nature.',
+        'When all the desires that dwell in the heart fall away, then the mortal becomes immortal and here attains Brahman.',
+        'When all the ties of the heart are severed here on earth, then the mortal becomes immortal. This much alone is the teaching.',
+        'There are one hundred and one arteries of the heart, one of which pierces the crown of the head. Going upward by it, a man at death attains immortality. But when his prana passes out by other arteries, going in different directions, then he is reborn in the world.',
+        'The Purusha, not larger than a thumb, the inner Self, always dwells in the hearts of men. Let a man separate Him from his body with steadiness, as one separates the tender stalk from a blade of grass. Let him know that Self as the Bright, as the Immortal, yea, as the Bright, as the Immortal.',
+        'Having received this wisdom taught by the King of Death and the entire process of yoga, Nachiketa became free from impurities and death and attained Brahman. Thus it will be also with any other who knows, in this manner, the inmost Self.',
+      ]
+    }
+  },
+  {
     id: 'aparokshanubhuti',
     title: 'Aparokshanubhuti',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -16,7 +311,7 @@ const BOOKS = [
     rating: 4.8,
     summary: 'Direct Self-Realization, an introductory guide to realizing the non-dual Self directly, beyond intellectual understanding.',
     keyIdeas: [
-        '<b>Aparokshanubhuti</b> means "Direct Experience of the Absolute" or <b>Self-Realization</b>, an introductory work by Adi Shankaracharya expounding Advaita Vedanta.',
+        '<b>Aparokshanubhuti</b> means "Direct Experience of the Absolute" or <b>Self-Realization</b>, an introductory work by Adi Shankarāchārya expounding Advaita Vedanta.',
         '<b>Aparoksha</b> refers to the "nearest of the near", one\'s own Self; <b>anubhuti</b> means to realize, to experience. Unlike knowledge of objects through sense-perception or inference, it is an <b>immediate and direct perception</b> of the Self.',
         'The central theme is the <b>identity of Jivatman (individual Self) and Paramatman (Universal Self)</b>, realized through the removal of ignorance by the light of <b>Vichara (enquiry)</b> alone.',
         'Certain <b>disciplines are laid down</b> as indispensable for all enquiry into the highest Truth, preparing the mind for such an investigation.',
@@ -28,7 +323,7 @@ const BOOKS = [
         'The central teaching is the <b>identity of the individual Self and the Universal Self</b>, realized through Vichara or enquiry alone.',
         'After realization, when ignorance and all its effects disappear, <b>the question of Prarabdha is altogether out of place</b>; the Shruti speaks of it only to explain the apparent behaviour of the realized to the ignorant.',
         'The whole visible and invisible universe is in reality the <b>one eternal Atman, which is Pure Consciousness</b>.',
-        'For those without the time for the classical works of Shankaracharya, this treatise is an <b>invaluable guide in the quest after spiritual truths</b>.',
+        'For those without the time for the classical works of Shankarāchārya, this treatise is an <b>invaluable guide in the quest after spiritual truths</b>.',
     ],
     importantConcepts: [
         '<b>Aparoksha:</b> The "nearest of the near", one\'s own Self, known by direct perception rather than inference.',
@@ -51,7 +346,7 @@ const BOOKS = [
       { text: 'I am verily Brahman, being equanimous, quiescent, and by nature absolute Existence, Knowledge, and Bliss.', cite: 'Aparokshanubhuti' },
       { text: 'The whole universe is but Brahman and nothing else, for there exists no other material cause of this phenomenal universe except Brahman.', cite: 'Aparokshanubhuti' },
     ],
-    finalTakeaway: 'Aparokshanubhuti, the Direct Experience of the Absolute, is an introductory manual of Advaita Vedanta. Its central theme is the identity of the individual Self and the Universal Self, realized through Vichara or enquiry alone. Shankaracharya lays down the necessary disciplines, guides the seeker through the enquiry "Who am I?", and culminates in the recognition that all that is visible and invisible is in reality the one eternal Atman, Pure Consciousness itself. After realization, even Prarabdha ceases to exist, and the seeker abides in the supreme Truth.',
+    finalTakeaway: 'Aparokshanubhuti, the Direct Experience of the Absolute, is an introductory manual of Advaita Vedanta. Its central theme is the identity of the individual Self and the Universal Self, realized through Vichara or enquiry alone. Shankarāchārya lays down the necessary disciplines, guides the seeker through the enquiry "Who am I?", and culminates in the recognition that all that is visible and invisible is in reality the one eternal Atman, Pure Consciousness itself. After realization, even Prarabdha ceases to exist, and the seeker abides in the supreme Truth.',
     translation: {
       translator: 'Swami Vimuktananda',
       publisher: 'Belur Math, 1938',
@@ -352,7 +647,7 @@ const BOOKS = [
   {
     id: 'svarupanusandhanashtakam',
     title: 'Svarupanusandhanashtakam',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -366,12 +661,12 @@ const BOOKS = [
       'Each verse describes the Self in the language of <b>pure awareness</b>, unborn, without beginning or end, free from the three states, untouched by the body and senses.',
       'The language is <b>direct and declarative</b>, pointing at a living recognition rather than proving a philosophical point.',
       'The verses serve as <b>prompts</b> for the recognition of the Self to be fresh and immediate, not merely remembered from a past experience.',
-      'It is one of Shankaracharya\'s <b>shorter and less well known</b> compositions, but highly regarded for its quality of presence and suitability for daily recitation.',
+      'It is one of Shankarāchārya\'s <b>shorter and less well known</b> compositions, but highly regarded for its quality of presence and suitability for daily recitation.',
     ],
     mainTakeaways: [
       'The text is meant to be <b>practised</b>, each verse is a reminder to return, again and again, to the recognition of what one truly is.',
       'The Self is described as <b>pure awareness</b>, unborn, free from the three states, untouched by the body, senses, time, or change.',
-      'Shankaracharya is <b>pointing at a living recognition</b>, not arguing a philosophical position.',
+      'Shankarāchārya is <b>pointing at a living recognition</b>, not arguing a philosophical position.',
       'Regular recitation <b>cuts through mental noise</b> and re-establishes the sense of one\'s own natural peace.',
     ],
     importantConcepts: [
@@ -394,7 +689,7 @@ const BOOKS = [
       { text: 'That which is infinite, all-pervading, free from distinctions, formless, supremely radiant, and free from death, that eternal supreme Brahman alone am I.', cite: 'Svarupanusandhanashtakam' },
       { text: 'That devout person who recites this hymn with reverence shall become Vishnu himself in this very world.', cite: 'Svarupanusandhanashtakam' },
     ],
-    finalTakeaway: 'Svarupanusandhanashtakam is a meditation text meant to be practised. In eight verses, Shankaracharya points directly to the Self as pure awareness: unborn, free from the three states, untouched by time or change. The direct, declarative language serves as a prompt for the living recognition of one\'s true nature. Regular recitation cuts through mental noise and re-establishes one\'s natural peace.',
+    finalTakeaway: 'Svarupanusandhanashtakam is a meditation text meant to be practised. In eight verses, Shankarāchārya points directly to the Self as pure awareness: unborn, free from the three states, untouched by time or change. The direct, declarative language serves as a prompt for the living recognition of one\'s true nature. Regular recitation cuts through mental noise and re-establishes one\'s natural peace.',
     translation: {
       translator: 'Swami Chinmayananda',
       publisher: 'Chinmaya Mission, Mumbai',
@@ -425,7 +720,7 @@ const BOOKS = [
   {
     id: 'sadhana-panchakam',
     title: 'Sadhana Panchakam',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -434,7 +729,7 @@ const BOOKS = [
     rating: 4.8,
     summary: 'Five Verses on Spiritual Practice, a compact step-by-step guide to the complete Vedantic path, from the very beginning of spiritual life to liberation.',
     keyIdeas: [
-      'The <b>Sadhana Panchakam</b> ("Five Verses on Spiritual Practice") is a compact guide to the complete spiritual path by Adi Shankaracharya, covering the whole path in just five verses.',
+      'The <b>Sadhana Panchakam</b> ("Five Verses on Spiritual Practice") is a compact guide to the complete spiritual path by Adi Shankarāchārya, covering the whole path in just five verses.',
       'Each verse (of eight lines) lays out a <b>step-by-step programme</b> for the seeker, from the very beginning of spiritual life all the way to liberation.',
       'The text begins with <b>foundational steps</b>: study the Vedas, perform your duties, offer the results to God, keep the company of the wise, and develop dispassion.',
       'It moves to <b>deeper inner work</b>: control of the senses and mind, contemplation of the Self, and gradual withdrawal from identifying with the body and ego.',
@@ -468,7 +763,7 @@ const BOOKS = [
       { text: 'Always be absorbed in the attitude "I am Brahman". Renounce pride. Give up the delusory misconception "I am the body".', cite: 'Sadhana Panchakam' },
       { text: 'In solitude live joyously. Quieten your mind in the Supreme Lord. Realise and see the All-pervading Self everywhere.', cite: 'Sadhana Panchakam' },
     ],
-    finalTakeaway: 'Sadhana Panchakam is a complete map of the Vedantic path in miniature. In just five verses, Shankaracharya guides the seeker from the very beginning to liberation: study, duty, devotion, satsang, and dispassion; then inner work of sense-control and contemplation; and finally the recognition of one\'s true nature as Brahman and the peace of abiding in that recognition. It neither skips preliminary practices nor stops at outer ritual, making it a valued guide for beginners and experienced practitioners alike.',
+    finalTakeaway: 'Sadhana Panchakam is a complete map of the Vedantic path in miniature. In just five verses, Shankarāchārya guides the seeker from the very beginning to liberation: study, duty, devotion, satsang, and dispassion; then inner work of sense-control and contemplation; and finally the recognition of one\'s true nature as Brahman and the peace of abiding in that recognition. It neither skips preliminary practices nor stops at outer ritual, making it a valued guide for beginners and experienced practitioners alike.',
     translation: {
       translator: 'Swami Chinmayananda',
       publisher: 'Chinmaya Mission, Mumbai',
@@ -1166,7 +1461,7 @@ const BOOKS = [
   {
     id: 'vivekachudamani',
     title: 'Vivekachudamani',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -1215,7 +1510,7 @@ const BOOKS = [
   {
     id: 'atma-bodha',
     title: 'Atma Bodha',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -1260,7 +1555,7 @@ const BOOKS = [
       { text: 'By the awakening of Self-knowledge, all ignorance is destroyed, just as darkness is dispelled by the rising sun.', cite: 'Atma Bodha' },
       { text: 'Knowledge alone, not actions, not rites, not rituals, is the direct cause of liberation.', cite: 'Atma Bodha' },
     ],
-    finalTakeaway: 'Atma Bodha is a beautifully compact guide to self-knowledge. In sixty-eight verses, Shankaracharya walks the seeker from the gross body inward through the five sheaths, negating each as not-Self, until the luminous witness, the Atman, is directly revealed. Its message is radical and liberating: you are not what you think you are. You are the eternal, free, blissful consciousness that was never bound. Knowledge of this alone is liberation.',
+    finalTakeaway: 'Atma Bodha is a beautifully compact guide to self-knowledge. In sixty-eight verses, Shankarāchārya walks the seeker from the gross body inward through the five sheaths, negating each as not-Self, until the luminous witness, the Atman, is directly revealed. Its message is radical and liberating: you are not what you think you are. You are the eternal, free, blissful consciousness that was never bound. Knowledge of this alone is liberation.',
     translation: {
       translator: 'Swami Chinmayananda',
       publisher: 'Chinmaya Mission, Mumbai',
@@ -1410,7 +1705,7 @@ const BOOKS = [
   {
     id: 'tattva-bodha',
     title: 'Tattva Bodha',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -1427,7 +1722,7 @@ const BOOKS = [
       'It introduces the great Vedantic statements (Mahavakyas) such as <b>"Tat Tvam Asi" (That Thou Art)</b>.',
     ],
     mainTakeaways: [
-      'Tattvabodha means <b>Knowledge of Truth</b> and is mandatory reading for understanding Shankaracharya\'s philosophy and the Advaita vision.',
+      'Tattvabodha means <b>Knowledge of Truth</b> and is mandatory reading for understanding Shankarāchārya\'s philosophy and the Advaita vision.',
       'The <b>four-fold qualifications</b> prepare the seeker: discrimination, dispassion, the six virtues, and the yearning for liberation.',
       'The Self (Atman) is <b>not the body, mind, or intellect</b>, it is the witness of all three states and is identical with Brahman.',
       'The great statement <b>"Tat Tvam Asi" (That Thou Art)</b> points to the oneness of the individual soul and the Supreme Reality.',
@@ -1454,7 +1749,7 @@ const BOOKS = [
       { text: 'Discrimination between the permanent and the impermanent is the first step toward liberation.', cite: 'Tattvabodha' },
       { text: 'Knowledge of the truth leads to liberation, for bondage is born of ignorance alone.', cite: 'Tattvabodha' },
     ],
-    finalTakeaway: 'Tattvabodha is a compact primer that distills the essential tenets of Advaita Vedanta into a clear question-answer format. By guiding the seeker from the qualifications for inquiry, through the three bodies, five sheaths, and three states of awareness, to the great statements of identity like "Tat Tvam Asi", Shankaracharya prepares the aspirant for the ultimate realization: the Self is not the body, mind, or intellect but is identical with Brahman. This knowledge of truth is the path to liberation.',
+    finalTakeaway: 'Tattvabodha is a compact primer that distills the essential tenets of Advaita Vedanta into a clear question-answer format. By guiding the seeker from the qualifications for inquiry, through the three bodies, five sheaths, and three states of awareness, to the great statements of identity like "Tat Tvam Asi", Shankarāchārya prepares the aspirant for the ultimate realization: the Self is not the body, mind, or intellect but is identical with Brahman. This knowledge of truth is the path to liberation.',
     translation: {
       translator: 'Swami Chinmayananda',
       publisher: 'Chinmaya Mission, Mumbai',
@@ -1510,14 +1805,14 @@ const BOOKS = [
         'If one is asked how many kinds of karmas there are, the reply is: there are three kinds of karmas, viz., agami, sanchita and prarabdha. The results of actions, good or bad, performed by the body of the realised soul (jnani) after the dawn of knowledge is known as agami. What is sanchita karma? The results of actions performed in all previous births, which are in seed form to give rise to endless crores of births in the future, is called sanchita (accumulated) karma. What is prarabdha karma? Having given birth to this body, the actions which give results in this very world, in the form of happiness or misery, and which can be destroyed only by enjoying or suffering them, is called prarabdha karma.',
         'Sanchita karma is destroyed by the firm knowledge "I am Brahman" alone. The agami karma is also destroyed by knowledge, and the wise man is not affected by it, as a lotus leaf is not affected by the water on it. Further, to those who praise, serve and worship the wise man go the results of the actions done by the wise man. To those who criticise, hate or cause pain to the wise man go the results of all unpraiseworthy and sinful actions done by the wise man.',
         'Thus the knower of the Self, having crossed samsara, attains supreme bliss here itself. The shruti affirms, the knower of the Self goes beyond all sorrow. Let the wise man cast off his body in Kashi or in the house of a dog-eater; it is immaterial, because at the time of gaining knowledge itself he is liberated, being freed from all the results of his actions. So assert the smritis too.',
-        'Thus concludes the Tattvabodha, composed by the revered Adi Shankaracharya.',
+        'Thus concludes the Tattvabodha, composed by the revered Adi Shankarāchārya.',
       ]
     }
   },
   {
     id: 'kaupina-panchakam',
     title: 'Kaupina Panchakam',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -1526,7 +1821,7 @@ const BOOKS = [
     rating: 4.8,
     summary: 'Five Verses on the Loincloth, a joyful celebration of the sannyasi\'s life of complete inner and outer freedom.',
     keyIdeas: [
-      'The <b>Kaupina Panchakam</b> ("Five Verses on the Loincloth") is a joyful poem by Shankaracharya celebrating the life of the <b>sannyasi</b>, the wandering monk who has renounced all possessions.',
+      'The <b>Kaupina Panchakam</b> ("Five Verses on the Loincloth") is a joyful poem by Shankarāchārya celebrating the life of the <b>sannyasi</b>, the wandering monk who has renounced all possessions.',
       'The <b>kaupina</b> (loincloth) is a symbol for the life of <b>complete inner and outer freedom</b>, the seemingly impoverished life is actually the richest of all.',
       'Each verse ends with the refrain <b>"blessed indeed are those who wear only the kaupina"</b>, a declaration that outer simplicity is the natural expression of inner fullness.',
       'The sannyasi has seen through the illusion of the world and <b>rests in the knowledge of the Self</b>, unaffected by praise or blame, heat or cold.',
@@ -1558,7 +1853,7 @@ const BOOKS = [
       { text: 'Spurning wealth like a torn piece of cloth, sitting at the foot of a tree for shelter, blest indeed is the wearer of the loin-cloth.', cite: 'Kaupina Panchakam' },
       { text: 'Chanting Brahman, the word of redemption, heedless of outer, of inner, of middle, blest indeed is the wearer of the loin-cloth.', cite: 'Kaupina Panchakam' },
     ],
-    finalTakeaway: 'Kaupina Panchakam is a joyful song celebrating the sannyasi\'s life of complete freedom. Through five simple verses, Shankaracharya shows that when one truly knows the Self as the source of all joy, outer simplicity becomes the natural expression of inner fullness. The life of renunciation is not about hardship, it is about the freedom that comes from resting in the knowledge of the Self.',
+    finalTakeaway: 'Kaupina Panchakam is a joyful song celebrating the sannyasi\'s life of complete freedom. Through five simple verses, Shankarāchārya shows that when one truly knows the Self as the source of all joy, outer simplicity becomes the natural expression of inner fullness. The life of renunciation is not about hardship, it is about the freedom that comes from resting in the knowledge of the Self.',
     translation: {
       translator: 'Swami Chinmayananda',
       publisher: 'Chinmaya Mission, Mumbai',
@@ -1581,7 +1876,7 @@ const BOOKS = [
   {
     id: 'drig-drishya-viveka',
     title: 'Drig-Drishya Viveka',
-    author: 'Adi Shankaracharya',
+    author: 'Adi Shankarāchārya',
     category: 'Advaita',
     color: '#2a1f1a',
     accent: '#d4a574',
@@ -1601,28 +1896,29 @@ const BOOKS = [
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
-  "aparokshanubhuti": "2026-08-28",
-  "svarupanusandhanashtakam": "2026-08-24",
-  "sadhana-panchakam": "2026-08-20",
-  "atomic-habits": "2026-08-16",
-  "thinking-fast-and-slow": "2026-08-12",
-  "deep-work": "2026-08-08",
-  "meditations": "2026-08-04",
-  "the-psychology-of-money": "2026-07-31",
-  "sapiens": "2026-07-27",
-  "the-power-of-now": "2026-07-23",
-  "start-with-why": "2026-07-19",
-  "mans-search-for-meaning": "2026-07-15",
-  "essentialism": "2026-07-11",
-  "the-alchemist": "2026-07-07",
-  "the-4-hour-workweek": "2026-07-03",
-  "grit": "2026-06-29",
-  "100-things-successful-people-do": "2026-06-25",
-  "vivekachudamani": "2026-06-21",
-  "atma-bodha": "2026-06-17",
-  "tattva-bodha": "2026-06-13",
-  "kaupina-panchakam": "2026-06-09",
-  "drig-drishya-viveka": "2026-06-05",
+  "kathopanishad": "2026-08-28",
+  "aparokshanubhuti": "2026-08-24",
+  "svarupanusandhanashtakam": "2026-08-20",
+  "sadhana-panchakam": "2026-08-16",
+  "atomic-habits": "2026-08-12",
+  "thinking-fast-and-slow": "2026-08-08",
+  "deep-work": "2026-08-04",
+  "meditations": "2026-07-31",
+  "the-psychology-of-money": "2026-07-27",
+  "sapiens": "2026-07-23",
+  "the-power-of-now": "2026-07-19",
+  "start-with-why": "2026-07-15",
+  "mans-search-for-meaning": "2026-07-11",
+  "essentialism": "2026-07-07",
+  "the-alchemist": "2026-07-03",
+  "the-4-hour-workweek": "2026-06-29",
+  "grit": "2026-06-25",
+  "100-things-successful-people-do": "2026-06-21",
+  "vivekachudamani": "2026-06-17",
+  "atma-bodha": "2026-06-13",
+  "tattva-bodha": "2026-06-09",
+  "kaupina-panchakam": "2026-06-05",
+  "drig-drishya-viveka": "2026-06-01",
 };
 BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
 BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
@@ -1634,7 +1930,8 @@ const CATEGORY_META = {
   Productivity: 'Do less, better. Focus, essentialism, and the science of getting things done.',
   Philosophy: 'Timeless questions about meaning, virtue, and the art of living well.',
   Science: 'Big ideas from history, biology, and the frontiers of human knowledge.',
-  Advaita: 'The non-dual wisdom of Adi Shankaracharya, the path of self-realization.',
+  Advaita: 'The non-dual wisdom of Adi Shankarāchārya, the path of self-realization.',
+  'Upanishads': 'The ancient Vedantic scriptures, the direct revelations of the seers on the nature of Brahman and the Self.',
 };
 
 /* ----- State ----- */
@@ -1832,31 +2129,50 @@ function openSummary(id) {
       </div>
     `;
   } else {
+    // Section icons
+    const ICONS = {
+      key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path></svg>',
+      takeaways: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>',
+      concepts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>',
+      lessons: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
+      quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
+      translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+      final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
+    };
+
     // Build anchor nav
     const sections = [
-      { id: 'key-ideas', label: 'Key Ideas' },
-      { id: 'takeaways', label: 'Takeaways' },
-      { id: 'concepts', label: 'Concepts' },
-      { id: 'lessons', label: 'Lessons' },
-      { id: 'quotes', label: 'Quotes' },
+      { id: 'key-ideas', label: 'Key Ideas', icon: 'key' },
+      { id: 'takeaways', label: 'Takeaways', icon: 'takeaways' },
+      { id: 'concepts', label: 'Concepts', icon: 'concepts' },
+      { id: 'lessons', label: 'Lessons', icon: 'lessons' },
+      { id: 'quotes', label: 'Quotes', icon: 'quotes' },
     ];
-    if (book.translation) sections.push({ id: 'translation', label: 'Translation' });
-    sections.push({ id: 'final', label: 'Final' });
+    if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: 'translation' });
+    sections.push({ id: 'final', label: 'Final', icon: 'final' });
 
-  summaryAnchors.innerHTML = sections.map(s =>
-    `<a href="#summary-${s.id}" data-section="${s.id}">${s.label}</a>`
-  ).join('');
-
-  // Build section content
-  const ICONS = {
-    key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path></svg>',
-    takeaways: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>',
-    concepts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>',
-    lessons: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
-    quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
-    translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
-    final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
+  const toRoman = n => {
+    const vals = [[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
+    let r = '';
+    for (const [v, s] of vals) { while (n >= v) { r += s; n -= v; } }
+    return r;
   };
+
+  summaryAnchors.innerHTML = `
+    <h3 class="anchors-title">Contents</h3>
+    <ol class="anchors-list">
+      ${sections.map((s, i) => `
+        <li class="anchors-item">
+          <a href="#summary-${s.id}" data-section="${s.id}">
+            <span class="anchor-icon" aria-hidden="true">${ICONS[s.icon]}</span>
+            <span class="anchor-label">${s.label}</span>
+            <span class="anchor-leader" aria-hidden="true"></span>
+            <span class="anchor-page" aria-hidden="true">${toRoman(i + 1)}</span>
+          </a>
+        </li>
+      `).join('')}
+    </ol>
+  `;
   const sectionHTML = `
     <section id="summary-key-ideas">
       <div class="section-card">
@@ -2126,6 +2442,30 @@ function bindCategory(btn) {
 }
 catLinks.forEach(bindCategory);
 
+/* ----- More dropdown ----- */
+const moreBtn = $('#moreBtn');
+const moreMenu = $('#moreMenu');
+const moreDropdown = moreBtn.closest('.more-dropdown');
+if (moreBtn && moreMenu) {
+  moreBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = moreDropdown.classList.toggle('open');
+    moreBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', e => {
+    if (moreDropdown.classList.contains('open') && !e.target.closest('.more-dropdown')) {
+      moreDropdown.classList.remove('open');
+      moreBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+  moreMenu.querySelectorAll('.cat-link').forEach(btn => {
+    btn.addEventListener('click', () => {
+      moreDropdown.classList.remove('open');
+      moreBtn.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
 /* ----- Mobile nav ----- */
 const menuBtn = $('#menuBtn');
 const mobileNav = $('#mobileNav');
@@ -2133,11 +2473,18 @@ const mobileNav = $('#mobileNav');
 function setupMobileNav() {
   const categories = [...new Set(state.books.map(b => b.category))];
   const filters = ['all', ...categories];
-  mobileNav.innerHTML = filters.map(f => {
-    const label = f === 'all' ? 'All' : f;
-    return `<button class="cat-link ${f === state.activeCategory ? 'active' : ''}" data-filter="${f}">${label}</button>`;
-  }).join('');
+  mobileNav.innerHTML = `
+    <button class="mobile-close" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    ${filters.map(f => {
+      const label = f === 'all' ? 'All' : f;
+      return `<button class="cat-link ${f === state.activeCategory ? 'active' : ''}" data-filter="${f}">${label}</button>`;
+    }).join('')}
+  `;
   $$('.mobile-nav .cat-link').forEach(bindCategory);
+  const closeBtn = $('.mobile-close');
+  if (closeBtn) closeBtn.addEventListener('click', closeMobileNav);
 }
 
 function toggleMobileNav(force) {
@@ -2206,6 +2553,7 @@ summaryScrim.addEventListener('click', closeSummary);
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && state.summaryOpen) closeSummary();
+  else if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
 });
 
 /* ----- Theme ----- */
