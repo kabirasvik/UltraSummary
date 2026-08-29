@@ -15,6 +15,17 @@ const CATEGORY_META = {
   'Upanishads': 'The ancient Vedantic scriptures, the direct revelations of the seers on the nature of Brahman and the Self.',
 };
 
+/* ----- Category helpers ----- */
+function getCategories(book) {
+  return Array.isArray(book.category) ? book.category : [book.category];
+}
+
+function categoryLinksHTML(book, cls = 'category-link') {
+  return getCategories(book)
+    .map(c => '<a href="#/category/' + encodeURIComponent(c) + '" class="' + cls + '">' + c + '</a>')
+    .join('<span class="category-sep">·</span>');
+}
+
 /* ----- State ----- */
 const state = {
   books: BOOKS,
@@ -25,6 +36,7 @@ const state = {
   summaryOpen: false,
   previousRoute: '#/',
   previouslyFocused: null,
+  mobileLayout: window.innerWidth <= 768,
 };
 
 /* ----- DOM refs ----- */
@@ -114,7 +126,7 @@ function renderBookCard(book) {
       ${comingSoon}
     </div>
     <div class="book-body">
-      <span class="book-category">${book.category}</span>
+      <span class="book-category">${getCategories(book).join('<span class="category-sep">·</span>')}</span>
       <h3 class="book-title">${book.title}</h3>
       <p class="book-author">${book.author}</p>
       <p class="book-summary">${book.summary}</p>
@@ -133,7 +145,7 @@ function renderBookCard(book) {
 
 function renderLibrary() {
   const filtered = state.books.filter(book => {
-    const matchCategory = state.activeCategory === 'all' || book.category === state.activeCategory;
+    const matchCategory = state.activeCategory === 'all' || getCategories(book).includes(state.activeCategory);
     const q = state.searchQuery.toLowerCase();
     const matchSearch = !q || book.title.toLowerCase().includes(q) || book.author.toLowerCase().includes(q) || book.summary.toLowerCase().includes(q);
     return matchCategory && matchSearch;
@@ -142,7 +154,6 @@ function renderLibrary() {
   resultCount.textContent = `${filtered.length} title${filtered.length !== 1 ? 's' : ''}`;
 
   bookGrid.innerHTML = '';
-  bookGrid.className = 'book-grid' + (state.currentView === 'list' ? ' list-view' : '');
 
   if (filtered.length === 0) {
     emptyState.hidden = false;
@@ -150,10 +161,71 @@ function renderLibrary() {
   }
   emptyState.hidden = true;
 
+  // Mobile: category-separated horizontal scroll
+  if (window.innerWidth <= 768) {
+    bookGrid.className = 'book-grid mobile';
+    renderMobileLibrary(filtered);
+    return;
+  }
+
+  bookGrid.className = 'book-grid' + (state.currentView === 'list' ? ' list-view' : '');
   const frag = document.createDocumentFragment();
   filtered.forEach(book => frag.appendChild(renderBookCard(book)));
   bookGrid.appendChild(frag);
 }
+
+function renderMobileLibrary(books) {
+  const catOrder = ['Psychology', 'Business', 'Productivity', 'Philosophy', 'Science', 'Strategy', 'Advaita', 'Upanishads'];
+  const grouped = {};
+  books.forEach(book => {
+    getCategories(book).forEach(cat => {
+      (grouped[cat] = grouped[cat] || []).push(book);
+    });
+  });
+  const frag = document.createDocumentFragment();
+  for (const cat of catOrder) {
+    const list = grouped[cat];
+    if (!list || !list.length) continue;
+    const section = document.createElement('section');
+    section.className = 'mobile-cat-section';
+    section.innerHTML = `
+      <div class="mobile-cat-head">
+        <h2 class="mobile-cat-title">${cat}</h2>
+        <span class="mobile-cat-count">${list.length}</span>
+      </div>
+      <div class="mobile-cat-scroll">
+        ${list.map(book => renderMobileBookCard(book)).join('')}
+      </div>
+    `;
+    frag.appendChild(section);
+  }
+  bookGrid.appendChild(frag);
+}
+
+function renderMobileBookCard(book) {
+  const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
+  return `
+    <div class="mobile-book-card" tabindex="0" role="button" aria-label="Read summary of ${book.title}" data-id="${book.id}">
+      <div class="mobile-book-cover" style="background:${book.color}">
+        <span class="cover-initials">${initials}</span>
+        <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
+      </div>
+      <div class="mobile-book-title">${book.title}</div>
+    </div>
+  `;
+}
+
+// Delegated interactions for mobile cards (rendered via innerHTML)
+document.addEventListener('click', e => {
+  const card = e.target.closest('.mobile-book-card');
+  if (card) openSummary(card.dataset.id);
+});
+document.addEventListener('keydown', e => {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('mobile-book-card')) {
+    e.preventDefault();
+    openSummary(e.target.dataset.id);
+  }
+});
 
 /* ----- Summary View ----- */
 function trapFocus(e) {
@@ -192,7 +264,7 @@ function openSummary(id) {
   mountCover(summaryCover, book, 'card', initials);
   summaryTitle.textContent = book.title;
   summaryAuthor.textContent = book.author;
-  summaryCategory.innerHTML = '<a href="#/category/' + encodeURIComponent(book.category) + '" class="category-link">' + book.category + '</a>';
+  summaryCategory.innerHTML = categoryLinksHTML(book);
   summaryBlurb.textContent = book.summary;
   factTime.textContent = book.readingTime;
   factYear.textContent = book.year;
@@ -546,7 +618,7 @@ function showHomeView() {
 }
 
 function showCategoryView(cat) {
-  const exists = state.books.some(b => b.category === cat);
+  const exists = state.books.some(b => getCategories(b).includes(cat));
   if (!exists) { showHomeView(); return; }
   state.activeCategory = cat;
   updateCatLinksActive();
@@ -556,7 +628,7 @@ function showCategoryView(cat) {
   banner.hidden = false;
   document.getElementById('categoryTitle').textContent = cat;
   document.getElementById('categoryDesc').textContent = CATEGORY_META[cat] || 'Browse all summaries in this category.';
-  const count = state.books.filter(b => b.category === cat).length;
+  const count = state.books.filter(b => getCategories(b).includes(cat)).length;
   document.getElementById('categoryCount').textContent = `${count} ${count === 1 ? 'book' : 'books'}`;
   document.getElementById('libraryTitle').hidden = true;
   renderLibrary();
@@ -633,7 +705,7 @@ const menuBtn = $('#menuBtn');
 const mobileNav = $('#mobileNav');
 
 function setupMobileNav() {
-  const categories = [...new Set(state.books.map(b => b.category))];
+  const categories = [...new Set(state.books.flatMap(b => getCategories(b)))];
   const filters = ['all', ...categories];
   mobileNav.innerHTML = `
     <button class="mobile-close" type="button" aria-label="Close menu">
@@ -781,6 +853,20 @@ setTheme(getTheme(), false);
 applyFontScale(getFontScale());
 renderRoute();
 window.addEventListener('hashchange', renderRoute);
+
+// Re-render on breakpoint cross so grid/mobile layout stays in sync
+let resizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => {
+    const mobile = window.innerWidth <= 768;
+    const wasMobile = state.mobileLayout;
+    if (mobile !== wasMobile) {
+      state.mobileLayout = mobile;
+      if (!state.summaryOpen) renderLibrary();
+    }
+  }, 150);
+});
 
 /* ----- Summary scroll tracking ----- */
 summaryView.addEventListener('scroll', updateSummaryProgress, { passive: true });
