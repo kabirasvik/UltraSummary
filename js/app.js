@@ -182,6 +182,10 @@ function renderCategorySection(cat, books) {
       <h2 class="cat-section-title">${cat}</h2>
       <span class="cat-section-count">${books.length}</span>
       <div class="cat-section-nav">
+        <a class="view-all" href="#/category/${encodeURIComponent(cat)}">
+          View all
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </a>
         <button class="cat-arrow cat-prev" type="button" aria-label="Scroll ${cat} left">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
