@@ -7,7 +7,7 @@
   <meta name="description" content="A calm, distraction-free library of book summaries. Read less, understand more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;600;700;800&family=Schoolbell&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@500;600;700;800&family=Schoolbell&family=Cabin+Sketch:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css?v=20260829" />
   <script>
     if (localStorage.getItem('ultra-theme') === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
@@ -165,9 +165,8 @@
   <section class="summary" id="summaryView" aria-hidden="true" aria-label="Book summary" tabindex="-1" role="dialog" aria-modal="true">
     <header class="summary-header">
       <div class="container summary-header-inner">
-        <button class="back-btn" id="summaryBack" type="button">
+        <button class="back-btn" id="summaryBack" type="button" aria-label="Back to library">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
-          Back to library
         </button>
         <div class="summary-progress" aria-hidden="true"><span id="summaryProgress"></span></div>
         <div class="summary-actions">

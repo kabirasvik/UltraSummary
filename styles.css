@@ -32,6 +32,7 @@
   --font-display: 'Playfair Display', Georgia, serif;
   --font-ui: 'Inter', -apple-system, 'Helvetica Neue', Arial, sans-serif;
   --font-hand: 'Schoolbell', cursive;
+  --font-sketch: 'Cabin Sketch', cursive;
   --font: var(--font-ui);
   --max-width: 1200px;
   --header-h: 68px;
@@ -831,8 +832,9 @@ ul { list-style: none; }
   display: flex; align-items: center; gap: 16px; height: 60px;
 }
 .back-btn {
-  display: flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: var(--text-secondary);
-  padding: 6px 12px; border-radius: var(--radius-sm); transition: var(--transition);
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 40px; height: 40px; border-radius: 50%;
+  color: var(--text-secondary); transition: var(--transition);
 }
 @media (hover: hover) {
   .back-btn:hover { background: var(--surface-hover); color: var(--text); }
@@ -1036,7 +1038,7 @@ ul { list-style: none; }
 }
 .final-block h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
 .final-block h2 svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
-.final-block p { font-family: var(--font-hand); font-size: calc(17px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.9; }
+.final-block p { font-family: var(--font-sketch); font-size: calc(17px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.9; }
 
 /* ============================================================
    TOAST & TOP
@@ -1172,8 +1174,7 @@ ul { list-style: none; }
   .summary-cover { width: 120px; height: 170px; font-size: 30px; }
   .summary-title { font-size: 24px; }
   .summary-header-inner { gap: 8px; }
-  .back-btn { font-size: 0; gap: 0; padding: 8px; }
-  .back-btn::after { content: 'Back'; font-size: 13px; }
+  .back-btn { width: 36px; height: 36px; }
   .font-btn { width: 34px; height: 34px; font-size: 18px; }
   .to-top { bottom: 20px; right: 20px; }
 }
