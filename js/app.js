@@ -23,7 +23,7 @@ function getCategories(book) {
 function categoryLinksHTML(book, cls = 'category-link') {
   return getCategories(book)
     .map(c => '<a href="#/category/' + encodeURIComponent(c) + '" class="' + cls + '">' + c + '</a>')
-    .join('<span class="category-sep">·</span>');
+    .join('');
 }
 
 /* ----- State ----- */
@@ -136,6 +136,7 @@ function renderLibrary() {
   bookGrid.className = 'book-grid category-sections';
 
   const catOrder = ['Psychology', 'Business', 'Productivity', 'Philosophy', 'Science', 'Strategy', 'Advaita', 'Upanishads'];
+  const catRank = new Map(catOrder.map((c, i) => [c, i]));
   const grouped = {};
   filtered.forEach(book => {
     getCategories(book).forEach(cat => {
@@ -144,10 +145,14 @@ function renderLibrary() {
   });
 
   const frag = document.createDocumentFragment();
-  for (const cat of catOrder) {
-    const list = grouped[cat];
-    if (!list || !list.length) continue;
-    frag.appendChild(renderCategorySection(cat, list));
+  const sectionOrder = Object.keys(grouped).sort((a, b) => {
+    const na = grouped[a][0], nb = grouped[b][0];
+    if (nb.added !== na.added) return nb.added.localeCompare(na.added);
+    if (nb._order !== na._order) return nb._order - na._order;
+    return (catRank.get(a) ?? 99) - (catRank.get(b) ?? 99);
+  });
+  for (const cat of sectionOrder) {
+    frag.appendChild(renderCategorySection(cat, grouped[cat]));
   }
   bookGrid.appendChild(frag);
 }
@@ -236,7 +241,7 @@ function renderBookCardHTML(book) {
         ${comingSoon}
       </div>
       <div class="book-body">
-        <span class="book-category">${getCategories(book).join('<span class="category-sep">·</span>')}</span>
+        <div class="book-cats">${getCategories(book).map(c => '<span class="book-category">' + c + '</span>').join('')}</div>
         <h3 class="book-title">${book.title}</h3>
         <p class="book-author">${book.author}</p>
         <p class="book-summary">${book.summary}</p>

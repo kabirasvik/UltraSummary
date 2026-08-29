@@ -334,16 +334,24 @@ ul { list-style: none; }
   color: var(--accent); margin-bottom: 20px;
 }
 
-.category-link {
-  display: inline-flex; align-items: center; padding: 4px 10px;
-  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-  border-radius: 4px;
-  color: var(--accent); text-decoration: none;
-  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;
-  line-height: 1;
-  transition: background 0.15s ease, color 0.15s ease;
-  cursor: pointer;
+.book-category,
+.category-link,
+.list-cat-chip {
+  display: inline-flex; align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px;
+  line-height: 1.4;
+  background: color-mix(in srgb, var(--accent) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  color: var(--accent);
+  white-space: nowrap;
 }
+.category-link {
+  text-decoration: none; cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.category-link + .category-link { margin-left: 6px; }
 .category-link:hover,
 .category-link:focus-visible {
   background: var(--accent);
@@ -443,12 +451,12 @@ ul { list-style: none; }
 .cat-section-scroll .book-meta,
 .cat-section-scroll .coming-soon-badge { display: none; }
 .cat-section-scroll .book-title {
-  font-size: 13px; font-weight: 600; line-height: 1.3;
+  font-size: 13px; font-weight: 600; line-height: 1.25;
   display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
   color: var(--text); font-family: var(--font-display);
 }
 .cat-section-scroll .book-author {
-  font-size: 11px; color: var(--text-secondary); opacity: 0.65; margin-top: 2px;
+  font-size: 11px; color: var(--text-secondary); opacity: 0.65; margin-top: 1px;
   display: block; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .cat-section-scroll .cover-initials { pointer-events: none; }
@@ -483,17 +491,10 @@ ul { list-style: none; }
   font-family: var(--font-display); color: var(--text);
 }
 .list-book-author {
-  font-size: 13px; color: var(--text-secondary); opacity: 0.7; margin-top: 2px;
+  font-size: 13px; color: var(--text-secondary); opacity: 0.7; margin-top: 1px;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 .list-book-cats { display: flex; gap: 4px; margin-top: 5px; flex-wrap: wrap; }
-.list-cat-chip {
-  font-size: 9px; font-weight: 600; padding: 1px 6px; border-radius: 3px;
-  text-transform: uppercase; letter-spacing: 0.5px;
-  background: color-mix(in srgb, var(--accent) 14%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 30%, transparent);
-  color: var(--accent); white-space: nowrap; line-height: 1.5;
-}
 
 /* Card */
 .book-card {
@@ -521,10 +522,10 @@ ul { list-style: none; }
 }
 
 .book-body { padding: 16px 20px 20px; display: flex; flex-direction: column; flex: 1; }
-.book-category { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; color: var(--accent); margin-bottom: 6px; }
-.book-title { font-size: 17px; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 4px; }
-.book-author { font-size: 14px; color: var(--text-secondary); opacity: 0.6; margin-bottom: 10px; }
-.book-summary { font-size: 14px; color: var(--text-secondary); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
+.book-cats { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 8px; }
+.book-title { font-size: 17px; font-weight: 700; line-height: 1.25; letter-spacing: -0.3px; margin-bottom: 2px; }
+.book-author { font-size: 13px; color: var(--text-secondary); opacity: 0.65; margin-bottom: 10px; }
+.book-summary { font-size: 13px; color: var(--text-secondary); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 14px; }
 .book-meta { display: flex; align-items: center; gap: 12px; margin-top: auto; }
 .chip { font-size: 12px; padding: 4px 12px; border-radius: 20px; background: var(--bg-alt); color: var(--text-secondary); font-weight: 500; }
 .book-meta .chip { font-size: 11px; padding: 3px 10px; }
@@ -1101,7 +1102,6 @@ ul { list-style: none; }
   .list-book-cover { width: 46px; height: 68px; }
   .list-book-title { font-size: 15px; }
   .list-book-author { font-size: 12px; }
-  .list-cat-chip { font-size: 8px; padding: 0 5px; }
 
   .section-title { font-size: 24px; }
   .category-title { font-size: 28px; }

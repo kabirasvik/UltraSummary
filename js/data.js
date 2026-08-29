@@ -3521,11 +3521,70 @@ chapters: [
       { text: 'I have adopted a Pascal\'s-wager strategy when it comes to both meditation and breathwork: in case they are good for me, and since I don\'t mind doing them most days, then I may be blessed with better health along the way.', cite: 'Chapter 9' },
     ],
     finalTakeaway: 'The Great Nerve reframes your health around a single, ancient nerve that medicine has long underestimated. Kevin Tracey shows that the vagus nerve is not merely the "rest-and-digest" wanderer of the textbooks but the master switch for inflammation — the hidden driver behind heart disease, stroke, diabetes, neurodegeneration, and depression, which together account for two-thirds of all deaths. His lab\'s discovery of the inflammatory reflex proved the brain and immune system are one conversation, and it launched bioelectronic medicine: computer chips and electricity that can tune the body\'s healing reflexes where drugs fail, cost a fortune, or carry black-box warnings. The book is both a scientific memoir and a practical guide: FDA-approved vagus nerve stimulators already treat epilepsy and depression and are closing in on rheumatoid arthritis and Crohn\'s disease, while everyday practices — slow breathing, meditation, and regular aerobic exercise — offer safe, evidence-grounded ways to raise your own vagal tone. Tracey\'s great strength is his honesty: he separates what is proven from what is hype, warns that cold plunges and ear TENS devices are oversold, and counsels patients to ask their doctors the right questions. The message is hopeful and empowering: your great nerve knows how to keep you well, and increasingly, both technology and simple habits can help it do its job.'
+  },
+  {
+    id: 'secret-teachings-of-padmasambhava',
+    title: 'Secret Teachings of Padmasambhava',
+    author: 'Padmasambhava (tr. Kennard Lipman, PhD)',
+    category: 'Philosophy',
+    color: '#4a1f2d',
+    accent: '#c9a227',
+    readingTime: 6,
+    year: 2010,
+    rating: 4.8,
+    summary: 'Essential instructions on mastering the energies of life — two esoteric Dzogchen teachings attributed to the great eighth-century master Padmasambhava, on the tantric body of channels, energy, and creative potency, the five phases, and the path of passion, with a commentary by translator Kennard Lipman.',
+    keyIdeas: [
+      'The book presents <b>two esoteric Dzogchen texts</b> attributed to <b>Padmasambhava</b>, the legendary eighth-century master who brought Buddhism to Tibet: <b>The Fivefold Essential Instruction</b> and <b>A Section of Hidden Instruction, the Innermost Essence of the Dakini</b>, both preserved in Longchenpa\'s fourteenth-century collection, the Nyingtig Yazhi.',
+      'Everything — the physical world, the body, emotions, and sexuality — is understood as the play of <b>five phases</b> (earth, water, fire, wind, and space) that arise from the primordial ground as a "spontaneous glimmering in five hues," and are experienced as matter only through a process of <b>concretization</b>.',
+      'The metaphysics of the texts is <b>nonduality</b>: the energies that drive us astray into attachment, aversion, and delusion remain the expression of <b>pristine awareness</b> — even going astray is the creative energy of pure presence.',
+      'The body is a <b>buddha-field</b>: the five phases manifest their enlightened dimension through the tantric body of <b>channels (tsa), energy (lung), and creative potency (tigle)</b>, which the Dzogchen view holds to be indivisible — "pervaded by great pristine awareness like oil in a sesame seed."',
+      'The Dzogchen ground has a structure of <b>essence, nature, and energy</b>: essence is emptiness (an open dimension, like space), nature is radiant clarity (like light), and energy is the harmonious play of the male-female polarity of pure presence.',
+      'Energy can be <b>mastered for vitality and enlightenment</b> by increasing the creative potency of the phases — naturally, by visualizing the dakas and dakinis of the five families as the energies cycle through the chakras with the lunar month, or using a <b>suitable partner</b> on the "path of passion."',
+      'The key to the tantric path is to go <b>beyond technique</b>: "relax the mind in a state beyond concepts" — the Dzogchen view is the best technique, because view, practice, and result are one.',
+      '<b>Sexuality is human energy par excellence</b> — a natural oscillation between earth and heaven, of ascent and descent — and the same energizing flow can be realized with or without a partner; the goal is a "relaxed tension," what one researcher calls <b>calm energy</b>.',
+    ],
+    mainTakeaways: [
+      'The world is a <b>magical apparition of samsara</b>, but the elemental forces that make up our body and world remain the expression of primordial forces never split into matter and mind — a holistic view that includes the external, internal, and ever more subtle, esoteric levels.',
+      '<b>Energy is intelligent and mind is energetic</b>: sensing, feeling, and knowing are energetic phenomena, and we can train our energy to be more intelligent and our mind to be more grounded in energy.',
+      'The emotions that seem to go astray — <b>passion, anger, dullness</b> — are themselves pristine awareness; working with them directly, rather than suppressing or indulging them, purifies them.',
+      'The body is not an object to be possessed, controlled, or manipulated but a <b>buddha-field</b> whose unconscious meaning must be addressed; working with the central channel and the energy body is the heart of tantric yoga.',
+      'There is a <b>middle way between ascetic denial and destructive excess</b>: mastering energy means finding a relaxed tension — calm energy — and truly enjoying life without compulsive inhibition or attachment.',
+      'In a fragmented, postmodern age, a <b>practical, integrated view of reality is still possible</b> — and humanity needs such holistic, nondual teachings to meet the challenges of globalization and healing.',
+    ],
+    importantConcepts: [
+      '<b>The Five Phases:</b> earth, water, fire, wind, and space — the processes that create solidity, cohesion, temperature, movement, and open dimension, arising from the primordial ground as the "spontaneous glimmering in five hues."',
+      '<b>Pristine Awareness:</b> the discerning capacity of mind present since the very beginning, indivisible from space; its reification gives rise to the five phases and, through them, to samsara.',
+      '<b>Essence, Nature, and Energy:</b> the structure of the Dzogchen ground — emptiness, radiant clarity, and the energetic response of pure presence — mirrored in the body and mind.',
+      '<b>Channels, Energy, and Creative Potency (tsa, lung, tigle):</b> the tantric energy body; in the Dzogchen view these three are indivisible, and the body is concretely a buddha-mandala.',
+      '<b>Concretization:</b> the process of moving from spiritual to physical reality, by which the five hues of pristine awareness become the five physical phases of experience.',
+      '<b>The Path of Passion:</b> using a suitable partner and the energy of sexual union to increase creative potency — where passionate attachment, if recognized, becomes the creative energy of pristine awareness.',
+      '<b>The Five Families and Dakinis:</b> the enlightened female poles of the phases (Mamaki, Pandaravasini, Buddhalocana, Samayatara) visualized in sexual embrace at the chakras to harmonize the energies.',
+      '<b>Kumbhaka (Vase Breathing):</b> the method of held breath that must be mastered before the esoteric meditations on the energy body can be practiced for real.',
+    ],
+    practicalLessons: [
+      '<b>Begin with the view</b>: the profoundest view is the best technique — know from the start that your body is essence-nature-energy, an open, radiant, nondual field, so you never get lost in technique.',
+      '<b>Work with the central channel</b> rather than chasing advanced asanas: unify scattered karmic energy into the central channel to dissolve the mental image of the body as an object of attachment and manipulation.',
+      '<b>Work with the energy of your emotions</b>: e.g., draw the fiery energy of anger down toward the navel (with the seed syllable RAM and vase breathing) so it becomes mirrorlike awareness instead of projected irritation.',
+      '<b>In sexual practice, unite the polarities of genitals and head</b>, drawing energy upward from the genitals, down from the crown, or letting it pervade the whole body to maintain the right state of energetic tension — and, above all, relax the mind in a state beyond concepts.',
+      '<b>Harmonize the phases daily</b>: avoid sleeping during the day, eat and behave so as not to disorder the phases, and neutralize the conflicting emotions in the fundamental dimension of embodiment rather than letting them become habitual.',
+      '<b>Respect your resistances</b>: laziness, perfectionism, and chronic complaints are intelligent and cannot be bullied out of the way by the ego; working with "what is," including the unconscious meaning of the body, is the beginning of fundamental healing.',
+    ],
+    bestQuotes: [
+      { text: 'At the time of intercourse, passionate attachment and the concepts associated with it arise: this is experienced as the creative energy of pristine awareness. If one does not know this, it is just attachment.', cite: 'The Fivefold Essential Instruction' },
+      { text: 'The unique controlling point is the utilization of the active aspect of energy and mind together; doing this one stores the active energy within. At the time of retaining the active energy, relax the mind in a state beyond concepts. In this way holding and scattering can happen at the same time. This is very profound.', cite: 'The Fivefold Essential Instruction' },
+      { text: 'These are not born or manufactured. Although they arise from the motivating cause of going astray due to a lack of pure presence, they remain the functioning of spontaneously self-originating pristine awareness.', cite: 'The Innermost Essence of the Dakini' },
+      { text: 'The body is pervaded by great pristine awareness like oil in a sesame seed.', cite: 'Tantra of Self-Generating Pure Presence' },
+      { text: 'Observe yourself to discover how you are limited and conditioned, trapped in the cage of dualism like a little bird.', cite: 'Namkhai Norbu Rinpoche' },
+      { text: 'The greater the darkness, the greater the potential light.', cite: 'Introduction' },
+      { text: 'May we all find a kind and quiet heart amid the storms of the energies of life.', cite: 'Translator\'s Preface' },
+    ],
+    finalTakeaway: 'Secret Teachings of Padmasambhava brings together two of the most esoteric texts of the Tibetan Dzogchen tradition — The Fivefold Essential Instruction and A Section of Hidden Instruction, the Innermost Essence of the Dakini — attributed to the great eighth-century master Padmasambhava and preserved in Longchenpa\'s fourteenth-century collection. Translated by Kennard Lipman in the spirit of H. V. Guenther, the texts unfold a fully holistic worldview: the five phases of earth, water, fire, wind, and space are understood as the concretization of a primordial "spontaneous glimmering in five hues," the expression of pristine awareness that has never been split into matter and mind. The body is revealed as a buddha-field, pervaded by channels, energy, and creative potency that are ultimately indivisible, and the practitioner learns to master the energies of life — through the natural increase of creative potency as the phases cycle through the chakras with the lunar month, and through the path of passion, where sexuality itself becomes a special opportunity for enlightenment. Above all, the book insists that technique must take us beyond manipulation and control: the key is to "relax the mind in a state beyond concepts," because in Dzogchen view, practice, and result are one — the profoundest view is the best technique. Both profoundly spiritual and strikingly practical, these teachings offer a middle way between ascetic denial and destructive excess, and a vision of nonduality that speaks directly to the fragmented, crisis-ridden world of our time.'
   }
 ];
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
+  "secret-teachings-of-padmasambhava": "2026-08-29",
   "from-shiva-to-schrodinger": "2026-08-29",
   "your-body-already-knows": "2026-08-29",
   "becoming-supernatural": "2026-08-29",
@@ -3566,5 +3625,8 @@ const ADDED_DATES = {
   "kaupina-panchakam": "2026-06-05",
   "drig-drishya-viveka": "2026-06-01",
 };
-BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
-BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
+BOOKS.forEach((b, i) => { b.added = ADDED_DATES[b.id] || '2026-01-01'; b._order = i; });
+BOOKS.sort((a, b) => {
+  const diff = new Date(b.added) - new Date(a.added);
+  return diff !== 0 ? diff : b._order - a._order;
+});
