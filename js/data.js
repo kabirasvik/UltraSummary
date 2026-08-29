@@ -1,5 +1,6 @@
 /* ============================================================
-   Ultra Summary - Application
+   Ultra Summary - Book Data
+   Contains: BOOKS array + ADDED_DATES
    ============================================================ */
 
 /* ----- Book Data ----- */
@@ -3257,6 +3258,75 @@ chapters: [
     finalTakeaway: 'Manifest by Roxie Nafousi is a warm, practical, and deeply personal guide to living your best life, built on the author\'s own transformation from addiction and depression to purpose and self-love. Far from the passive "visualize and wait" caricature of manifesting, Nafousi presents a grounded, seven-step system that fuses the science of neuroplasticity and the law of attraction with relentless inner work. The steps are simple but demanding: be clear in your vision (and in who you want to become), remove the fear and doubt that live in your subconscious, cultivate the self-love that underpins everything, align your behaviour by being proactive and stepping outside your comfort zone, overcome the tests the universe sends to check your self-worth, embrace gratitude without caveats, turn envy into inspiration, and finally trust in the universe and divine timing. The book\'s power lies in its honesty: Nafousi openly shares her own limiting beliefs, her toxic relationship patterns, and the exact moment she declined a book deal to hold out for her dream publisher — then signed with Penguin exactly one year after her first workshop. Manifesting, she insists, is a self-development practice to live by, not a magic trick: at its core is your self-worth, your subconscious beliefs about what you deserve, and your capacity for self-love. Every decision, every thought, every habit is an opportunity to raise your worth and step closer to your dreams — because someone once told you that you couldn\'t have it all, and she is here to tell you that you can.'
   },
   {
+    id: 'becoming-supernatural',
+    title: 'Becoming Supernatural',
+    author: 'Dr. Joe Dispenza',
+    category: 'Science',
+    color: '#1c2b3a',
+    accent: '#e8a14b',
+    readingTime: 8,
+    year: 2017,
+    rating: 4.6,
+    summary: 'How Common People Are Doing the Uncommon — a doctor and scientist\'s bold manual for unlocking extraordinary human potential, showing how to step beyond your familiar past, enter the present moment, and use meditation to heal the body, rewire the brain, and create a new future.',
+    keyIdeas: [
+      'You are <b>not confined by your past or your genetics</b> — the environment signals the gene, and by changing how you think, act, and feel, you can make epigenetic changes that alter your biology and your future.',
+      '<b>Emotions are the chemical residue of past experiences</b>, stored in the body. When you relive memories with the same feelings, your body believes it is still in the past — so your personality (how you think, act, and feel) keeps re-creating the same future.',
+      '<b>The present moment is the doorway to the supernatural</b>. All potential futures exist in the quantum field, which can only be accessed by getting beyond your identity — entering as "no body, no one, no thing, no where, in no time."',
+      '<b>A clear intention (the electric charge) combined with an elevated emotion (the magnetic charge) creates an electromagnetic signature</b> that draws a matching potential from the unified field into your life — you change your energy, and your reality changes.',
+      '<b>95% of who you are as an adult is subconscious body-mind program</b> — only 5% is conscious. To change, you must pull the mind out of the body by changing your brain waves (from beta to alpha/theta) and entering the operating system of the autonomic nervous system.',
+      '<b>Mental rehearsal is real biology</b>: when you vividly imagine an experience, your brain and body change as if it had actually happened (the Harvard piano study and Cleveland Clinic muscle studies prove this).',
+      '<b>Emotions are energy in motion</b> — all energy is frequency and all frequency carries information. Your repeated thoughts and feelings broadcast an electromagnetic field that keeps creating the same reality; change the field and you change your life.',
+      '<b>Heart coherence</b> — sustaining elevated emotions like gratitude, joy, and love — creates an orderly, magnetic heart that connects you to the unified field and can even influence others at a distance (Project Coherence).',
+    ],
+    mainTakeaways: [
+      '<b>Your future is a rerun of your past until you change it.</b> The same thoughts → same choices → same behaviors → same experiences → same emotions keep you on autopilot. The only way out is to change your state of being.',
+      '<b>Enter the present moment to create a new reality.</b> All potentials exist in the eternal now; you access them by becoming pure consciousness — beyond your body, identity, environment, and time.',
+      '<b>Combine a clear intention with elevated emotion.</b> The electric charge of a detailed intention plus the magnetic charge of heartfelt emotion (gratitude, joy, love) creates the electromagnetic signature that draws your future to you.',
+      '<b>Change your brain waves to program your body.</b> Moving from beta (analysis) to alpha/theta lets your consciousness enter the autonomic nervous system — the subconscious operating system that heals and rebalances the body.',
+      '<b>Liberate stored emotional energy from the body with the breath.</b> The breathing technique pulls energy trapped in the survival centers (fear, anger, guilt) back up to the brain, making it available for creation instead of survival.',
+      '<b>Recondition the body to a new mind through daily practice.</b> Feel the emotions of your future ahead of the experience — your body as the unconscious mind cannot tell the difference between the real event and the imagined one.',
+      '<b>Healing is possible for anyone.</b> Anna\'s case — paralysis, autoimmune disease, and cancer — healed through years of daily meditation, proving that common people can do the uncommon.',
+      '<b>Your energy influences others and the world.</b> Heart coherence produces a measurable magnetic field that can move others into coherence (Project Coherence), showing we are bound by an invisible field of light and information.',
+    ],
+    chapters: [
+      { num: 1, title: 'Opening the Door to the Supernatural', concept: 'Three stories that define the supernatural: Anna\'s self-healing from paralysis, autoimmune disease, and cancer; and two of Dispenza\'s own mystical experiences that changed him forever.', points: ['<b>Anna\'s story:</b> after her husband\'s suicide, chronic stress (the body believing it is still in the past) triggered paralysis, erosive lichen planus, a collapsed immune system, and esophageal cancer.', '<b>Her turning point:</b> she realized "If I created my life, maybe I can uncreate it with the same passion." She stopped treatments and began meditating twice daily — combining clear intention with elevated emotion.', '<b>The science:</b> her body did not know the difference between the original trauma and reliving it — she was addicted to the emotions of stress. By embracing the elevated emotions of her future, she signaled new genes and healed within 1 year 9 months.', '<b>Dispenza\'s message:</b> you already have all the anatomy, chemistry, and physiology to become supernatural — it is sitting latent within you, waiting to be awakened.'] },
+      { num: 2, title: 'The Present Moment', concept: 'The eternal now is the doorway to creating a new life. Your brain is a product of the past, and your routine thoughts, choices, and emotions keep you in a predictable future — a rerun of yesterday.', points: ['<b>How the past becomes your future:</b> thinking the same thoughts fires the same circuits, creating the same feelings, which drive the same choices, behaviors, and experiences — your future becomes a rerun of your past.', '<b>Your body is on autopilot:</b> 95% of who you are is subconscious. Waking up, checking your phone, and repeating the same routine keeps you "in the known" with no room for the unknown.', '<b>Emotions are energy in motion:</b> your thoughts (electric) and feelings (magnetic) combine into an electromagnetic field that broadcasts your state of being — and creates more of the same reality.', '<b>Mental rehearsal primes biology:</b> the Harvard piano study and Cleveland Clinic muscle studies prove that vividly imagining an experience changes your brain and body as if it had actually happened.', '<b>Your body follows your mind:</b> if you keep placing attention on the known, your body follows your mind to the known. Change where you put attention and energy, and your body can follow your mind to the unknown.'] },
+      { num: 3, title: 'Tuning In to New Potentials in the Quantum', concept: 'The quantum field (fifth dimension) holds infinite potentials. You enter it by becoming "no body, no one, no thing, no where, in no time" — then combine intention and emotion to draw a new future to you.', points: ['<b>Enter as no body:</b> you cannot enter the immaterial quantum with your problems, name, schedule, or emotions — you must become pure awareness and consciousness.', '<b>Clear intention + elevated emotion:</b> the intention is the electric charge, the elevated emotion (gratitude, joy, love) is the magnetic charge; together they create the electromagnetic signature equal to your new state of being.', '<b>Vibrational match:</b> when your broadcast energy matches a potential in the unified field, you draw that experience to you — you become the vortex to your future.', '<b>Evidence:</b> brain scans show participants in 4-day workshops achieved meditative states 18% faster, lowered stress-related beta waves by 124%, and increased delta (oneness) waves by 149%.', '<b>Peoc\'h\'s chicks:</b> baby chicks\' intention influenced the random movement of a robot toward them — evidence that intention can influence matter and draw experiences to you.'] },
+      { num: 4, title: 'Blessing of the Energy Centers', concept: 'A popular meditation for programming the body\'s energy centers — each under the control of the autonomic nervous system — for health and the greatest good.', points: ['<b>Energy centers:</b> each center has its own frequency, glands, hormones, chemistry, and mini-brain, all programmed subconsciously through the autonomic nervous system.', '<b>Entering the operating system:</b> by changing your brain waves to alpha/theta, you can access the ANS and reprogram each center to work harmoniously.', '<b>Blessing for the greater good:</b> resting attention in each center and the space around it, blessing it for health and the greatest good, helps bring the body back to balance.', '<b>Anna used this first:</b> she began each meditation with the Blessing of the Energy Centers to influence her ANS and restore her health.'] },
+      { num: 5, title: 'Reconditioning the Body to a New Mind', concept: 'A breathing technique to liberate emotional energy stored in the body, pull the mind out of the body, and recondition the body to live in a new future instead of the familiar past.', points: ['<b>Energy gets stored in the body:</b> repeated thinking-feeling loops trap emotions (anger, guilt, lust, fear) as energy in the survival centers, making the body more matter and less energy.', '<b>The breath:</b> the technique moves trapped energy from the first three centers up the spine to the brain, transmuting survival emotions into creative ones — making the energy available for higher purposes.', '<b>The body is the unconscious mind:</b> it cannot tell the difference between a real experience and an imagined one — so you can teach it emotionally how to feel in your future-present reality.', '<b>The body as a magnet:</b> the stronger the polarity between your survival emotions (stuck in the past) and your creative energy, the larger the electromagnetic field you can generate.'] },
+      { num: 6, title: 'Case Studies: Living Examples of Truth', concept: 'Real stories of students who applied the meditations — including Ginny, who healed chronic back and leg pain from herniated discs during a workshop.', points: ['<b>Ginny\'s story:</b> after a car accident caused two herniated discs and two years of chronic pain, she attended a workshop and surrendered — liberating stored anger and pain energy through the breath.', '<b>During the meditation:</b> she felt energy moving up her spine, left her body through the back of her head, and entered a state of peace and unconditional love with no pain.', '<b>Stories make it real:</b> "Once you have the thought, If they can do it, so can I, you naturally believe in yourself more."', '<b>Anyone can do this:</b> these students first understood the concepts intellectually, then applied them in their bodies, and turned them into wisdom in their souls.'] },
+      { num: 7, title: 'Heart Intelligence', concept: 'The heart is the center of oneness and connection to the unified field. Creating heart coherence — sustaining elevated emotions — produces a measurable magnetic field that can even influence others at a distance.', points: ['<b>The brain thinks, but the heart knows:</b> the heart is the center of wholeness, oneness, and unity consciousness — where opposites meet.', '<b>Heart coherence:</b> elevated emotions like gratitude, joy, appreciation, and compassion make the heart beat with rhythm, order, and balance — a coherent heart produces a measurable magnetic field.', '<b>Influencing others:</b> evidence shows a group in heart coherence can influence others at a distance to go into coherence at the same time — we are bound by an invisible field of light and information.', '<b>Master your environment:</b> when you can maintain an internal state independent of external conditions, you are mastering your environment — and if you keep your heart open, it will keep beating longer.'] },
+      { num: 8, title: 'Mind Movies/Kaleidoscope', concept: 'A technique combining a kaleidoscope (to induce a trance and change brain waves with eyes open) with Mind Movies of your desired future to program your subconscious mind.', points: ['<b>Trance increases suggestibility:</b> the kaleidoscope lowers the volume of the analytical mind, opening the door between the conscious and subconscious mind — making you more suggestible to information.', '<b>Mind Movies:</b> videos of your future self — scenes and pictures of the life you want — program your subconscious toward that new future.', '<b>Proven results:</b> many students report the things in their Mind Movie manifesting; some are already on their third Mind Movie because everything in the first two came true.'] },
+      { num: 9, title: 'Walking Meditation', concept: 'A practice for embodying the energy of your future with your eyes open — walking as your new self so you don\'t return to unconscious programs when you come back to your senses.', points: ['<b>The problem:</b> after a seated meditation, opening your eyes often returns you to unconscious programs and automatic reactions.', '<b>Walking into your future:</b> enter the meditative state standing, then open your eyes and walk as your future self — embodying a new habit of thinking, acting, and feeling.', '<b>Anna used this daily:</b> she walked as her new self every day, refusing to "go unconscious" and return to her old self.', '<b>Install the circuits:</b> in time, you may naturally begin to think like a wealthy person, act like an unlimited being, and feel expansive joy because you conditioned your body to become that person.'] },
+      { num: 10, title: 'Case Studies: Making It Real', concept: 'More student stories that illustrate the principles with allegory, inspiring conviction, certainty, and trust in the practice.', points: ['<b>Stories connect the dots:</b> these case studies help you hear the information from another angle and see it experienced firsthand.', '<b>Inspiration for practice:</b> reading about real people who transformed motivates you to do your own practice with more conviction and trust.'] },
+      { num: 11, title: 'Space-Time and Time-Space', concept: 'A journey from space-time (the Newtonian world where space is eternal and we move through time) to time-space (the quantum world where time is eternal and we move through dimensions).', points: ['<b>Two realms:</b> in space-time, we experience time as we move through space; in time-space, we experience spaces/dimensions as we move through time.', '<b>The mystical becomes real:</b> transcendental experiences are so lucid and real that "I can never go back to business as usual because I know too much."', '<b>Contemplation builds circuits:</b> studying and contemplating the material prepares your brain for the experience itself — it might take a few readings to fully understand.'] },
+      { num: 12, title: 'The Pineal Gland', concept: 'The pineal gland is an antenna that transduces frequencies and information into vivid imagery — activating it produces a full-on sensory experience without the senses.', points: ['<b>The pineal as antenna:</b> a tiny gland in the central back of the brain that can turn energy beyond the vibration of matter into imagery in the brain.', '<b>Activation:</b> when activated, the pineal transmutes melatonin into powerful metabolites that produce mystical, interdimensional experiences.', '<b>The inward experience must be real:</b> to lose yourself fully in the inward experience, it has to be so real that "you are there" — more real than any past external experience.'] },
+      { num: 13, title: 'Project Coherence: Making a Better World', concept: 'Thousands of people meditating together at the same time to raise the planet\'s frequency — creating heart and brain coherence that influences others nonlocally to change the world.', points: ['<b>Nonlocal influence:</b> measurements show students going into heart coherence at the same time are affecting each other energetically, not physically.', '<b>Global meditation:</b> Project Coherence gathers thousands of people to elevate energy and place the intention that lives be enriched, bodies healed, dreams come true, and the mystical become common.', '<b>Peace-gathering science:</b> more than 23 peer-reviewed articles and 50+ peace projects show such events can lower violence, war, crime, and accidents while increasing economic growth.', '<b>Instead of studying history, make history:</b> the evidence shows it works — so why not join in and help change the world?'] },
+      { num: 14, title: 'Case Studies: It Could Happen to You', concept: 'Final stories of profound mystical experiences that show even the most extraordinary inner adventures are accessible to anyone who does the work.', points: ['<b>Mystical experiences are real:</b> students report interdimensional experiences as real as material reality.', '<b>Inspiration:</b> these stories show that even the most mystical adventures can be yours if you work at it with daily practice.'] },
+    ],
+    practicalLessons: [
+      '<b>Meditate daily — ideally twice a day:</b> like Anna, commit to doing your inner work even when you don\'t feel like it. Refuse to get up from your meditations as the same person who sat down.',
+      '<b>Use the Blessing of the Energy Centers:</b> rest your attention in each energy center and the space around it, blessing it for health and the greatest good, to program your autonomic nervous system back to balance.',
+      '<b>Practice the breathing technique:</b> pull the mind out of the body by moving stored emotional energy (fear, anger, guilt) from the survival centers up the spine to the brain — making your energy available for creation.',
+      '<b>Combine a clear intention with elevated emotion:</b> get specific about what you want to create, then feel the emotion (gratitude, joy, love) of having it ahead of the experience. This is how you change your energy.',
+      '<b>Enter the present moment as "no body, no one, no thing, no where, in no time":</b> become pure awareness of the infinite field to access the quantum potential you want to draw in.',
+      '<b>Do the walking meditation:</b> after reaching the meditative state, open your eyes and walk as your future self — so you don\'t return to your old unconscious programs when you come back to your senses.',
+      '<b>Track your progress with heart coherence:</b> practice sustaining elevated emotions until your heart beats coherently; notice how maintaining internal states independent of external conditions changes your life.',
+      '<b>Change your environment to change yourself:</b> separate yourself from the people, things, places, and routines that remind you of who you think you are — even briefly — to break the habit of being yourself.',
+    ],
+    bestQuotes: [
+      { text: 'If I created the life I have now, maybe I can uncreate everything with the same passion I created it with.', cite: 'Anna (student in Becoming Supernatural)' },
+      { text: 'The only way you can create a new life, heal your body, or change your predictable future is to get beyond yourself.', cite: 'Dr. Joe Dispenza' },
+      { text: 'If where you place your attention is where you place your energy, the moment you put your attention on familiar feelings and memories, you are siphoning your energy into the past and out of the present moment.', cite: 'Dr. Joe Dispenza' },
+      { text: 'Emotions are the chemical consequences (or feedback) of past experiences.', cite: 'Dr. Joe Dispenza' },
+      { text: 'When you choose to prove to yourself how powerful you really are, you have no idea who you will be helping in the future.', cite: 'Dr. Joe Dispenza' },
+      { text: 'You can\'t enter this immaterial place with your problems, your name, your schedules and routines, your pain, or your emotions. You can\'t enter as some body — you must enter as no body.', cite: 'Dr. Joe Dispenza' },
+      { text: 'If you want to perform something that\'s unlimited, you\'d better feel unlimited. If you want to create freedom, you\'d better feel free. And if you want to truly heal yourself, you\'d better raise your energy to wholeness.', cite: 'Dr. Joe Dispenza' },
+      { text: 'The brain thinks, but the heart knows.', cite: 'Dr. Joe Dispenza' },
+    ],
+    finalTakeaway: 'Becoming Supernatural is Dr. Joe Dispenza\'s bold synthesis of neuroscience, epigenetics, quantum physics, and meditation — a practical manual for proving that "common people can do the uncommon." Its core message is empowering and radical: you are not a product of your past or your genes; you are a consciousness that can rewire its brain, change its biology, and create a new future. The book\'s foundation is the insight that your personality — how you think, act, and feel — keeps re-creating the same reality. Emotions are the chemical residue of past experiences, stored in the body; as long as you keep reliving familiar feelings, your body believes it is still in the past, and your future becomes a rerun of your yesterday. To break this loop, Dispenza offers a complete system: enter the present moment as pure consciousness ("no body, no one, no thing, no where, in no time"), change your brain waves from beta to alpha/theta to access the autonomic nervous system, liberate stored emotional energy with the breath, and recondition the body to a new mind by embracing the elevated emotions of your future ahead of the experience. The scientific anchor is real: the Harvard piano study, the Cleveland Clinic muscle studies, and thousands of brain scans prove that mental rehearsal changes biology by thought alone. Anna\'s case — healing paralysis, autoimmune disease, and cancer through daily meditation — is the living proof that anchors the whole book. Dispenza writes with humility and conviction, acknowledging the risk of pseudoscience accusations while standing firmly on peer-reviewed research and measurable results. Whether or not you accept the quantum-field metaphysics, the book\'s core teaching is sound and life-changing: change your energy — how you think and feel — and you change your reality.'
+  },
+  {
     id: 'the-great-nerve',
     title: 'The Great Nerve',
     author: 'Kevin J. Tracey, MD',
@@ -3322,6 +3392,7 @@ chapters: [
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
+  "becoming-supernatural": "2026-08-29",
   "manifest": "2026-08-29",
   "effective-life-management": "2026-08-29",
   "psycho-cybernetics": "2026-08-29",
@@ -3361,785 +3432,3 @@ const ADDED_DATES = {
 };
 BOOKS.forEach(b => { b.added = ADDED_DATES[b.id] || '2026-01-01'; });
 BOOKS.sort((a, b) => new Date(b.added) - new Date(a.added));
-
-/* ----- Category metadata ----- */
-const CATEGORY_META = {
-  Psychology: 'Understand the mind, habits, and behavior, from cognitive bias to lasting change.',
-  Business: 'Ideas and frameworks for building, leading, and thinking about work and money.',
-  Productivity: 'Do less, better. Focus, essentialism, and the science of getting things done.',
-  Philosophy: 'Timeless questions about meaning, virtue, and the art of living well.',
-  Science: 'Big ideas from history, biology, and the frontiers of human knowledge.',
-  Strategy: 'Power, influence, and the game of social dynamics — from Machiavelli to modern psychology.',
-  Advaita: 'The non-dual wisdom of Adi Shankarāchārya, the path of self-realization.',
-  'Upanishads': 'The ancient Vedantic scriptures, the direct revelations of the seers on the nature of Brahman and the Self.',
-};
-
-/* ----- State ----- */
-const state = {
-  books: BOOKS,
-  currentView: 'grid',
-  activeCategory: 'all',
-  searchQuery: '',
-  currentBook: null,
-  summaryOpen: false,
-  previousRoute: '#/',
-  previouslyFocused: null,
-};
-
-/* ----- DOM refs ----- */
-const $ = (sel, ctx = document) => ctx.querySelector(sel);
-const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
-
-const bookGrid = $('#bookGrid');
-const searchInput = $('#searchInput');
-const searchClear = $('#searchClear');
-const catLinks = $$('.cat-link');
-const viewBtns = $$('.view-btn');
-const resultCount = $('#resultCount');
-const emptyState = $('#emptyState');
-const clearFilters = $('#clearFilters');
-const toast = $('#toast');
-const toTop = $('#toTop');
-const summaryView = $('#summaryView');
-const summaryScrim = $('#summaryScrim');
-const summaryBack = $('#summaryBack');
-const summaryClose = $('#summaryClose');
-const summaryCover = $('#summaryCover');
-const summaryTitle = $('#summaryTitle');
-const summaryAuthor = $('#summaryAuthor');
-const summaryCategory = $('#summaryCategory');
-const summaryBlurb = $('#summaryBlurb');
-const factTime = $('#factTime');
-const factYear = $('#factYear');
-const factRating = $('#factRating');
-const summaryAnchors = $('#summaryAnchors');
-const summarySections = $('#summarySections');
-const summaryProgress = $('#summaryProgress');
-const statBooks = $('#statBooks');
-
-/* ----- Toast ----- */
-let toastTimer;
-
-function coverError(img, fallbackText) {
-  const base = `images/covers/${img.dataset.folder}/${img.dataset.bookId}`;
-  if (!img.dataset.triedPng) {
-    img.dataset.triedPng = '1';
-    img.src = `${base}.png`;
-    return;
-  }
-  img.remove();
-  if (fallbackText && img.parentElement) img.parentElement.textContent = fallbackText;
-}
-
-function mountCover(container, book, folder, fallbackText) {
-  container.textContent = '';
-  container.style.background = book.color;
-  const img = document.createElement('img');
-  img.className = 'cover-img';
-  img.alt = '';
-  img.dataset.bookId = book.id;
-  img.dataset.folder = folder;
-  img.onerror = () => coverError(img, fallbackText);
-  img.src = `images/covers/${folder}/${book.id}.jpg`;
-  container.appendChild(img);
-}
-
-function showToast(msg) {
-  toast.textContent = msg;
-  toast.classList.add('show');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('show'), 2500);
-}
-
-/* ----- Render ----- */
-function renderBookCard(book) {
-  const isComingSoon = book.status === 'coming-soon';
-  const card = document.createElement('div');
-  card.className = 'book-card' + (isComingSoon ? ' card-coming-soon' : '');
-  card.dataset.id = book.id;
-  card.tabIndex = 0;
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', isComingSoon ? `Summary of ${book.title} coming soon` : `Read summary of ${book.title} by ${book.author}`);
-
-  const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-  const comingSoon = isComingSoon
-    ? `<span class="coming-soon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg> Coming soon</span>`
-    : '';
-
-  card.innerHTML = `
-    <div class="book-cover" style="background:${book.color}">
-      <span class="cover-initials">${initials}</span>
-        <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
-      ${comingSoon}
-    </div>
-    <div class="book-body">
-      <span class="book-category">${book.category}</span>
-      <h3 class="book-title">${book.title}</h3>
-      <p class="book-author">${book.author}</p>
-      <p class="book-summary">${book.summary}</p>
-      <div class="book-meta">
-        <span class="chip">${book.readingTime} min</span>
-        <span class="added-date">${new Date(book.added + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-      </div>
-    </div>
-  `;
-
-  card.addEventListener('click', () => openSummary(book.id));
-  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSummary(book.id); } });
-
-  return card;
-}
-
-function renderLibrary() {
-  const filtered = state.books.filter(book => {
-    const matchCategory = state.activeCategory === 'all' || book.category === state.activeCategory;
-    const q = state.searchQuery.toLowerCase();
-    const matchSearch = !q || book.title.toLowerCase().includes(q) || book.author.toLowerCase().includes(q) || book.summary.toLowerCase().includes(q);
-    return matchCategory && matchSearch;
-  });
-
-  resultCount.textContent = `${filtered.length} title${filtered.length !== 1 ? 's' : ''}`;
-
-  bookGrid.innerHTML = '';
-  bookGrid.className = 'book-grid' + (state.currentView === 'list' ? ' list-view' : '');
-
-  if (filtered.length === 0) {
-    emptyState.hidden = false;
-    return;
-  }
-  emptyState.hidden = true;
-
-  const frag = document.createDocumentFragment();
-  filtered.forEach(book => frag.appendChild(renderBookCard(book)));
-  bookGrid.appendChild(frag);
-}
-
-/* ----- Summary View ----- */
-function trapFocus(e) {
-  if (!state.summaryOpen) return;
-  const focusable = summaryView.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])');
-  if (!focusable.length) return;
-  const first = focusable[0];
-  const last = focusable[focusable.length - 1];
-  if (e.key === 'Tab') {
-    if (e.shiftKey) {
-      if (document.activeElement === first || !summaryView.contains(document.activeElement)) {
-        e.preventDefault();
-        last.focus();
-      }
-    } else {
-      if (document.activeElement === last || !summaryView.contains(document.activeElement)) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-  }
-}
-
-function openSummary(id) {
-  const book = state.books.find(b => b.id === id);
-  if (!book) return;
-  state.currentBook = book;
-  state.summaryOpen = true;
-  state.previousRoute = currentHash().startsWith('#/book/') ? '#/' : currentHash();
-  state.previouslyFocused = document.activeElement;
-
-  const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-
-  summaryCover.textContent = '';
-  summaryCover.style.background = book.color;
-  mountCover(summaryCover, book, 'card', initials);
-  summaryTitle.textContent = book.title;
-  summaryAuthor.textContent = book.author;
-  summaryCategory.innerHTML = '<a href="#/category/' + encodeURIComponent(book.category) + '" class="category-link">' + book.category + '</a>';
-  summaryBlurb.textContent = book.summary;
-  factTime.textContent = book.readingTime;
-  factYear.textContent = book.year;
-  factRating.textContent = book.rating.toFixed(1);
-
-  if (book.status === 'coming-soon') {
-    summaryAnchors.innerHTML = '';
-    summarySections.innerHTML = `
-      <div class="coming-soon-panel">
-        <div class="coming-soon-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg>
-        </div>
-        <h2>Summary coming soon</h2>
-        <p>The full summary of <strong>${book.title}</strong> is being prepared and will appear here shortly. Check back soon.</p>
-      </div>
-    `;
-  } else {
-    // Section icons
-    const ICONS = {
-      key: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.4 1 2.3h6c0-.9.4-1.8 1-2.3A7 7 0 0 0 12 2z"></path></svg>',
-      takeaways: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>',
-      concepts: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>',
-      lessons: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
-      quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
-      translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
-      final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
-    };
-
-    // Build anchor nav
-    const sections = [
-      { id: 'key-ideas', label: 'Key Ideas', icon: 'key' },
-      { id: 'takeaways', label: 'Takeaways', icon: 'takeaways' },
-    ];
-    if (book.laws) sections.push({ id: 'concepts', label: 'Laws', icon: 'concepts' });
-    else if (book.chapters) sections.push({ id: 'concepts', label: 'Chapters', icon: 'concepts' });
-    else if (book.importantConcepts && book.importantConcepts.length) sections.push({ id: 'concepts', label: 'Concepts', icon: 'concepts' });
-    sections.push({ id: 'lessons', label: 'Lessons', icon: 'lessons' });
-    sections.push({ id: 'quotes', label: 'Quotes', icon: 'quotes' });
-    if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: 'translation' });
-    sections.push({ id: 'final', label: 'Final', icon: 'final' });
-
-  const toRoman = n => {
-    const vals = [[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
-    let r = '';
-    for (const [v, s] of vals) { while (n >= v) { r += s; n -= v; } }
-    return r;
-  };
-
-  summaryAnchors.innerHTML = `
-    <h3 class="anchors-title">Contents</h3>
-    <ol class="anchors-list">
-      ${sections.map((s, i) => `
-        <li class="anchors-item">
-          <a href="#summary-${s.id}" data-section="${s.id}">
-            <span class="anchor-icon" aria-hidden="true">${ICONS[s.icon]}</span>
-            <span class="anchor-label">${s.label}</span>
-            <span class="anchor-leader" aria-hidden="true"></span>
-            <span class="anchor-page" aria-hidden="true">${toRoman(i + 1)}</span>
-          </a>
-        </li>
-      `).join('')}
-    </ol>
-  `;
-  const sectionHTML = `
-    <section id="summary-key-ideas">
-      <div class="section-card">
-        <h2><span class="section-icon">${ICONS.key}</span> Key Ideas</h2>
-        <ul>${book.keyIdeas.map(idea => `<li>${idea}</li>`).join('')}</ul>
-      </div>
-    </section>
-    <section id="summary-takeaways">
-      <div class="section-card">
-        <h2><span class="section-icon">${ICONS.takeaways}</span> Main Takeaways</h2>
-        <ul>${book.mainTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>
-      </div>
-    </section>
-    ${book.laws ? `
-    <section id="summary-concepts">
-      <div class="section-card laws-card" id="lawsCard">
-        <div class="translation-head">
-          <h2><span class="section-icon">${ICONS.concepts}</span> The 48 Laws</h2>
-          <span class="translation-badge">${book.laws.length} laws</span>
-        </div>
-        <ol class="laws-list" id="lawsList">
-          ${book.laws.map(law => `
-            <li class="law">
-              <span class="law-num" aria-hidden="true">${law.num}</span>
-              <span class="law-text">
-                <span class="law-title">${law.title}</span>
-                ${law.detail ? `<span class="law-detail">${law.detail}</span>` : ''}
-              </span>
-            </li>
-          `).join('')}
-        </ol>
-        <button class="translation-toggle" id="lawsToggle" type="button" aria-expanded="false">
-          <span class="toggle-label">See all laws</span>
-          <span class="toggle-count">(${book.laws.length} laws)</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-      </div>
-    </section>
-    ` : book.chapters ? `
-    <section id="summary-concepts">
-      <div class="section-card laws-card" id="lawsCard">
-        <div class="translation-head">
-          <h2><span class="section-icon">${ICONS.concepts}</span> Chapters</h2>
-          <span class="translation-badge">${book.chapters.length} chapters</span>
-        </div>
-        <ol class="laws-list" id="lawsList">
-          ${book.chapters.map(ch => {
-            const rows = [];
-            if (ch.concept) rows.push(`<div class="law-row"><span class="law-row-label">Concept</span><span>${ch.concept}</span></div>`);
-            if (ch.mechanics) rows.push(`<div class="law-row"><span class="law-row-label">Mechanics</span><span>${ch.mechanics}</span></div>`);
-            if (ch.exemplar) rows.push(`<div class="law-row"><span class="law-row-label">Exemplar</span><span>${ch.exemplar}</span></div>`);
-            if (ch.danger) rows.push(`<div class="law-row"><span class="law-row-label">Danger</span><span>${ch.danger}</span></div>`);
-            if (ch.types) rows.push(...ch.types.map((t, i) => `<div class="law-row"><span class="law-row-label">Type ${i + 1}</span><span>${t}</span></div>`));
-            if (ch.steps) rows.push(...ch.steps.map(s => `<div class="law-row"><span class="law-row-label">Step</span><span>${s}</span></div>`));
-            if (ch.points) rows.push(`<div class="law-points">${ch.points.map(p => `<div class="law-point">${p}</div>`).join('')}</div>`);
-            return `
-            <li class="law">
-              <span class="law-num" aria-hidden="true">${ch.num}</span>
-              <span class="law-text">
-                <span class="law-title">${ch.title}</span>
-                ${rows.length ? `<span class="law-rows">${rows.join('')}</span>` : ''}
-              </span>
-            </li>`;
-          }).join('')}
-        </ol>
-        <button class="translation-toggle" id="lawsToggle" type="button" aria-expanded="false">
-          <span class="toggle-label">See all chapters</span>
-          <span class="toggle-count">(${book.chapters.length} chapters)</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-      </div>
-    </section>
-    ` : book.importantConcepts && book.importantConcepts.length ? `
-    <section id="summary-concepts">
-      <div class="section-card">
-        <h2><span class="section-icon">${ICONS.concepts}</span> Important Concepts</h2>
-        <ul>${book.importantConcepts.map(c => `<li>${c}</li>`).join('')}</ul>
-      </div>
-    </section>
-    ` : ''}
-    <section id="summary-lessons">
-      <div class="section-card">
-        <h2><span class="section-icon">${ICONS.lessons}</span> Practical Lessons</h2>
-        <ul>${book.practicalLessons.map(l => `<li>${l}</li>`).join('')}</ul>
-      </div>
-    </section>
-    <section id="summary-quotes">
-      <div class="section-card">
-        <h2><span class="quote-mark">${ICONS.quotes}</span> Best quotes</h2>
-        ${book.bestQuotes.map(q => `
-          <div class="quote-block">
-            <blockquote>${q.text}</blockquote>
-            <cite>${q.cite}</cite>
-          </div>
-        `).join('')}
-      </div>
-    </section>
-    ${book.translation ? `
-    <section id="summary-translation">
-      <div class="section-card translation-card" id="translationCard">
-        <div class="translation-head">
-          <h2><span class="section-icon">${ICONS.translation}</span> Translation</h2>
-          <span class="translation-badge">${book.translation.verses.length} verses</span>
-        </div>
-        <p class="translation-attrib">
-          Translated by <strong>${book.translation.translator}</strong>
-          <span class="attrib-sep" aria-hidden="true"></span>
-          Published by <strong>${book.translation.publisher}</strong>
-        </p>
-        <ol class="translation-verses" id="translationVerses">
-          ${book.translation.verses.map((v, i) => {
-            const s = book.translation.sanskritVerses ? book.translation.sanskritVerses[i] || '' : '';
-            return `<li class="verse"><span class="verse-num" aria-hidden="true">${i + 1}</span><span class="verse-text">${s ? '<span class="verse-sanskrit">' + s + '</span>' : ''}${v}</span></li>`;
-          }).join('')}
-        </ol>
-        <button class="translation-toggle" id="translationToggle" type="button" aria-expanded="false">
-          <span class="toggle-label">See translation</span>
-          <span class="toggle-count">(${book.translation.verses.length} verses)</span>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
-      </div>
-    </section>
-    ` : ''}
-    <section id="summary-final">
-      <div class="final-block">
-        <h2>${ICONS.final} Final Takeaway</h2>
-        <p>${book.finalTakeaway}</p>
-      </div>
-    </section>
-  `;
-  summarySections.innerHTML = sectionHTML;
-
-  // Anchor click tracking
-  $$('.summary-anchors a').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.getElementById(a.getAttribute('href').slice(1));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-
-  // Laws / Chapters toggle
-  const lawsToggle = document.getElementById('lawsToggle');
-  if (lawsToggle) {
-    const card = document.getElementById('lawsCard');
-    const label = lawsToggle.querySelector('.toggle-label');
-    const count = lawsToggle.querySelector('.toggle-count');
-    const items = book.laws || book.chapters || [];
-    const unit = book.laws ? 'laws' : 'chapters';
-    lawsToggle.addEventListener('click', () => {
-      const expanded = card.classList.toggle('expanded');
-      if (expanded) {
-        label.textContent = 'Hide';
-        if (count) count.textContent = '';
-      } else {
-        label.textContent = 'See all';
-        if (count) count.textContent = `(${items.length} ${unit})`;
-      }
-      lawsToggle.setAttribute('aria-expanded', String(expanded));
-    });
-  }
-
-  // Translation toggle
-  const translationToggle = document.getElementById('translationToggle');
-  if (translationToggle) {
-    const card = document.getElementById('translationCard');
-    const label = translationToggle.querySelector('.toggle-label');
-    const count = translationToggle.querySelector('.toggle-count');
-    translationToggle.addEventListener('click', () => {
-      const expanded = card.classList.toggle('expanded');
-      if (expanded) {
-        label.textContent = 'Hide translation';
-        if (count) count.textContent = '';
-      } else {
-        label.textContent = 'See translation';
-        if (count) count.textContent = `(${book.translation.verses.length} verses)`;
-      }
-      translationToggle.setAttribute('aria-expanded', String(expanded));
-    });
-  }
-  }
-
-  // Show
-  document.body.style.overflow = 'hidden';
-  summaryView.scrollTop = 0;
-  summaryScrim.hidden = false;
-  summaryView.classList.add('open');
-  requestAnimationFrame(() => {
-    summaryScrim.classList.add('open');
-    summaryView.focus();
-    document.addEventListener('keydown', trapFocus);
-    const mainEl = document.getElementById('main');
-    if (mainEl) {
-      mainEl.setAttribute('inert', '');
-      mainEl.setAttribute('aria-hidden', 'true');
-    }
-  });
-
-  updateSummaryProgress();
-  setHash('#/book/' + encodeURIComponent(id));
-}
-
-function closeSummary(updateHash) {
-  if (updateHash === undefined) updateHash = true;
-  state.summaryOpen = false;
-  summaryView.classList.remove('open');
-  summaryScrim.classList.remove('open');
-  summaryScrim.hidden = true;
-  document.body.style.overflow = '';
-  state.currentBook = null;
-  summaryView.scrollTop = 0;
-  toTop.classList.remove('show');
-  document.removeEventListener('keydown', trapFocus);
-  const mainEl = document.getElementById('main');
-  if (mainEl) {
-    mainEl.removeAttribute('inert');
-    mainEl.removeAttribute('aria-hidden');
-  }
-  if (state.previouslyFocused && typeof state.previouslyFocused.focus === 'function') {
-    state.previouslyFocused.focus();
-  }
-  if (updateHash && currentHash().startsWith('#/book/')) {
-    setHash(state.previousRoute || '#/');
-  }
-}
-
-function updateSummaryProgress() {
-  const el = summaryView;
-  const scrollTop = el.scrollTop;
-  const scrollHeight = el.scrollHeight - el.clientHeight;
-  const pct = scrollHeight > 0 ? Math.min(scrollTop / scrollHeight * 100, 100) : 0;
-  summaryProgress.style.width = pct + '%';
-}
-
-/* ----- Search ----- */
-let searchDebounce;
-
-function handleSearch() {
-  clearTimeout(searchDebounce);
-  searchDebounce = setTimeout(() => {
-    state.searchQuery = searchInput.value.trim();
-    searchClear.hidden = !state.searchQuery;
-    renderLibrary();
-  }, 200);
-}
-
-searchInput.addEventListener('input', handleSearch);
-searchClear.addEventListener('click', () => {
-  searchInput.value = '';
-  searchClear.hidden = true;
-  state.searchQuery = '';
-  renderLibrary();
-  searchInput.focus();
-});
-
-const searchForm = document.querySelector('.search-wrap');
-if (searchForm) {
-  searchForm.addEventListener('submit', e => {
-    e.preventDefault();
-    clearTimeout(searchDebounce);
-    state.searchQuery = searchInput.value.trim();
-    searchClear.hidden = !state.searchQuery;
-    renderLibrary();
-  });
-}
-
-/* ----- Routing ----- */
-function currentHash() { return location.hash || '#/'; }
-
-function setHash(h) {
-  if (location.hash !== h) location.hash = h;
-}
-
-function updateCatLinksActive() {
-  $$('.cat-link').forEach(b => b.classList.toggle('active', b.dataset.filter === state.activeCategory));
-}
-
-function showHomeView() {
-  state.activeCategory = 'all';
-  updateCatLinksActive();
-  const hero = document.querySelector('.hero');
-  if (hero) hero.style.display = '';
-  document.getElementById('categoryBanner').hidden = true;
-  const title = document.getElementById('libraryTitle');
-  title.textContent = 'The library';
-  title.hidden = false;
-  renderLibrary();
-}
-
-function showCategoryView(cat) {
-  const exists = state.books.some(b => b.category === cat);
-  if (!exists) { showHomeView(); return; }
-  state.activeCategory = cat;
-  updateCatLinksActive();
-  const hero = document.querySelector('.hero');
-  if (hero) hero.style.display = 'none';
-  const banner = document.getElementById('categoryBanner');
-  banner.hidden = false;
-  document.getElementById('categoryTitle').textContent = cat;
-  document.getElementById('categoryDesc').textContent = CATEGORY_META[cat] || 'Browse all summaries in this category.';
-  const count = state.books.filter(b => b.category === cat).length;
-  document.getElementById('categoryCount').textContent = `${count} ${count === 1 ? 'book' : 'books'}`;
-  document.getElementById('libraryTitle').hidden = true;
-  renderLibrary();
-  window.scrollTo({ top: 0 });
-}
-
-function renderRoute() {
-  const hash = currentHash();
-  const bookMatch = hash.match(/^#\/book\/(.+)$/);
-  if (bookMatch) {
-    const id = decodeURIComponent(bookMatch[1]);
-    if (!state.books.some(b => b.id === id)) { showHomeView(); return; }
-    const alreadyOpen = state.summaryOpen && state.currentBook && state.currentBook.id === id;
-    if (!alreadyOpen) {
-      if (currentHash().startsWith('#/book/') && hash !== '#/book/' + id) {
-        // switching books directly
-      }
-      openSummary(id);
-    }
-    return;
-  }
-  if (state.summaryOpen) closeSummary(false);
-  const catMatch = hash.match(/^#\/category\/(.+)$/);
-  if (catMatch) {
-    showCategoryView(decodeURIComponent(catMatch[1]));
-  } else {
-    showHomeView();
-  }
-}
-
-/* ----- Category ----- */
-function bindCategory(btn) {
-  btn.addEventListener('click', () => {
-    closeMobileNav();
-    const filter = btn.dataset.filter;
-    if (filter === 'all') setHash('#/');
-    else setHash('#/category/' + encodeURIComponent(filter));
-  });
-}
-catLinks.forEach(bindCategory);
-
-/* ----- More dropdown ----- */
-const moreBtn = $('#moreBtn');
-const moreMenu = $('#moreMenu');
-const moreDropdown = moreBtn.closest('.more-dropdown');
-if (moreBtn && moreMenu) {
-  const openMore = () => {
-    moreDropdown.classList.add('open');
-    moreBtn.setAttribute('aria-expanded', 'true');
-  };
-  const closeMore = () => {
-    moreDropdown.classList.remove('open');
-    moreBtn.setAttribute('aria-expanded', 'false');
-  };
-  moreBtn.addEventListener('click', e => {
-    e.stopPropagation();
-    if (moreDropdown.classList.contains('open')) closeMore();
-    else openMore();
-  });
-  if (window.matchMedia && window.matchMedia('(hover: hover)').matches) {
-    moreDropdown.addEventListener('mouseenter', openMore);
-    moreDropdown.addEventListener('mouseleave', closeMore);
-  }
-  document.addEventListener('click', e => {
-    if (moreDropdown.classList.contains('open') && !e.target.closest('.more-dropdown')) closeMore();
-  });
-  moreMenu.querySelectorAll('.cat-link').forEach(btn => {
-    btn.addEventListener('click', closeMore);
-  });
-}
-
-/* ----- Mobile nav ----- */
-const menuBtn = $('#menuBtn');
-const mobileNav = $('#mobileNav');
-
-function setupMobileNav() {
-  const categories = [...new Set(state.books.map(b => b.category))];
-  const filters = ['all', ...categories];
-  mobileNav.innerHTML = `
-    <button class="mobile-close" type="button" aria-label="Close menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-    </button>
-    ${filters.map(f => {
-      const label = f === 'all' ? 'All' : f;
-      return `<button class="cat-link ${f === state.activeCategory ? 'active' : ''}" data-filter="${f}">${label}</button>`;
-    }).join('')}
-  `;
-  $$('.mobile-nav .cat-link').forEach(bindCategory);
-  const closeBtn = $('.mobile-close');
-  if (closeBtn) closeBtn.addEventListener('click', closeMobileNav);
-}
-
-function toggleMobileNav(force) {
-  const open = typeof force === 'boolean' ? force : !mobileNav.classList.contains('open');
-  mobileNav.classList.toggle('open', open);
-  document.body.style.overflow = open ? 'hidden' : '';
-  menuBtn.setAttribute('aria-expanded', String(open));
-  menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-}
-
-function closeMobileNav() {
-  toggleMobileNav(false);
-}
-
-menuBtn.addEventListener('click', () => toggleMobileNav());
-document.addEventListener('click', e => {
-  if (mobileNav.classList.contains('open') && !e.target.closest('#mobileNav') && !e.target.closest('#menuBtn')) {
-    closeMobileNav();
-  }
-});
-
-/* ----- View toggle ----- */
-viewBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    viewBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    state.currentView = btn.dataset.view;
-    renderLibrary();
-  });
-});
-
-/* ----- Clear filters ----- */
-clearFilters.addEventListener('click', () => {
-  searchInput.value = '';
-  state.searchQuery = '';
-  searchClear.hidden = true;
-  state.activeCategory = 'all';
-  $$('.cat-link').forEach(b => b.classList.remove('active'));
-  $$('.cat-link[data-filter="all"]').forEach(b => b.classList.add('active'));
-  renderLibrary();
-});
-
-/* ----- Scroll ----- */
-function handleScroll() {
-  const isScrolled = state.summaryOpen ? summaryView.scrollTop > 400 : window.scrollY > 400;
-  toTop.classList.toggle('show', isScrolled);
-  if (state.summaryOpen) {
-    updateSummaryProgress();
-  }
-}
-
-window.addEventListener('scroll', handleScroll, { passive: true });
-summaryView.addEventListener('scroll', handleScroll, { passive: true });
-toTop.addEventListener('click', () => {
-  if (state.summaryOpen) {
-    summaryView.scrollTo({ top: 0, behavior: 'smooth' });
-  } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-});
-
-/* ----- Summary events ----- */
-summaryBack.addEventListener('click', closeSummary);
-summaryClose.addEventListener('click', closeSummary);
-summaryScrim.addEventListener('click', closeSummary);
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && state.summaryOpen) closeSummary();
-  else if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
-});
-
-/* ----- Theme ----- */
-const themeToggle = document.getElementById('themeToggle');
-
-function getTheme() {
-  return localStorage.getItem('ultra-theme') || 'light';
-}
-
-function setTheme(theme, persist = true) {
-  document.documentElement.setAttribute('data-theme', theme);
-  if (themeToggle) {
-    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
-    themeToggle.setAttribute('aria-pressed', String(theme === 'dark'));
-  }
-  if (persist) localStorage.setItem('ultra-theme', theme);
-}
-
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    setTheme(getTheme() === 'dark' ? 'light' : 'dark');
-  });
-}
-
-/* ----- Font size ----- */
-const fontMinus = document.getElementById('fontMinus');
-const fontPlus = document.getElementById('fontPlus');
-const FS_KEY = 'ultra-font-scale';
-const MIN_FS = 0.8, MAX_FS = 1.5, FS_STEP = 0.1;
-
-function getFontScale() {
-  return parseFloat(localStorage.getItem(FS_KEY)) || 1;
-}
-
-function applyFontScale(scale) {
-  summaryView.style.setProperty('--fs', scale.toFixed(1));
-  const pct = Math.round(scale * 100);
-  if (fontMinus) {
-    fontMinus.disabled = scale <= MIN_FS;
-    fontMinus.setAttribute('aria-label', `Decrease text size (currently ${pct}%)`);
-  }
-  if (fontPlus) {
-    fontPlus.disabled = scale >= MAX_FS;
-    fontPlus.setAttribute('aria-label', `Increase text size (currently ${pct}%)`);
-  }
-}
-
-function setFontScale(scale) {
-  const clamped = Math.min(MAX_FS, Math.max(MIN_FS, Math.round(scale * 10) / 10));
-  localStorage.setItem(FS_KEY, clamped);
-  applyFontScale(clamped);
-}
-
-if (fontMinus) fontMinus.addEventListener('click', () => setFontScale(getFontScale() - FS_STEP));
-if (fontPlus) fontPlus.addEventListener('click', () => setFontScale(getFontScale() + FS_STEP));
-
-/* ----- Init ----- */
-statBooks.textContent = state.books.length;
-const heroBookCount = document.getElementById('heroBookCount');
-if (heroBookCount) heroBookCount.textContent = state.books.length;
-setupMobileNav();
-setTheme(getTheme(), false);
-applyFontScale(getFontScale());
-renderRoute();
-window.addEventListener('hashchange', renderRoute);
-
-/* ----- Summary scroll tracking ----- */
-summaryView.addEventListener('scroll', updateSummaryProgress, { passive: true });
