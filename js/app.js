@@ -103,11 +103,37 @@ function showToast(msg) {
 }
 
 /* ----- Render ----- */
+function normalize(str) {
+  return String(str).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function buildSearchText(book) {
+  const parts = [
+    book.title,
+    book.author,
+    book.summary,
+    ...(book.keyIdeas || []),
+    ...(book.mainTakeaways || []),
+    ...(book.importantConcepts || []),
+    ...(book.practicalLessons || []),
+    ...(book.finalTakeaway ? [book.finalTakeaway] : []),
+    ...(book.bestQuotes || []).flatMap(q => [q.text, q.cite]),
+    ...(book.chapters || []).flatMap(ch => [ch.title, ch.concept || '', ...(ch.points || [])]),
+    ...(book.laws || []).flatMap(law => [law.title, law.detail || '']),
+  ];
+  return normalize(parts.filter(Boolean).join(' \u0001 '));
+}
+
+function getSearchText(book) {
+  if (book._search === undefined) book._search = buildSearchText(book);
+  return book._search;
+}
+
 function renderLibrary() {
+  const q = normalize(state.searchQuery);
   const filtered = state.books.filter(book => {
     const matchCategory = state.activeCategory === 'all' || getCategories(book).includes(state.activeCategory);
-    const q = state.searchQuery.toLowerCase();
-    const matchSearch = !q || book.title.toLowerCase().includes(q) || book.author.toLowerCase().includes(q) || book.summary.toLowerCase().includes(q);
+    const matchSearch = !q || getSearchText(book).includes(q);
     return matchCategory && matchSearch;
   });
 
@@ -672,8 +698,6 @@ function showCategoryView(cat) {
   banner.hidden = false;
   document.getElementById('categoryTitle').textContent = cat;
   document.getElementById('categoryDesc').textContent = CATEGORY_META[cat] || 'Browse all summaries in this category.';
-  const count = state.books.filter(b => getCategories(b).includes(cat)).length;
-  document.getElementById('categoryCount').textContent = `${count} ${count === 1 ? 'book' : 'books'}`;
   document.getElementById('libraryTitle').hidden = true;
   renderLibrary();
   window.scrollTo({ top: 0 });
@@ -707,12 +731,25 @@ function renderRoute() {
 function bindCategory(btn) {
   btn.addEventListener('click', () => {
     closeMobileNav();
+    // A category change implies a fresh browse: drop any stale search filter.
+    if (searchInput) searchInput.value = '';
+    if (searchClear) searchClear.hidden = true;
+    state.searchQuery = '';
     const filter = btn.dataset.filter;
     if (filter === 'all') setHash('#/');
     else setHash('#/category/' + encodeURIComponent(filter));
   });
 }
 catLinks.forEach(bindCategory);
+
+/* "View all" links use plain hash navigation; clear search before the route re-renders. */
+document.addEventListener('click', e => {
+  if (e.target.closest('.view-all')) {
+    if (searchInput) searchInput.value = '';
+    if (searchClear) searchClear.hidden = true;
+    state.searchQuery = '';
+  }
+});
 
 /* ----- More dropdown ----- */
 const moreBtn = $('#moreBtn');
