@@ -29,7 +29,6 @@ function categoryLinksHTML(book, cls = 'category-link') {
 /* ----- State ----- */
 const state = {
   books: BOOKS,
-  currentView: 'grid',
   activeCategory: 'all',
   searchQuery: '',
   currentBook: null,
@@ -47,7 +46,6 @@ const bookGrid = $('#bookGrid');
 const searchInput = $('#searchInput');
 const searchClear = $('#searchClear');
 const catLinks = $$('.cat-link');
-const viewBtns = $$('.view-btn');
 const resultCount = $('#resultCount');
 const emptyState = $('#emptyState');
 const clearFilters = $('#clearFilters');
@@ -105,44 +103,6 @@ function showToast(msg) {
 }
 
 /* ----- Render ----- */
-function renderBookCard(book) {
-  const isComingSoon = book.status === 'coming-soon';
-  const card = document.createElement('div');
-  card.className = 'book-card' + (isComingSoon ? ' card-coming-soon' : '');
-  card.dataset.id = book.id;
-  card.tabIndex = 0;
-  card.setAttribute('role', 'button');
-  card.setAttribute('aria-label', isComingSoon ? `Summary of ${book.title} coming soon` : `Read summary of ${book.title} by ${book.author}`);
-
-  const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
-  const comingSoon = isComingSoon
-    ? `<span class="coming-soon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg> Coming soon</span>`
-    : '';
-
-  card.innerHTML = `
-    <div class="book-cover" style="background:${book.color}">
-      <span class="cover-initials">${initials}</span>
-        <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
-      ${comingSoon}
-    </div>
-    <div class="book-body">
-      <span class="book-category">${getCategories(book).join('<span class="category-sep">·</span>')}</span>
-      <h3 class="book-title">${book.title}</h3>
-      <p class="book-author">${book.author}</p>
-      <p class="book-summary">${book.summary}</p>
-      <div class="book-meta">
-        <span class="chip">${book.readingTime} min</span>
-        <span class="added-date">${new Date(book.added + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
-      </div>
-    </div>
-  `;
-
-  card.addEventListener('click', () => openSummary(book.id));
-  card.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openSummary(book.id); } });
-
-  return card;
-}
-
 function renderLibrary() {
   const filtered = state.books.filter(book => {
     const matchCategory = state.activeCategory === 'all' || getCategories(book).includes(state.activeCategory);
@@ -153,6 +113,11 @@ function renderLibrary() {
 
   resultCount.textContent = `${filtered.length} title${filtered.length !== 1 ? 's' : ''}`;
 
+  // Clean up observers from previous sections before clearing
+  bookGrid.querySelectorAll('.cat-section').forEach(sec => {
+    if (sec._catResizeObserver) sec._catResizeObserver.disconnect();
+    if (sec._catResizeHandler) window.removeEventListener('resize', sec._catResizeHandler);
+  });
   bookGrid.innerHTML = '';
 
   if (filtered.length === 0) {
@@ -161,67 +126,137 @@ function renderLibrary() {
   }
   emptyState.hidden = true;
 
-  // Mobile: category-separated horizontal scroll
-  if (window.innerWidth <= 768) {
-    bookGrid.className = 'book-grid mobile';
-    renderMobileLibrary(filtered);
+  // On a category page, show a flat list of that category's books
+  if (state.activeCategory !== 'all') {
+    bookGrid.className = 'book-grid category-list';
+    bookGrid.innerHTML = filtered.map(book => renderListBook(book)).join('');
     return;
   }
 
-  bookGrid.className = 'book-grid' + (state.currentView === 'list' ? ' list-view' : '');
-  const frag = document.createDocumentFragment();
-  filtered.forEach(book => frag.appendChild(renderBookCard(book)));
-  bookGrid.appendChild(frag);
-}
+  bookGrid.className = 'book-grid category-sections';
 
-function renderMobileLibrary(books) {
   const catOrder = ['Psychology', 'Business', 'Productivity', 'Philosophy', 'Science', 'Strategy', 'Advaita', 'Upanishads'];
   const grouped = {};
-  books.forEach(book => {
+  filtered.forEach(book => {
     getCategories(book).forEach(cat => {
       (grouped[cat] = grouped[cat] || []).push(book);
     });
   });
+
   const frag = document.createDocumentFragment();
   for (const cat of catOrder) {
     const list = grouped[cat];
     if (!list || !list.length) continue;
-    const section = document.createElement('section');
-    section.className = 'mobile-cat-section';
-    section.innerHTML = `
-      <div class="mobile-cat-head">
-        <h2 class="mobile-cat-title">${cat}</h2>
-        <span class="mobile-cat-count">${list.length}</span>
-      </div>
-      <div class="mobile-cat-scroll">
-        ${list.map(book => renderMobileBookCard(book)).join('')}
-      </div>
-    `;
-    frag.appendChild(section);
+    frag.appendChild(renderCategorySection(cat, list));
   }
   bookGrid.appendChild(frag);
 }
 
-function renderMobileBookCard(book) {
+function renderListBook(book) {
   const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
   return `
-    <div class="mobile-book-card" tabindex="0" role="button" aria-label="Read summary of ${book.title}" data-id="${book.id}">
-      <div class="mobile-book-cover" style="background:${book.color}">
+    <div class="list-book" data-id="${book.id}" tabindex="0" role="button" aria-label="Read summary of ${book.title} by ${book.author}">
+      <div class="list-book-cover" style="background:${book.color}">
         <span class="cover-initials">${initials}</span>
         <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
       </div>
-      <div class="mobile-book-title">${book.title}</div>
+      <div class="list-book-body">
+        <h3 class="list-book-title">${book.title}</h3>
+        <p class="list-book-author">${book.author}</p>
+        <div class="list-book-cats">${getCategories(book).map(c => '<span class="list-cat-chip">' + c + '</span>').join('')}</div>
+      </div>
     </div>
   `;
 }
 
-// Delegated interactions for mobile cards (rendered via innerHTML)
+function renderCategorySection(cat, books) {
+  const section = document.createElement('section');
+  section.className = 'cat-section';
+  section.innerHTML = `
+    <div class="cat-section-head">
+      <h2 class="cat-section-title">${cat}</h2>
+      <span class="cat-section-count">${books.length}</span>
+      <div class="cat-section-nav">
+        <button class="cat-arrow cat-prev" type="button" aria-label="Scroll ${cat} left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="cat-arrow cat-next" type="button" aria-label="Scroll ${cat} right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+      </div>
+    </div>
+    <div class="cat-section-scroll">
+      ${books.map(book => renderBookCardHTML(book)).join('')}
+    </div>
+  `;
+
+  const scrollEl = section.querySelector('.cat-section-scroll');
+  const prevBtn = section.querySelector('.cat-prev');
+  const nextBtn = section.querySelector('.cat-next');
+  const step = () => Math.max(240, scrollEl.clientWidth * 0.75);
+  prevBtn.addEventListener('click', () => scrollEl.scrollBy({ left: -step(), behavior: 'smooth' }));
+  nextBtn.addEventListener('click', () => scrollEl.scrollBy({ left: step(), behavior: 'smooth' }));
+
+  // Enable/disable arrows based on scroll position and whether the row overflows.
+  const updateArrows = () => {
+    const maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+    const canScroll = maxScroll > 1;
+    prevBtn.disabled = !canScroll || scrollEl.scrollLeft <= 0;
+    nextBtn.disabled = !canScroll || scrollEl.scrollLeft >= maxScroll - 1;
+  };
+  scrollEl.addEventListener('scroll', updateArrows, { passive: true });
+
+  // Run after the section is attached so clientWidth/scrollWidth are accurate.
+  requestAnimationFrame(updateArrows);
+
+  // Keep arrows in sync if the row's size changes (resize, lazy image load, font shift).
+  if (typeof ResizeObserver !== 'undefined') {
+    const ro = new ResizeObserver(updateArrows);
+    ro.observe(scrollEl);
+    section._catResizeObserver = ro;
+  } else {
+    window.addEventListener('resize', updateArrows);
+    section._catResizeHandler = updateArrows;
+  }
+
+  return section;
+}
+
+function renderBookCardHTML(book) {
+  const isComingSoon = book.status === 'coming-soon';
+  const initials = book.title.split(' ').map(w => w[0]).join('').slice(0, 3).toUpperCase();
+  const comingSoon = isComingSoon
+    ? `<span class="coming-soon-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"></circle><polyline points="12 7 12 12 15 14"></polyline></svg> Coming soon</span>`
+    : '';
+  return `
+    <div class="book-card cat-card${isComingSoon ? ' card-coming-soon' : ''}" data-id="${book.id}" tabindex="0" role="button" aria-label="Read summary of ${book.title} by ${book.author}">
+      <div class="book-cover" style="background:${book.color}">
+        <span class="cover-initials">${initials}</span>
+        <img src="images/covers/card/${book.id}.jpg" alt="" class="cover-img" data-book-id="${book.id}" data-folder="card" loading="lazy" onerror="coverError(this)">
+        ${comingSoon}
+      </div>
+      <div class="book-body">
+        <span class="book-category">${getCategories(book).join('<span class="category-sep">·</span>')}</span>
+        <h3 class="book-title">${book.title}</h3>
+        <p class="book-author">${book.author}</p>
+        <p class="book-summary">${book.summary}</p>
+        <div class="book-meta">
+          <span class="chip">${book.readingTime} min</span>
+          <span class="added-date">${new Date(book.added + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+// Delegated interactions for category cards (rendered via innerHTML)
 document.addEventListener('click', e => {
-  const card = e.target.closest('.mobile-book-card');
+  const card = e.target.closest('.cat-card, .list-book');
   if (card) openSummary(card.dataset.id);
 });
 document.addEventListener('keydown', e => {
-  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList && e.target.classList.contains('mobile-book-card')) {
+  if ((e.key === 'Enter' || e.key === ' ') && e.target.classList &&
+      (e.target.classList.contains('cat-card') || e.target.classList.contains('list-book'))) {
     e.preventDefault();
     openSummary(e.target.dataset.id);
   }
@@ -740,25 +775,18 @@ document.addEventListener('click', e => {
   }
 });
 
-/* ----- View toggle ----- */
-viewBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    viewBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    state.currentView = btn.dataset.view;
-    renderLibrary();
-  });
-});
-
 /* ----- Clear filters ----- */
 clearFilters.addEventListener('click', () => {
   searchInput.value = '';
   state.searchQuery = '';
   searchClear.hidden = true;
-  state.activeCategory = 'all';
-  $$('.cat-link').forEach(b => b.classList.remove('active'));
-  $$('.cat-link[data-filter="all"]').forEach(b => b.classList.add('active'));
-  renderLibrary();
+  const target = '#/';
+  if (location.hash === target) {
+    state.activeCategory = 'all';
+    showHomeView();
+  } else {
+    setHash(target);
+  }
 });
 
 /* ----- Scroll ----- */
