@@ -1038,7 +1038,7 @@ ul { list-style: none; }
 }
 .final-block h2 { font-size: 18px; font-weight: 700; margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
 .final-block h2 svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
-.final-block p { font-family: var(--font-sketch); font-size: calc(17px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.9; }
+.final-block p { font-size: calc(16px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.85; }
 
 /* ============================================================
    TOAST & TOP
