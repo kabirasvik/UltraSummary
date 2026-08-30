@@ -110,6 +110,23 @@ There are exactly **8** categories. Use only these strings (case-sensitive).
 
 A book may have **multiple** categories (`category: ['Psychology', 'Business']`). Books appear under each of their categories.
 
+### 4.1 How to choose categories wisely
+
+Categories are the primary way readers find a book — choose them deliberately, book by book, never by rote. Rules:
+
+1. **Judge each book on its own content**, not its region, author, or heritage. "Indian book" does not automatically mean Philosophy/Advaita/Upanishads; a history-of-philosophy survey and a practical wellness manual need different labels.
+2. **Default to a single category** that is the strongest fit. Most books belong to exactly one.
+3. **Use a dual category only when both labels are strong** — i.e. the book genuinely and substantially belongs to both. Do not add a second category as a default, a hedge, or because "it's kind of related."
+4. **A thin framing does not justify a category.** If a topic appears only briefly (a short intro, a passing chapter), it is not a category. The category must reflect the bulk of the book's content and focus.
+5. **Prefer the more specific label** when two categories could both claim a book, and order dual arrays with the dominant category first.
+6. **Watch for overuse of `Philosophy` and `Science`:** not every traditional/Indian book is `Philosophy`, and a book is only `Science` if science (biology, physics, the frontiers of knowledge) is a genuine core — not because its title says "science" or it sits near other philosophy books.
+
+Worked examples:
+- A survey covering *all* Indian schools (Vedas, Upaniṣads, Buddha, Jainas, Nyāya, Vedānta, Cārvāka) → `'Philosophy'` (single; no sub-tradition dominates).
+- A history of Buddhist philosophical systems → `'Philosophy'` (single).
+- A practical breathwork manual (breath physiology, health, lung capacity + calming the mind, stress relief) with only a short Vedic intro → `['Science', 'Psychology']` (dual: both are core; Philosophy is not).
+- A Vedantic text on self-realization → `'Advaita'` (single, the most specific fit).
+
 ---
 
 ## 5. The summary-writing method (overall plan)
