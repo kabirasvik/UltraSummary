@@ -1209,7 +1209,10 @@ ul { list-style: none; }
 }
 .dict-section:first-child { margin-top: 0; }
 .dict-meaning { display: flex; flex-wrap: wrap; gap: 0 10px; align-items: baseline; font-size: 14px; line-height: 1.5; }
-.dict-meaning .dict-hi { font-size: 16px; font-weight: 600; color: var(--text); }
+.dict-hi-row { display: inline; font-size: 14px; line-height: 1.55; }
+.dict-hi-row .dict-hi { font-size: 16px; font-weight: 600; color: var(--text); }
+.dict-hi-row .dict-comma { color: var(--text-tertiary); font-weight: 600; }
+.dict-hi-row .dict-tr { font-size: 13px; color: var(--text-tertiary); }
 .dict-meaning .dict-en { color: var(--text-secondary); }
 .dict-meaning .dict-wiki { color: var(--text-secondary); font-size: 13px; }
 .dict-meaning .dict-tr { font-size: 13px; color: var(--text-tertiary); }

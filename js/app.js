@@ -947,10 +947,11 @@ function renderDictMeanings(result) {
   if (result.hindi && result.hindi.length) {
     const fromGoogle = result.hindi.some(m => m.source === 'google');
     html += `<span class="dict-section">Hindi${fromGoogle ? ' · Google' : ''}</span>`;
-    html += result.hindi.slice(0, 5).map(m => {
-      const tr = m.transliteration ? `<span class="dict-tr">(${m.transliteration})</span>` : '';
-      return `<span class="dict-meaning"><span class="dict-hi">${m.word}</span>${tr}</span>`;
-    }).join('');
+    const words = result.hindi.slice(0, 5).map(m => {
+      const tr = m.transliteration ? ` <span class="dict-tr">(${m.transliteration})</span>` : '';
+      return `<span class="dict-hi">${m.word}</span>${tr}`;
+    }).join('<span class="dict-comma">, </span>');
+    html += `<span class="dict-hi-row">${words}</span>`;
   }
 
   if (result.english && result.english.length) {
