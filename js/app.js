@@ -174,7 +174,7 @@ function renderLibrary() {
   const sectionOrder = Object.keys(grouped).sort((a, b) => {
     const na = grouped[a][0], nb = grouped[b][0];
     if (nb.added !== na.added) return nb.added.localeCompare(na.added);
-    if (nb._order !== na._order) return nb._order - na._order;
+    if (na._order !== nb._order) return na._order - nb._order;
     return (catRank.get(a) ?? 99) - (catRank.get(b) ?? 99);
   });
   for (const cat of sectionOrder) {

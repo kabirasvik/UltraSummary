@@ -40,7 +40,7 @@ The site is a **static, data-driven app** — there is no server and no build st
 
 ## 3. Book entry schema
 
-All 40 books share these **required** fields. Optional fields appear only when relevant.
+All books share these **required** fields. Optional fields appear only when relevant.
 
 ### 3.1 Required fields (every book)
 
@@ -274,6 +274,17 @@ Minimal placeholders keep a book in the library before its summary is ready:
 
 The search index is built from: title, author, summary, keyIdeas, mainTakeaways, importantConcepts, practicalLessons, finalTakeaway, bestQuotes (text + cite), chapters (title + concept + points), and laws (title + detail). Wording matters: important terms should appear somewhere in the entry so the book is findable.
 
+## 8.1 Newest-first ordering (don't forget this)
+
+The home page sorts newest-first using `ADDED_DATES` at the bottom of `js/data.js`, and this ordering drives **both** the book order and the category-section order.
+
+- When adding a book, **register its `id` in `ADDED_DATES` with today's date, at the very top** of the map. This is what puts the new book (and its categories) on top of the home page.
+- `ADDED_DATES` order is the recency signal: for same-date books, the sort uses the position in `ADDED_DATES` (top = newest). So a book added later must be inserted *above* any other book with the same date.
+- Never rely on file position in `BOOKS` for ordering — the map is the source of truth for "added" and recency.
+- **The newest book's categories also rise to the top.** The home page groups books by category and orders the sections by their newest member's date (then `_order`). Because the new book is first, its categories sort to the top of the section list as well.
+- `_order` is assigned from `ADDED_DATES` order (smaller = newer) in `js/data.js`, and the category-section sort in `app.js` uses the same ascending `_order`. Keep both in sync — a mismatch makes sections order backwards.
+- Forgetting this step is a common mistake: the book still appears in the library, but not at the top as the newest addition.
+
 ---
 
 ## 9. Design-system notes (styling is done, do not reinvent)
@@ -300,8 +311,9 @@ The implication: a content author only edits `js/data.js` — never CSS/HTML for
 - [ ] Add `translation` only for verse-based texts (§6.9).
 - [ ] Write `keyIdeas` → `mainTakeaways` → concepts/chapters → `practicalLessons` → `bestQuotes` → `finalTakeaway` (§6).
 - [ ] Verify `id` matches the cover file `images/covers/card/<id>.jpg` (§7). Do not modify an existing cover.
+- [ ] **Register the added date** in `ADDED_DATES` at the bottom of `data.js` with today's date, **at the very top** of the map (§8.1). This is what puts the new book first on the home page.
 - [ ] Validate: `node --check js/data.js`.
-- [ ] Open the site and verify: book appears in the right category, summary sections render in order, chapters toggle works, search finds it.
+- [ ] Open the site and verify: book appears at the top, in the right category, summary sections render in order, chapters toggle works, search finds it.
 
 ---
 
