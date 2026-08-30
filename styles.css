@@ -1180,6 +1180,56 @@ ul { list-style: none; }
 }
 
 /* ============================================================
+   DICTIONARY POPOVER
+   ============================================================ */
+.dict-popover {
+  position: fixed; z-index: 600;
+  min-width: 220px; max-width: 340px;
+  max-height: 70vh; overflow-y: auto;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 14px 16px 10px;
+  font-family: var(--font-ui);
+  color: var(--text);
+  pointer-events: auto;
+}
+.dict-popover-word {
+  font-size: 15px; font-weight: 700; letter-spacing: -0.2px;
+  margin-bottom: 6px; color: var(--accent);
+}
+.dict-popover-meanings { display: flex; flex-direction: column; gap: 4px; }
+.dict-popover-meanings .dict-loading { font-size: 13px; color: var(--text-tertiary); }
+.dict-popover-meanings .dict-none { font-size: 13px; color: var(--text-secondary); font-style: italic; }
+.dict-section {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
+  color: var(--text-tertiary);
+  margin: 6px 0 2px;
+}
+.dict-section:first-child { margin-top: 0; }
+.dict-meaning { display: flex; flex-wrap: wrap; gap: 0 10px; align-items: baseline; font-size: 14px; line-height: 1.5; }
+.dict-meaning .dict-hi { font-size: 16px; font-weight: 600; color: var(--text); }
+.dict-meaning .dict-en { color: var(--text-secondary); }
+.dict-meaning .dict-wiki { color: var(--text-secondary); font-size: 13px; }
+.dict-meaning .dict-tr { font-size: 13px; color: var(--text-tertiary); }
+.dict-popover-foot {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border-light);
+}
+.dict-popover-attrib { font-size: 11px; color: var(--text-tertiary); }
+.dict-popover-close {
+  background: none; border: none; cursor: pointer;
+  width: 22px; height: 22px; line-height: 1;
+  font-size: 16px; color: var(--text-secondary); border-radius: 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  transition: var(--transition);
+}
+@media (hover: hover) {
+  .dict-popover-close:hover { background: var(--accent-subtle); color: var(--text); }
+}
+
+/* ============================================================
    ACCESSIBILITY / MOTION
    ============================================================ */
 @media (prefers-reduced-motion: reduce) {

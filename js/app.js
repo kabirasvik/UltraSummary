@@ -602,6 +602,7 @@ function openSummary(id) {
 
 function closeSummary(updateHash) {
   if (updateHash === undefined) updateHash = true;
+  hideDictionaryPopover();
   state.summaryOpen = false;
   summaryView.classList.remove('open');
   summaryScrim.classList.remove('open');
@@ -863,6 +864,150 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape' && state.summaryOpen) closeSummary();
   else if (e.key === 'Escape' && mobileNav.classList.contains('open')) closeMobileNav();
 });
+
+/* ----- Dictionary popover ----- */
+const dictPopover = $('#dictPopover');
+const dictPopoverWord = $('#dictPopoverWord');
+const dictPopoverMeanings = $('#dictPopoverMeanings');
+
+function hideDictionaryPopover() {
+  if (dictPopover) dictPopover.hidden = true;
+}
+
+function wordAtPoint(x, y) {
+  let range = null;
+  if (document.caretRangeFromPoint) {
+    range = document.caretRangeFromPoint(x, y);
+  } else if (document.caretPositionFromPoint) {
+    const pos = document.caretPositionFromPoint(x, y);
+    if (pos) {
+      range = document.createRange();
+      range.setStart(pos.offsetNode, pos.offset);
+    }
+  }
+  if (!range) return null;
+  const node = range.startContainer;
+  if (!node || node.nodeType !== Node.TEXT_NODE) return null;
+  const text = node.textContent || '';
+  const offset = range.startOffset;
+  if (offset < 0 || offset > text.length) return null;
+
+  // Resolve the exact character under the pointer using its client rect,
+  // so clicks on blank space or between words do not snap to a word.
+  const idx = charIndexAtPoint(node, text, offset, x, y);
+  if (idx < 0 || idx >= text.length) return null;
+  if (!isWordChar(text[idx])) return null;
+
+  let start = idx;
+  let end = idx + 1;
+  while (start > 0 && isWordChar(text[start - 1])) start--;
+  while (end < text.length && isWordChar(text[end])) end++;
+  const word = text.slice(start, end).trim();
+  return word.length >= 2 ? word : null;
+}
+
+const isWordChar = ch => /[\w'’’-]/.test(ch);
+
+function charIndexAtPoint(node, text, offset, x, y) {
+  const hit = i => {
+    if (i < 0 || i >= text.length) return false;
+    const r = document.createRange();
+    r.setStart(node, i);
+    r.setEnd(node, i + 1);
+    const rects = r.getClientRects();
+    if (!rects || !rects.length) return false;
+    const rect = rects[0];
+    return x >= rect.left - 2 && x <= rect.right + 2 && y >= rect.top - 2 && y <= rect.bottom + 2;
+  };
+  if (hit(offset)) return offset;
+  if (hit(offset - 1)) return offset - 1;
+  return -1;
+}
+
+function positionDictPopover(x, y) {
+  const pad = 14;
+  const pw = dictPopover.offsetWidth || 260;
+  const ph = dictPopover.offsetHeight || 90;
+  let left = x + pad;
+  let top = y + pad;
+  if (left + pw > window.innerWidth - pad) left = x - pw - pad;
+  if (top + ph > window.innerHeight - pad) top = y - ph - pad;
+  dictPopover.style.left = Math.max(pad, left) + 'px';
+  dictPopover.style.top = Math.max(pad, top) + 'px';
+}
+
+function renderDictMeanings(result) {
+  if (!result || (!result.hindi && !result.english && !result.wikipedia)) {
+    dictPopoverMeanings.innerHTML = '<span class="dict-none">No meaning found for this word.</span>';
+    return;
+  }
+
+  let html = '';
+
+  if (result.hindi && result.hindi.length) {
+    const fromGoogle = result.hindi.some(m => m.source === 'google');
+    html += `<span class="dict-section">Hindi${fromGoogle ? ' · Google' : ''}</span>`;
+    html += result.hindi.slice(0, 5).map(m => {
+      const tr = m.transliteration ? `<span class="dict-tr">(${m.transliteration})</span>` : '';
+      return `<span class="dict-meaning"><span class="dict-hi">${m.word}</span>${tr}</span>`;
+    }).join('');
+  }
+
+  if (result.english && result.english.length) {
+    html += '<span class="dict-section">English</span>';
+    html += result.english.slice(0, 3).map(d => `<span class="dict-meaning"><span class="dict-en">${d}</span></span>`).join('');
+  }
+
+  if (result.wikipedia) {
+    html += '<span class="dict-section">Wikipedia</span>';
+    html += `<span class="dict-meaning"><span class="dict-wiki">${result.wikipedia.extract}</span></span>`;
+  }
+
+  dictPopoverMeanings.innerHTML = html;
+}
+
+/* ----- Dictionary tap-or-selection disambiguation ----- */
+function hasTextSelection() {
+  const sel = window.getSelection();
+  return !!(sel && !sel.isCollapsed && sel.toString().trim());
+}
+
+async function handleSummaryWordClick(e) {
+  if (e.target.closest('button, a, input')) return;
+  // User is selecting text (drag or double-click) — let them select/copy, no popover.
+  if (hasTextSelection()) { hideDictionaryPopover(); return; }
+
+  const word = wordAtPoint(e.clientX, e.clientY);
+  if (!word) { hideDictionaryPopover(); return; }
+
+  e.stopPropagation();
+
+  dictPopoverWord.textContent = word;
+  dictPopoverMeanings.innerHTML = '<span class="dict-loading">Looking up…</span>';
+  dictPopover.hidden = false;
+  positionDictPopover(e.clientX, e.clientY);
+
+  const meanings = await Dictionary.lookup(word);
+  if (dictPopover.hidden) return;
+  renderDictMeanings(meanings);
+}
+
+// Double-click selects a word — dismiss any popover and leave the selection alone.
+summaryView.addEventListener('dblclick', hideDictionaryPopover);
+
+summaryView.addEventListener('click', handleSummaryWordClick);
+if (dictPopover) {
+  const closeBtn = $('#dictPopoverClose');
+  if (closeBtn) closeBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    hideDictionaryPopover();
+  });
+  document.addEventListener('click', e => {
+    if (!dictPopover.hidden && !dictPopover.contains(e.target)) hideDictionaryPopover();
+  });
+  summaryScrim.addEventListener('click', hideDictionaryPopover);
+}
+summaryView.addEventListener('scroll', hideDictionaryPopover, { passive: true });
 
 /* ----- Theme ----- */
 const themeToggle = document.getElementById('themeToggle');
