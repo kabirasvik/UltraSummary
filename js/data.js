@@ -967,7 +967,7 @@ chapters: [
   {
     id: 'musashis-dokkodo',
     title: 'Musashi\'s Dokkodo (The Way of Walking Alone)',
-    author: 'Lawrence A. Kane and Kris Wilder',
+    author: 'Lawrence A. Kane & Kris Wilder',
     category: 'Strategy',
     color: '#1f2b2b',
     accent: '#c9a96e',
