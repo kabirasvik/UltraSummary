@@ -360,6 +360,7 @@ function openSummary(id) {
       lessons: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>',
       quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
       translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
+      compositions: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>',
       final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
     };
 
@@ -374,6 +375,7 @@ function openSummary(id) {
     sections.push({ id: 'lessons', label: 'Lessons', icon: 'lessons' });
     if (book.bestQuotes && book.bestQuotes.length) sections.push({ id: 'quotes', label: 'Quotes', icon: 'quotes' });
     if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: 'translation' });
+    if (book.compositions) sections.push({ id: 'compositions', label: book.compositionsLabel || 'Compositions', icon: 'compositions' });
     sections.push({ id: 'final', label: 'Final', icon: 'final' });
 
   const toRoman = n => {
@@ -523,6 +525,28 @@ function openSummary(id) {
       </div>
     </section>
     ` : ''}
+    ${book.compositions ? `
+    <section id="summary-compositions">
+      <div class="section-card laws-card" id="compositionsCard">
+        <h2><span class="section-icon">${ICONS.compositions}</span> ${book.compositionsLabel || 'Compositions'}</h2>
+        <div class="compositions-body" id="compositionsBody">
+          <ul class="compositions-list">
+            ${book.compositions.map(group => `
+              <li>
+                <span class="comp-group">${group.group}.</span>
+                ${group.works.map((w, i) => `${i ? ', ' : ''}${typeof w === 'string' ? w : `<a class="composition-link" href="#/book/${w.book}">${w.name}</a>`}`).join('')}
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+        <button class="translation-toggle" id="compositionsToggle" type="button" aria-expanded="false">
+          <span class="toggle-label">See all works</span>
+          <span class="toggle-count">(${book.compositions.reduce((n, g) => n + g.works.length, 0)} works)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </section>
+    ` : ''}
     <section id="summary-final">
       <div class="final-block">
         <h2>${ICONS.final} Final Takeaway</h2>
@@ -559,6 +583,28 @@ function openSummary(id) {
         if (count) count.textContent = `(${items.length} ${unit})`;
       }
       lawsToggle.setAttribute('aria-expanded', String(expanded));
+    });
+  }
+
+  // Compositions toggle
+  const compositionsToggle = document.getElementById('compositionsToggle');
+  if (compositionsToggle) {
+    const card = document.getElementById('compositionsCard');
+    const body = document.getElementById('compositionsBody');
+    const label = compositionsToggle.querySelector('.toggle-label');
+    const count = compositionsToggle.querySelector('.toggle-count');
+    const total = book.compositions.reduce((n, g) => n + g.works.length, 0);
+    compositionsToggle.addEventListener('click', () => {
+      const expanded = card.classList.toggle('expanded');
+      body.classList.toggle('expanded', expanded);
+      if (expanded) {
+        label.textContent = 'Hide';
+        if (count) count.textContent = '';
+      } else {
+        label.textContent = 'See all works';
+        if (count) count.textContent = `(${total} works)`;
+      }
+      compositionsToggle.setAttribute('aria-expanded', String(expanded));
     });
   }
 

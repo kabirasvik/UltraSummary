@@ -1241,5 +1241,56 @@ ul { list-style: none; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+}
+}
+
+/* ============================================================
+   COMPOSITIONS
+   ============================================================ */
+.compositions-body {
+  max-height: 460px;
+  overflow: hidden;
+  position: relative;
+  -webkit-mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 0%, black 70%, transparent 100%);
+}
+.laws-card.expanded .compositions-body {
+  max-height: none;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.compositions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.compositions-list li {
+  padding-left: 20px;
+  font-size: calc(15px * var(--fs));
+  line-height: 1.6;
+  color: var(--text-secondary);
+  position: relative;
+  margin: 0;
+}
+.compositions-list li::before { display: none; }
+.compositions-list .comp-group {
+  color: var(--accent);
+  font-weight: 700;
+  margin-right: 4px;
+}
+.compositions-list a.composition-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition), color var(--transition);
+}
+@media (hover: hover) {
+  .compositions-list a.composition-link:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
   }
 }
