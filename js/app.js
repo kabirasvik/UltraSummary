@@ -372,7 +372,7 @@ function openSummary(id) {
     else if (book.chapters) sections.push({ id: 'concepts', label: 'Chapters', icon: 'concepts' });
     else if (book.importantConcepts && book.importantConcepts.length) sections.push({ id: 'concepts', label: 'Concepts', icon: 'concepts' });
     sections.push({ id: 'lessons', label: 'Lessons', icon: 'lessons' });
-    sections.push({ id: 'quotes', label: 'Quotes', icon: 'quotes' });
+    if (book.bestQuotes && book.bestQuotes.length) sections.push({ id: 'quotes', label: 'Quotes', icon: 'quotes' });
     if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: 'translation' });
     sections.push({ id: 'final', label: 'Final', icon: 'final' });
 
@@ -484,6 +484,7 @@ function openSummary(id) {
         <ul>${book.practicalLessons.map(l => `<li>${l}</li>`).join('')}</ul>
       </div>
     </section>
+    ${book.bestQuotes && book.bestQuotes.length ? `
     <section id="summary-quotes">
       <div class="section-card">
         <h2><span class="quote-mark">${ICONS.quotes}</span> Best quotes</h2>
@@ -495,6 +496,7 @@ function openSummary(id) {
         `).join('')}
       </div>
     </section>
+    ` : ''}
     ${book.translation ? `
     <section id="summary-translation">
       <div class="section-card translation-card" id="translationCard">
