@@ -13,6 +13,7 @@ const CATEGORY_META = {
   Strategy: 'Power, influence, and the game of social dynamics — from Machiavelli to modern psychology.',
   Advaita: 'The non-dual wisdom of Adi Shankarāchārya, the path of self-realization.',
   'Upanishads': 'The ancient Vedantic scriptures, the direct revelations of the seers on the nature of Brahman and the Self.',
+  Biography: 'Lives that illuminate the human journey, from spiritual masters to historical figures.',
 };
 
 /* ----- Category helpers ----- */
@@ -361,22 +362,23 @@ function openSummary(id) {
       quotes: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.983 3v7.391c0 5.704-3.731 9.57-8.983 10.609l-.995-2.151c2.432-.917 3.995-3.638 3.995-5.849h-4v-10h9.983zm14.017 0v7.391c0 5.704-3.748 9.57-9 10.609l-.996-2.151c2.433-.917 3.996-3.638 3.996-5.849h-3.983v-10h9.983z"/></svg>',
       translation: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>',
       compositions: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>',
+      biography: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>',
       final: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>',
     };
 
     // Build anchor nav
-    const sections = [
-      { id: 'key-ideas', label: 'Key Ideas', icon: 'key' },
-      { id: 'takeaways', label: 'Takeaways', icon: 'takeaways' },
-    ];
+    const sections = [];
+    if (book.keyIdeas && book.keyIdeas.length) sections.push({ id: 'key-ideas', label: 'Key Ideas', icon: 'key' });
+    if (book.mainTakeaways && book.mainTakeaways.length) sections.push({ id: 'takeaways', label: 'Takeaways', icon: 'takeaways' });
     if (book.laws) sections.push({ id: 'concepts', label: 'Laws', icon: 'concepts' });
     else if (book.chapters) sections.push({ id: 'concepts', label: 'Chapters', icon: 'concepts' });
     else if (book.importantConcepts && book.importantConcepts.length) sections.push({ id: 'concepts', label: 'Concepts', icon: 'concepts' });
-    sections.push({ id: 'lessons', label: 'Lessons', icon: 'lessons' });
+    if (book.biography) sections.push({ id: 'biography', label: 'Biography', icon: 'biography' });
+    if (book.practicalLessons && book.practicalLessons.length) sections.push({ id: 'lessons', label: 'Lessons', icon: 'lessons' });
     if (book.bestQuotes && book.bestQuotes.length) sections.push({ id: 'quotes', label: 'Quotes', icon: 'quotes' });
     if (book.translation) sections.push({ id: 'translation', label: 'Translation', icon: 'translation' });
     if (book.compositions) sections.push({ id: 'compositions', label: book.compositionsLabel || 'Compositions', icon: 'compositions' });
-    sections.push({ id: 'final', label: 'Final', icon: 'final' });
+    if (book.finalTakeaway) sections.push({ id: 'final', label: 'Final', icon: 'final' });
 
   const toRoman = n => {
     const vals = [[10, 'X'], [9, 'IX'], [5, 'V'], [4, 'IV'], [1, 'I']];
@@ -401,18 +403,22 @@ function openSummary(id) {
     </ol>
   `;
   const sectionHTML = `
+    ${book.keyIdeas && book.keyIdeas.length ? `
     <section id="summary-key-ideas">
       <div class="section-card">
         <h2><span class="section-icon">${ICONS.key}</span> Key Ideas</h2>
         <ul>${book.keyIdeas.map(idea => `<li>${idea}</li>`).join('')}</ul>
       </div>
     </section>
+    ` : ''}
+    ${book.mainTakeaways && book.mainTakeaways.length ? `
     <section id="summary-takeaways">
       <div class="section-card">
         <h2><span class="section-icon">${ICONS.takeaways}</span> Main Takeaways</h2>
         <ul>${book.mainTakeaways.map(t => `<li>${t}</li>`).join('')}</ul>
       </div>
     </section>
+    ` : ''}
     ${book.laws ? `
     <section id="summary-concepts">
       <div class="section-card laws-card" id="lawsCard">
@@ -547,12 +553,63 @@ function openSummary(id) {
       </div>
     </section>
     ` : ''}
+    ${book.biography ? `
+    <section id="summary-biography">
+      <div class="section-card biography-card" id="biographyCard">
+        <div class="translation-head">
+          <h2><span class="section-icon">${ICONS.biography}</span> ${book.biography.content.title}</h2>
+          <span class="translation-badge">${book.biography.language}</span>
+        </div>
+        <div class="biography-body" id="biographyBody">
+          <div class="biography-subtitle">${book.biography.content.subtitle}</div>
+          ${book.biography.content.facts ? `
+          <div class="bio-section">
+            <h3>तथ्य (Facts)</h3>
+            <table class="bio-facts">
+              ${book.biography.content.facts.map(f => `
+                <tr><th>${f.label}</th><td>${f.value}</td></tr>
+              `.trim()).join('')}
+            </table>
+          </div>
+          ` : ''}
+          ${book.biography.content.topics ? `
+          <div class="bio-section">
+            <h3>${book.biography.content.header}</h3>
+            <ol class="bio-topics">
+              ${book.biography.content.topics.map(t => `
+                <li>
+                  <strong>${t.num}. ${t.title}</strong>
+                  <ul>
+                    ${t.subtopics.map(st => `<li>${st}</li>`).join('')}
+                  </ul>
+                </li>
+              `).join('')}
+            </ol>
+          </div>
+          ` : ''}
+          ${book.biography.content.essay ? `
+          <div class="bio-section">
+            <h3>आलेख (Essay)</h3>
+            <p class="bio-essay">${book.biography.content.essay}</p>
+          </div>
+          ` : ''}
+        </div>
+        <button class="translation-toggle" id="biographyToggle" type="button" aria-expanded="false">
+          <span class="toggle-label">See biography</span>
+          <span class="toggle-count">(${book.biography.content.topics ? book.biography.content.topics.length : 0} topics)</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+      </div>
+    </section>
+    ` : ''}
+    ${book.finalTakeaway ? `
     <section id="summary-final">
       <div class="final-block">
         <h2>${ICONS.final} Final Takeaway</h2>
         <p>${book.finalTakeaway}</p>
       </div>
     </section>
+    ` : ''}
   `;
   summarySections.innerHTML = sectionHTML;
 
@@ -626,6 +683,25 @@ function openSummary(id) {
       translationToggle.setAttribute('aria-expanded', String(expanded));
     });
   }
+
+// Biography toggle
+    const biographyToggle = document.getElementById('biographyToggle');
+    if (biographyToggle) {
+      const card = document.getElementById('biographyCard');
+      const label = biographyToggle.querySelector('.toggle-label');
+      const count = biographyToggle.querySelector('.toggle-count');
+      biographyToggle.addEventListener('click', () => {
+        const expanded = card.classList.toggle('expanded');
+        if (expanded) {
+          label.textContent = 'Hide biography';
+          if (count) count.textContent = '';
+        } else {
+          label.textContent = 'See biography';
+          if (count) count.textContent = `(${book.biography.content.topics ? book.biography.content.topics.length : 0} topics)`;
+        }
+        biographyToggle.setAttribute('aria-expanded', String(expanded));
+      });
+    }
   }
 
   // Show

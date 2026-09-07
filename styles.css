@@ -1040,6 +1040,53 @@ ul { list-style: none; }
 .final-block h2 svg { width: 18px; height: 18px; color: var(--accent); flex-shrink: 0; }
 .final-block p { font-size: calc(16px * var(--fs)); line-height: 1.7; color: var(--white); opacity: 0.85; }
 
+/* Biography essay section */
+.biography-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 28px 32px; box-shadow: var(--shadow-sm);
+}
+.biography-card .translation-head {
+  display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--border);
+}
+.biography-card .translation-head h2 {
+  font-size: 18px; font-weight: 700; letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px;
+}
+.biography-card .translation-head .section-icon {
+  display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
+  border-radius: 6px; background: var(--accent-subtle); color: var(--accent); font-size: 14px;
+}
+.biography-card .translation-head .section-icon svg { width: 16px; height: 16px; }
+.biography-card .translation-badge {
+  font-size: 12px; color: var(--accent); background: var(--accent-subtle); padding: 2px 8px; border-radius: 4px;
+}
+.biography-card .bio-body { line-height: 1.6; }
+.biography-card .bio-section { margin-bottom: 32px; }
+.biography-card .bio-section h3 {
+  font-size: 16px; font-weight: 600; letter-spacing: -0.2px; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+.biography-card .bio-section h3 svg { width: 14px; height: 14px; margin-right: 6px; }
+.biography-card .bio-topics { line-height: 1.8; }
+.biography-card .bio-topics li { margin-bottom: 12px; }
+.biography-card .bio-topics li strong { color: var(--text); display: block; font-size: 14px; margin-bottom: 4px; }
+.biography-card .bio-topics ul { margin-left: 20px; }
+.biography-card .bio-chronology { line-height: 1.8; }
+.biography-card .bio-chronology li { margin-bottom: 12px; }
+.biography-card .bio-chronology .bio-date {
+  font-weight: 600; color: var(--accent); margin-right: 12px; min-width: 90px;
+}
+.biography-card .bio-chronology .bio-event { color: var(--text-secondary); }
+.biography-card .bio-events { line-height: 1.8; }
+.biography-card .bio-events li { margin-bottom: 8px; }
+.biography-card .bio-events li strong { color: var(--text); }
+
+/* Biography toggle */
+.biography-card .translation-toggle {
+  margin-top: 20px; padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius);
+  background: none; font-size: 13px; cursor: pointer; transition: background 0.2s;
+}
+.biography-card .translation-toggle:hover { background: var(--accent-subtle); }
+.biography-card .translation-toggle.expanded .toggle-label { color: var(--text); }
+
 /* ============================================================
    TOAST & TOP
    ============================================================ */

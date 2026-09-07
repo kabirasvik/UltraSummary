@@ -7062,11 +7062,70 @@ importantConcepts: [
       { text: '"I am infinitely wealthy," and "My abundant wealth is readily available to my earnest children all over the world." — Baba Lokenath to Mathuramohan Chakraborty, referring to spiritual wealth.', cite: 'Chapter 12: The Closest Disciples' },
     ],
     finalTakeaway: 'The Incredible Life of a Himalayan Yogi is a testament to the possibility of living divinity in human form. Baba Lokenath Brahmachari (1730–1890) spent 160 years demonstrating that self-realization is not an escape from life but its deepest fulfillment — a life in which every breath, every step, every encounter becomes an expression of the Divine. His biography weaves together extraordinary yogic feats, interfaith harmony, boundless compassion, and a teaching so simple yet radical: remember the Divine in every breath, see the Divine in every being, and surrender the false self to the True Self. Written by his modern devotee Shuddhaanandaa Brahmachari, who received the mandate to write from Lokenath himself in a vision, the book is both biography and transmission — reading it with an open heart is itself a darshan, an invitation to awaken to the Divine that already lives within you.',
-  }
+  },
+  {
+    id: 'swami-vivekananda',
+    title: 'स्वामी विवेकानंद',
+    author: 'स्वामी विवेकानंद',
+    category: 'Biography',
+    color: '#1a2332',
+    accent: '#c9a227',
+    readingTime: 12,
+    year: 1902,
+    rating: 4.9,
+    summary: 'नरेंद्रनाथ दत्त से विश्वविख्यात संन्यासी — स्वामी विवेकानंद की जीवनी।',
+    keyIdeas: [],
+    mainTakeaways: [],
+    practicalLessons: [],
+    finalTakeaway: '',
+    biography: {
+      type: 'story',
+      language: 'Hindi',
+      content: {
+        header: 'जीवनी',
+        title: 'स्वामी विवेकानंद',
+        subtitle: 'नरेंद्रनाथ दत्त से विश्वविख्यात संन्यासी तक',
+        facts: [
+          { label: 'जन्म', value: '१२ जनवरी १८६३' },
+          { label: 'मूल नाम', value: 'नरेंद्रनाथ दत्त' },
+          { label: 'गुरु', value: 'श्री रामकृष्ण परमहंस' },
+          { label: 'निधन', value: '४ जुलाई १९०२, बेलूर मठ' },
+          { label: 'आयु', value: '३९ वर्ष' }
+        ],
+        topics: [
+          { num: '01', title: 'जन्म और पारिवारिक पृष्ठभूमि', subtopics: ['कलकत्ता में जन्म', 'परिवार का परिभाषा', 'विश्वनाथ दत्त - पिता'] },
+          { num: '02', title: 'बाल्यकाल और बालक नरेंद्र', subtopics: ['असाधारण ऊर्जा', 'जिज्ञासु स्वभाव', 'ध्यान की प्रवृत्ति'] },
+          { num: '03', title: 'शिक्षा और बौद्धिक विकास', subtopics: ['कलकत्ता की शिक्षा', 'प्रेसीडेंसी कॉलेज', 'जनरल असेंबलीज़ इंस्टीट्यूशन', 'पश्चिमी विचारों का प्रभाव'] },
+          { num: '04', title: 'ईश्वर की खोज', subtopics: ['तर्कशील युवावस्था', 'वैशिष्ट्य ब्रह्म समाज', 'धर्म का प्रश्न', 'प्रत्यक्ष अनुभव की तलाश'] },
+          { num: '05', title: 'श्री रामकृष्ण परमहंस से पहली भेंट', subtopics: ['1881 में दक्षिणेश्वर काली मंदिर', 'असाधारण प्रभाव', 'अनुभव के विरासत'] },
+          { num: '06', title: 'गुरु और शिष्य का संबंध', subtopics: ['तर्क से अनुभव की ओर', 'गुरु-शिष्य का विकास', 'ज़िन्दगी का परिवर्तन'] },
+          { num: '07', title: 'परिवार पर संकट और आर्थिक कठिनाइयाँ', subtopics: ['1884 में पिता का निधन', 'घर का आर्थिक पतन', 'जिम्मेदारियों का अनुभव'] },
+          { num: '08', title: 'रामकृष्ण के अंतिम दिन और शिष्य-मंडली', subtopics: ['गंभीर रूप में बीमारी', 'शिष्यों का समूह', '16 अगस्त 1886 में निधन'] },
+          { num: '09', title: 'बारानगर मठ और संन्यासी जीवन', subtopics: ['संन्यास का प्रारंभ', 'तपस्वी जीवन', 'रामकृष्ण परंपरा'] },
+          { num: '10', title: 'भारत विराजन और सामाजिक परीक्षण', subtopics: ['भारत के गरीबी देखना', 'आत्मविश्वास की तलाश', 'समाज के प्रश्न'] },
+          { num: '11', title: 'पश्चिम की यात्रा का निर्णय', subtopics: ['शिकागो विश्व धर्म संसद 1893', 'आतर्किक विदेशीय प्रसार', 'राष्ट्रीय आत्मविश्वास की इच्छा'] },
+          { num: '12', title: 'अमेरिका विराजन', subtopics: ['समुद्री यात्रा', 'पहली मौसमी संभाषण', 'भारत की पहचान'] },
+          { num: '13', title: 'शिकागो विश्व धर्म संसद', subtopics: ['11 सितंबर 1893', 'प्रसिद्ध संबोधन', 'माता के भाइयों और बहनों का अभिवादन', 'विश्व व्यापी प्रभाव'] },
+          { num: '14', title: 'पश्चिम में व्याख्यान और शिष्यों का विकास', subtopics: ['वेदांत और योग का परिचय', 'शिष्यों का समूह', 'अमेरिका के साथ कड़क मिलन'] },
+          { num: '15', title: 'भारत वापसी और रामकृष्ण मिशन की स्थापना', subtopics: ['1897 में भारत लौटना', 'रामकृष्ण मिशन 1 मई 1897', 'मानव सेवा का संगठन'] },
+          { num: '16', title: 'दूसरी पश्चिम यात्रा', subtopics: ['1899 के दो वर्ष', 'यूरोप और अमेरिका', 'आध्यात्मिक कार्य'] },
+          { num: '17', title: 'भारत से बेलूर मठ तक', subtopics: ['पश्चिम वापसी', 'स्थायी आध्यात्मिक केंद्र', 'रामकृष्ण परंपरा की विकास'] },
+          { num: '18', title: 'अंतिम वर्षों का संक्षिप्त समय', subtopics: ['शरीर की कमजोरी', 'शिष्यों की प्रशिक्षण', 'आंदोलन का निरुद्धार'] },
+          { num: '19', title: '4 जुलाई 1902', subtopics: ['बेलूर मठ में शाम का समय', 'ध्यान के बाद निधन', 'अंत तक सक्रिय थे'] },
+          { num: '20', title: 'मृत्यु के बाद की विरासत', subtopics: ['रामकृष्ण मिशन का निरंतर कार्य', 'शिक्षा और सेवा का विकास', 'भावनात्मक आंदोलन'] },
+          { num: '21', title: 'विवेकानंद का व्यक्तित्व', subtopics: ['जिज्ञासु बालक', 'तर्कशील विद्यार्थी', 'गुरु का शिष्य', 'परिव्राजक संन्यासी', 'व्याख्यानी'], },
+          { num: '22', title: 'महत्वपूर्ण तिथियाँ', subtopics: ['जन्म - 12 जनवरी 1863', 'पहली मुलाकात - 1881', 'पिता का निधन - 1884', 'गुरु का निधन - 16 अगस्त 1886', 'शिकागो संसद - 11 सितंबर 1893'] },
+          { num: '23', title: 'उपसंहार एवं आज का महत्व', subtopics: ['अतीत को समझना', 'आध्यात्मिकता और सेवा', 'विश्वविख्यात संन्यासी की पहचान'] }
+        ],
+        essay: 'उन्नीसवीं शताब्दी का भारत सामाजिक, धार्मिक और राजनीतिक परिवर्तन के दौर से गुजर रहा था। एक ओर ब्रिटिश शासन का प्रभाव बढ़ रहा था, दूसरी ओर भारतीय समाज अपनी परंपराओं, धार्मिक मान्यताओं और सामाजिक रूढ़ियों को लेकर गहरे प्रश्नों से जूझ रहा था। इसी समय एक ऐसे युवक का उदय हुआ जिसने भारतीय आध्यात्मिक परंपरा को आधुनिक तर्क, आत्मविश्वास और मानव-सेवा की दृष्टि से देखने का प्रयास किया। यह युवक था—नरेंद्रनाथ दत्त। आगे चलकर यही नरेंद्रनाथ संसार में स्वामी विवेकानंद के नाम से प्रसिद्ध हुए। उन्होंने भारत के वेदांत और योग की परंपराओं को पश्चिमी जगत के सामने प्रस्तुत किया, भारतवासियों में आत्मविश्वास और राष्ट्रचेतना जगाने का प्रयास किया और अपने गुरु श्री रामकृष्ण परमहंस की आध्यात्मिक विरासत को संगठित रूप में आगे बढ़ाया। उनका जीवन केवल एक संन्यासी की आध्यात्मिक यात्रा नहीं था। उसमें एक जिज्ञासु बालक, एक तर्कशील युवक, एक बेचैन ईश्वर-खोजी, एक समर्पित शिष्य, एक परिव्राजक संन्यासी, एक प्रभावशाली वक्ता, एक शिक्षक और एक संस्थापक—इन सभी रूपों का विकास दिखाई देता है।',
+      }
+    },
+  },
 ];
 
 /* ----- Added dates (recently added first) ----- */
 const ADDED_DATES = {
+  "swami-vivekananda": "2026-09-07",
   "himalayan-yogi": "2026-09-05",
   "vakya-vritti": "2026-09-02",
   "bhaja-govindam": "2026-09-02",
