@@ -1061,7 +1061,9 @@ ul { list-style: none; }
 .biography-card .translation-badge {
   font-size: 12px; color: var(--accent); background: var(--accent-subtle); padding: 2px 8px; border-radius: 4px;
 }
-.biography-card .bio-body { line-height: 1.6; }
+.biography-card .biography-body { line-height: 1.6; max-height: 480px; overflow: hidden; position: relative; transition: max-height 400ms var(--ease); -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%); mask-image: linear-gradient(to bottom, black 90%, transparent 100%); }
+.biography-card.expanded .biography-body { max-height: none; -webkit-mask-image: none; mask-image: none; }
+.biography-card .biography-subtitle { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; text-align: center; font-style: italic; line-height: 1.6; }
 .biography-card .bio-section { margin-bottom: 32px; }
 .biography-card .bio-section h3 {
   font-size: 18px; font-weight: 400; letter-spacing: 0.5px; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
@@ -1075,6 +1077,11 @@ ul { list-style: none; }
   color: var(--text-secondary);
   margin-bottom: 14px;
 }
+.biography-card .bio-facts { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.biography-card .bio-facts tr { border-bottom: 1px solid var(--border-light); }
+.biography-card .bio-facts th { text-align: left; font-weight: 600; padding: 8px 12px 8px 0; color: var(--accent); font-size: 13px; white-space: nowrap; width: 1%; font-family: var(--font-ui); }
+.biography-card .bio-facts td { padding: 8px 0; font-size: 14px; color: var(--text-secondary); font-family: var(--font-hindi); }
+.biography-card .bio-essay { font-size: 15px; line-height: 1.8; color: var(--text-secondary); }
 .biography-card .bio-topics { line-height: 1.8; }
 .biography-card .bio-topics li { margin-bottom: 12px; }
 .biography-card .bio-topics li strong { color: var(--text); display: block; font-size: 14px; margin-bottom: 4px; }

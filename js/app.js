@@ -712,14 +712,19 @@ function openSummary(id) {
       const card = document.getElementById('biographyCard');
       const label = biographyToggle.querySelector('.toggle-label');
       const count = biographyToggle.querySelector('.toggle-count');
+      const bioData = typeof book.biography === 'string'
+        ? (window[book.biography.toUpperCase().replace(/-/g, '_') + '_BIO'] || {})
+        : book.biography.content;
       biographyToggle.addEventListener('click', () => {
         const expanded = card.classList.toggle('expanded');
+        const body = card.querySelector('.biography-body');
+        if (body) body.classList.toggle('expanded', expanded);
         if (expanded) {
           label.textContent = 'Hide biography';
           if (count) count.textContent = '';
         } else {
           label.textContent = 'See biography';
-          if (count) count.textContent = `(${book.biography.content.topics ? book.biography.content.topics.length : 0} topics)`;
+          if (count) count.textContent = `(${bioData.sections ? bioData.sections.length : 0} sections)`;
         }
         biographyToggle.setAttribute('aria-expanded', String(expanded));
       });
