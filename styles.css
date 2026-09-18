@@ -1052,6 +1052,7 @@ ul { list-style: none; }
 }
 .biography-card .translation-head h2 {
   font-size: 18px; font-weight: 700; letter-spacing: -0.3px; display: flex; align-items: center; gap: 8px;
+  font-family: var(--font-topic);
 }
 .biography-card .translation-head .section-icon {
   display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px;
@@ -1070,17 +1071,11 @@ ul { list-style: none; }
   font-family: var(--font-topic);
 }
 .biography-card .bio-section h3 svg { width: 14px; height: 14px; margin-right: 6px; }
-.biography-card .bio-section p {
-  font-family: var(--font-hindi);
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-secondary);
-  margin-bottom: 14px;
-}
+.biography-card .bio-section p { font-family: "Martel", serif; font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 14px; }
 .biography-card .bio-facts { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
 .biography-card .bio-facts tr { border-bottom: 1px solid var(--border-light); }
 .biography-card .bio-facts th { text-align: left; font-weight: 600; padding: 8px 12px 8px 0; color: var(--accent); font-size: 13px; white-space: nowrap; width: 1%; font-family: var(--font-ui); }
-.biography-card .bio-facts td { padding: 8px 0; font-size: 14px; color: var(--text-secondary); font-family: var(--font-hindi); }
+.biography-card .bio-facts td { padding: 8px 0; font-size: 14px; color: var(--text-secondary); font-family: "Martel", serif; }
 .biography-card .bio-essay { font-size: 15px; line-height: 1.8; color: var(--text-secondary); }
 .biography-card .bio-topics { line-height: 1.8; }
 .biography-card .bio-topics li { margin-bottom: 12px; }
@@ -1096,13 +1091,23 @@ ul { list-style: none; }
 .biography-card .bio-events li { margin-bottom: 8px; }
 .biography-card .bio-events li strong { color: var(--text); }
 
-/* Biography toggle */
+/* Biography toggle uses the same style as translation toggles */
 .biography-card .translation-toggle {
-  margin-top: 20px; padding: 8px 16px; border: 1px solid var(--border); border-radius: var(--radius);
-  background: none; font-size: 13px; cursor: pointer; transition: background 0.2s;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  margin: 20px auto 0; padding: 10px 18px; border-radius: var(--radius-sm);
+  background: var(--text); color: var(--white);
+  font-size: 13px; font-weight: 600; transition: var(--transition);
 }
-.biography-card .translation-toggle:hover { background: var(--accent-subtle); }
-.biography-card .translation-toggle.expanded .toggle-label { color: var(--text); }
+.biography-card .translation-toggle:hover {
+  background: var(--text-hover);
+}
+.biography-card .translation-toggle .toggle-count { color: var(--white); opacity: 0.6; font-weight: 500; }
+.biography-card .translation-toggle svg {
+  width: 16px; height: 16px; transition: transform 300ms var(--ease);
+}
+.biography-card.expanded .translation-toggle svg {
+  transform: rotate(180deg);
+}
 
 /* ============================================================
    TOAST & TOP

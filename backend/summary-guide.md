@@ -71,6 +71,7 @@ All books share these **required** fields. Optional fields appear only when rele
 | `laws` | object[] | List-style content with numbered rules (e.g. The 48 Laws of Power). Shown as "The 48 Laws". §6.6. |
 | `translation` | object | Vedantic / Upanishad texts with original verses. `{ translator, publisher, sanskritVerses[], verses[] }`. §6.9. |
 | `status` | string | `'coming-soon'` renders a "Summary coming soon" placeholder instead of content. |
+| `biography` | string | Key referencing biography data file (`biographies/<key>.js`) that renders essay-style biography content. Used for books whose primary content is biographical. Standard summary fields (keyIdeas, mainTakeaways, practicalLessons, bestQuotes, finalTakeaway) should be empty/omitted. |
 
 ### 3.3 Field precedence (what the app actually renders)
 
@@ -254,7 +255,48 @@ translation: {
 - `verses` are the English renderings; `sanskritVerses` are the Devanagari originals.
 - The app renders "Translation" as its own section with a "See translation" toggle.
 
-### 6.10 Coming-soon entries
+### 6.11 Biography entries
+
+For books whose primary content is biographical:
+
+```js
+{
+  id: 'swami-vivekananda',
+  title: 'स्वामी विवेकानंद',
+  biography: 'swami-vivekananda',  // key referencing biographies/<key>.js
+  // All standard summary fields should be empty/omitted:
+  keyIdeas: [],
+  mainTakeaways: [],
+  practicalLessons: [],
+  bestQuotes: [],
+  finalTakeaway: '',
+}
+```
+
+Biography content lives in separate files under `biographies/<key>.js`:
+
+```js
+var SWAMI_VIVEKANANDA_BIO = {
+  title: 'स्वामी विवेकानंद',
+  subtitle: 'नरेंद्रनाथ दत्त से विश्वविख्यात संन्यासी',
+  language: 'हिन्दी',
+  facts: [
+    { label: 'जन्म', value: '12 जनवरी 1863, कोलकाता' },
+    // ... more facts
+  ],
+  sections: [
+    { id: 'childhood', title: 'बाल्यकाल', content: '<p>...</p>' },
+    { id: 'education', title: 'शिक्षा', content: '<p>...</p>' },
+    // ... more sections
+  ]
+}
+```
+
+- `sections[].id` must be unique within the biography.
+- `sections[].content` accepts raw HTML (e.g., `<p>...</p>` for paragraphs).
+- The biography section renders as an essay with collapsible sections and a facts table.
+
+### 6.12 Coming-soon entries
 
 Minimal placeholders keep a book in the library before its summary is ready:
 `status: 'coming-soon'` with empty arrays and an empty `finalTakeaway`. The app shows a "Summary coming soon" panel instead of the normal sections.
@@ -309,6 +351,7 @@ The implication: a content author only edits `js/data.js` — never CSS/HTML for
 - [ ] Fill all required fields (§3.1).
 - [ ] Add `importantConcepts`, `chapters`, or `laws` — pick exactly one, matching the book type (§3.3).
 - [ ] Add `translation` only for verse-based texts (§6.9).
+- [ ] For biography entries: add `biography: '<key>'` and create `biographies/<key>.js` with `var <KEY>_BIO = { title, subtitle, language, facts[], sections[] }` (§6.11).
 - [ ] Write `keyIdeas` → `mainTakeaways` → concepts/chapters → `practicalLessons` → `bestQuotes` → `finalTakeaway` (§6).
 - [ ] Verify `id` matches the cover file `images/covers/card/<id>.jpg` (§7). Do not modify an existing cover.
 - [ ] **Register the added date** in `ADDED_DATES` at the bottom of `data.js` with today's date, **at the very top** of the map (§8.1). This is what puts the new book first on the home page.
