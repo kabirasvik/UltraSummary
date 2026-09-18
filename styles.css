@@ -1066,13 +1066,9 @@ ul { list-style: none; }
 .biography-card.expanded .biography-body { max-height: none; -webkit-mask-image: none; mask-image: none; }
 .biography-card .biography-subtitle { font-size: 14px; color: var(--text-secondary); margin-bottom: 20px; text-align: center; font-style: italic; line-height: 1.6; }
 .biography-card .bio-section { margin-bottom: 32px; }
-.biography-card .bio-section h3 {
-  font-size: 18px; font-weight: 400; letter-spacing: 0.5px; color: var(--text); margin-bottom: 16px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
-  font-family: var(--font-topic);
-}
-.biography-card .bio-section h3 svg { width: 14px; height: 14px; margin-right: 6px; }
+.biography-card .bio-section h3 { text-align: center; }
 .biography-card .bio-section p { font-family: "Martel", serif; font-size: 15px; line-height: 1.8; color: var(--text-secondary); margin-bottom: 14px; }
-.biography-card .bio-facts { width: 100%; border-collapse: collapse; margin-bottom: 20px; }
+.biography-card .bio-facts { width: 100%; border-collapse: collapse; margin-bottom: 20px; text-align: left; }
 .biography-card .bio-facts tr { border-bottom: 1px solid var(--border-light); }
 .biography-card .bio-facts th { text-align: left; font-weight: 600; padding: 8px 12px 8px 0; color: var(--accent); font-size: 13px; white-space: nowrap; width: 1%; font-family: var(--font-ui); }
 .biography-card .bio-facts td { padding: 8px 0; font-size: 14px; color: var(--text-secondary); font-family: "Martel", serif; }

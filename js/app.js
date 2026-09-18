@@ -578,7 +578,7 @@ function openSummary(id) {
                     </table>
                   </div>
                   ` : ''}
-                  ${bioData.sections ? bioData.sections.map(s => `
+                  ${bioData.topics ? bioData.topics.map(s => `
                     <div class="bio-section" id="bio-${s.id}">
                       <h3>${s.title}</h3>
                       ${s.content}
@@ -587,7 +587,7 @@ function openSummary(id) {
                 </div>
                 <button class="translation-toggle" id="biographyToggle" type="button" aria-expanded="false">
                   <span class="toggle-label">See biography</span>
-                  <span class="toggle-count">(${bioData.sections ? bioData.sections.length : 0} sections)</span>
+                  <span class="toggle-count">(${bioData.topics ? bioData.topics.length : 0} topics)</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                 </button>`;
               })()
@@ -724,7 +724,7 @@ function openSummary(id) {
           if (count) count.textContent = '';
         } else {
           label.textContent = 'See biography';
-          if (count) count.textContent = `(${bioData.sections ? bioData.sections.length : 0} sections)`;
+          if (count) count.textContent = `(${bioData.topics ? bioData.topics.length : 0} topics)`;
         }
         biographyToggle.setAttribute('aria-expanded', String(expanded));
       });

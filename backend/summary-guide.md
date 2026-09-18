@@ -284,17 +284,17 @@ var SWAMI_VIVEKANANDA_BIO = {
     { label: 'जन्म', value: '12 जनवरी 1863, कोलकाता' },
     // ... more facts
   ],
-  sections: [
+  topics: [
     { id: 'childhood', title: 'बाल्यकाल', content: '<p>...</p>' },
     { id: 'education', title: 'शिक्षा', content: '<p>...</p>' },
-    // ... more sections
+    // ... more topics
   ]
 }
 ```
 
-- `sections[].id` must be unique within the biography.
-- `sections[].content` accepts raw HTML (e.g., `<p>...</p>` for paragraphs).
-- The biography section renders as an essay with collapsible sections and a facts table.
+- `topics[].id` must be unique within the biography.
+- `topics[].content` accepts raw HTML (e.g., `<p>...</p>` for paragraphs).
+- The biography section renders as an essay with collapsible topics and a facts table.
 
 ### 6.12 Coming-soon entries
 
@@ -351,7 +351,7 @@ The implication: a content author only edits `js/data.js` — never CSS/HTML for
 - [ ] Fill all required fields (§3.1).
 - [ ] Add `importantConcepts`, `chapters`, or `laws` — pick exactly one, matching the book type (§3.3).
 - [ ] Add `translation` only for verse-based texts (§6.9).
-- [ ] For biography entries: add `biography: '<key>'` and create `biographies/<key>.js` with `var <KEY>_BIO = { title, subtitle, language, facts[], sections[] }` (§6.11).
+- [ ] For biography entries: add `biography: '<key>'` and create `biographies/<key>.js` with `var <KEY>_BIO = { title, subtitle, language, facts[], topics[] }` (§6.11).
 - [ ] Write `keyIdeas` → `mainTakeaways` → concepts/chapters → `practicalLessons` → `bestQuotes` → `finalTakeaway` (§6).
 - [ ] Verify `id` matches the cover file `images/covers/card/<id>.jpg` (§7). Do not modify an existing cover.
 - [ ] **Register the added date** in `ADDED_DATES` at the bottom of `data.js` with today's date, **at the very top** of the map (§8.1). This is what puts the new book first on the home page.
