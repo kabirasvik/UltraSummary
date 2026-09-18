@@ -7074,9 +7074,11 @@ importantConcepts: [
     year: 1902,
     rating: 4.9,
     summary: 'नरेंद्रनाथ दत्त से विश्वविख्यात संन्यासी — स्वामी विवेकानंद की जीवनी।',
+    biography: 'swami-vivekananda',
     keyIdeas: [],
     mainTakeaways: [],
     practicalLessons: [],
+    bestQuotes: [],
     finalTakeaway: '',
   },
 ];

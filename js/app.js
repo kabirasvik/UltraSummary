@@ -162,7 +162,7 @@ function renderLibrary() {
 
   bookGrid.className = 'book-grid category-sections';
 
-  const catOrder = ['Psychology', 'Business', 'Productivity', 'Philosophy', 'Science', 'Strategy', 'Advaita', 'Upanishads'];
+  const catOrder = ['Psychology', 'Business', 'Productivity', 'Philosophy', 'Science', 'Strategy', 'Advaita', 'Upanishads', 'Biography'];
   const catRank = new Map(catOrder.map((c, i) => [c, i]));
   const grouped = {};
   filtered.forEach(book => {
@@ -486,12 +486,14 @@ function openSummary(id) {
       </div>
     </section>
     ` : ''}
+    ${book.practicalLessons && book.practicalLessons.length ? `
     <section id="summary-lessons">
       <div class="section-card">
         <h2><span class="section-icon">${ICONS.lessons}</span> Practical Lessons</h2>
         <ul>${book.practicalLessons.map(l => `<li>${l}</li>`).join('')}</ul>
       </div>
     </section>
+    ` : ''}
     ${book.bestQuotes && book.bestQuotes.length ? `
     <section id="summary-quotes">
       <div class="section-card">
@@ -556,6 +558,40 @@ function openSummary(id) {
     ${book.biography ? `
     <section id="summary-biography">
       <div class="section-card biography-card" id="biographyCard">
+        ${
+          typeof book.biography === 'string'
+            ? (() => {
+                const bioKey = book.biography.toUpperCase().replace(/-/g, '_') + '_BIO';
+                const bioData = window[bioKey] || {};
+                return `
+                <div class="translation-head">
+                  <h2><span class="section-icon">${ICONS.biography}</span> ${bioData.title || book.title}</h2>
+                  <span class="translation-badge">${bioData.language || ''}</span>
+                </div>
+                <div class="biography-body">
+                  <div class="biography-subtitle">${bioData.subtitle || ''}</div>
+                  ${bioData.facts ? `
+                  <div class="bio-section">
+                    <h3>तथ्य (Facts)</h3>
+                    <table class="bio-facts">
+                      ${bioData.facts.map(f => `<tr><th>${f.label}</th><td>${f.value}</td></tr>`).join('')}
+                    </table>
+                  </div>
+                  ` : ''}
+                  ${bioData.sections ? bioData.sections.map(s => `
+                    <div class="bio-section" id="bio-${s.id}">
+                      <h3>${s.title}</h3>
+                      ${s.content}
+                    </div>
+                  `).join('') : ''}
+                </div>
+                <button class="translation-toggle" id="biographyToggle" type="button" aria-expanded="false">
+                  <span class="toggle-label">See biography</span>
+                  <span class="toggle-count">(${bioData.sections ? bioData.sections.length : 0} sections)</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                </button>`;
+              })()
+            : `
         <div class="translation-head">
           <h2><span class="section-icon">${ICONS.biography}</span> ${book.biography.content.title}</h2>
           <span class="translation-badge">${book.biography.language}</span>
@@ -572,21 +608,6 @@ function openSummary(id) {
             </table>
           </div>
           ` : ''}
-          ${book.biography.content.topics ? `
-          <div class="bio-section">
-            <h3>${book.biography.content.header}</h3>
-            <ol class="bio-topics">
-              ${book.biography.content.topics.map(t => `
-                <li>
-                  <strong>${t.num}. ${t.title}</strong>
-                  <ul>
-                    ${t.subtopics.map(st => `<li>${st}</li>`).join('')}
-                  </ul>
-                </li>
-              `).join('')}
-            </ol>
-          </div>
-          ` : ''}
           ${book.biography.content.essay ? `
           <div class="bio-section">
             <h3>आलेख (Essay)</h3>
@@ -598,7 +619,8 @@ function openSummary(id) {
           <span class="toggle-label">See biography</span>
           <span class="toggle-count">(${book.biography.content.topics ? book.biography.content.topics.length : 0} topics)</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-        </button>
+        </button>`
+        }
       </div>
     </section>
     ` : ''}
